@@ -5155,6 +5155,9 @@ bool CWallet::SelectStakeCoins(StakeCoinsSet& setCoins, CAmount nTargetAmount) c
             continue;
 
         //check for min age
+        if (out.nDepth < Params().GetConsensus().MinStakeHistory())
+            continue;
+
         if (GetAdjustedTime() - out.tx->GetTxTime() < Params().GetConsensus().nStakeMinAge)
             continue;
 
