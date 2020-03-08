@@ -2310,6 +2310,14 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             LOCK(pfrom->cs_mnauth);
             vRecv >> pfrom->receivedMNAuthChallenge;
         }
+
+        // Ban old versions
+        if (cleanSubVer == "/BitGreen:1.4.0.3/" || cleanSubVer == "/BitGreen:1.4.0.4/") {
+            LogPrint(BCLog::NET, "peer=%d using obsolete version %s; disconnecting\n", pfrom->GetId(), cleanSubVer);
+            pfrom->fDisconnect = true;
+            return false;
+        }
+
         // Disconnect if we connected to ourself
         if (pfrom->fInbound && !connman->CheckIncomingNonce(nNonce))
         {
