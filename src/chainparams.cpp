@@ -164,7 +164,6 @@ public:
 
         // Stake constants
         consensus.nStakeEnforcement = 70000;
-        consensus.nStakeEnforcementCheck = 85000;
         consensus.nMinStakeAmount = 200 * COIN;
         consensus.nMinStakeHistory = 360;
 
@@ -301,8 +300,7 @@ public:
         consensus.nMasternodeMinimumConfirmations = 1;
 
         // Stake constants
-        consensus.nStakeEnforcement = 0;
-        consensus.nStakeEnforcementCheck = 0;
+        consensus.nStakeEnforcement = 60000;
         consensus.nMinStakeAmount = 150 * COIN;
         consensus.nMinStakeHistory = 600;
 

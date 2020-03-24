@@ -1771,7 +1771,7 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
     }
 
     // make sure we havent seen this stake previously
-    if (pindex->nHeight >= Params().GetConsensus().StakeEnforcementCheck() &&
+    if (pindex->nHeight >= Params().GetConsensus().StakeEnforcement() &&
         std::find(m_blockman.m_pos_index.begin(), m_blockman.m_pos_index.end(), hashProofOfStake) != m_blockman.m_pos_index.end()) {
         LogPrintf(" * already seen this stake (%s), discarding block..\n", hashProofOfStake.ToString());
         return false;
