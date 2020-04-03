@@ -7,11 +7,13 @@
 
 #include <pow.h>
 #include <random.h>
+#include <index/txindex.h>
 #include <shutdown.h>
 #include <ui_interface.h>
 #include <uint256.h>
 #include <util/system.h>
 #include <util/translation.h>
+#include <validation.h>
 
 #include <stdint.h>
 
@@ -21,7 +23,7 @@ static const char DB_COIN = 'C';
 static const char DB_COINS = 'c';
 static const char DB_BLOCK_FILES = 'f';
 static const char DB_BLOCK_INDEX = 'b';
-
+static const char DB_TXINDEX = 't';
 static const char DB_BEST_BLOCK = 'B';
 static const char DB_HEAD_BLOCKS = 'H';
 static const char DB_FLAG = 'F';
@@ -159,8 +161,9 @@ bool CBlockTreeDB::WriteReindexing(bool fReindexing) {
         return Erase(DB_REINDEX_FLAG);
 }
 
-void CBlockTreeDB::ReadReindexing(bool &fReindexing) {
+bool CBlockTreeDB::ReadReindexing(bool &fReindexing) {
     fReindexing = Exists(DB_REINDEX_FLAG);
+    return true;
 }
 
 bool CBlockTreeDB::ReadLastBlockFile(int &nFile) {
@@ -233,6 +236,21 @@ bool CBlockTreeDB::WriteBatchSync(const std::vector<std::pair<int, const CBlockF
     return WriteBatch(batch, true);
 }
 
+bool CBlockTreeDB::HasTxIndex(const uint256& txid) {
+    return Exists(std::make_pair(DB_TXINDEX, txid));
+}
+
+bool CBlockTreeDB::ReadTxIndex(const uint256 &txid, CDiskTxPos &pos) {
+    return Read(std::make_pair(DB_TXINDEX, txid), pos);
+}
+
+bool CBlockTreeDB::WriteTxIndex(const std::vector<std::pair<uint256, CDiskTxPos> >&vect) {
+    CDBBatch batch(*this);
+    for (std::vector<std::pair<uint256,CDiskTxPos> >::const_iterator it=vect.begin(); it!=vect.end(); it++)
+        batch.Write(std::make_pair(DB_TXINDEX, it->first), it->second);
+    return WriteBatch(batch);
+}
+
 bool CBlockTreeDB::WriteFlag(const std::string &name, bool fValue) {
     return Write(std::make_pair(DB_FLAG, name), fValue ? '1' : '0');
 }
@@ -244,6 +262,40 @@ bool CBlockTreeDB::ReadFlag(const std::string &name, bool &fValue) {
     fValue = ch == '1';
     return true;
 }
+
+bool CBlockTreeDB::ReadTxPos(const uint256 &txid, CDiskTxPos& pos) const
+{
+    return Read(std::make_pair(DB_TXINDEX, txid), pos);
+}
+
+bool CBlockTreeDB::FindTx(const uint256& tx_hash, uint256& block_hash, CTransactionRef& tx) const
+{
+    CDiskTxPos postx;
+    if (!ReadTxPos(tx_hash, postx)) {
+        return false;
+    }
+
+    CAutoFile file(OpenBlockFile(postx, true), SER_DISK, CLIENT_VERSION);
+    if (file.IsNull()) {
+        return error("%s: OpenBlockFile failed", __func__);
+    }
+    CBlockHeader header;
+    try {
+        file >> header;
+        if (fseek(file.Get(), postx.nTxOffset, SEEK_CUR)) {
+            return error("%s: fseek(...) failed", __func__);
+        }
+        file >> tx;
+    } catch (const std::exception& e) {
+        return error("%s: Deserialize or I/O error - %s", __func__, e.what());
+    }
+    if (tx->GetHash() != tx_hash) {
+        return error("%s: txid mismatch", __func__);
+    }
+    block_hash = header.GetHash();
+    return true;
+}
+
 
 bool CBlockTreeDB::LoadBlockIndexGuts(const Consensus::Params& consensusParams, std::function<CBlockIndex*(const uint256&)> insertBlockIndex)
 {

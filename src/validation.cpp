@@ -151,6 +151,38 @@ namespace {
      */
     bool fCheckForPruning = false;
 
+    /**
+     * Every received block is assigned a unique and increasing identifier, so we
+     * know which one to give priority in case of a fork.
+     */
+    CCriticalSection cs_nBlockSequenceId;
+    /** Blocks loaded from disk are assigned id 0, so start the counter at 1. */
+    int32_t nBlockSequenceId = 1;
+    /** Decreasing counter (used by subsequent preciousblock calls). */
+    int32_t nBlockReverseSequenceId = -1;
+    /** chainwork for the last block that preciousblock has been applied to. */
+    arith_uint256 nLastPreciousChainwork = 0;
+
+    /** In order to efficiently track invalidity of headers, we keep the set of
+      * blocks which we tried to connect and found to be invalid here (ie which
+      * were set to BLOCK_FAILED_VALID since the last restart). We can then
+      * walk this set and check if a new header is a descendant of something in
+      * this set, preventing us from having to walk mapBlockIndex when we try
+      * to connect a bad block and fail.
+      *
+      * While this is more complicated than marking everything which descends
+      * from an invalid block as invalid at the time we discover it to be
+      * invalid, doing so would require walking all of mapBlockIndex to find all
+      * descendants. Since this case should be very rare, keeping track of all
+      * BLOCK_FAILED_VALID blocks in a set should be just fine and work just as
+      * well.
+      *
+      * Because we already walk mapBlockIndex in height-order at startup, we go
+      * ahead and mark descendants of invalid blocks as FAILED_CHILD at that time,
+      * instead of putting things in this set.
+      */
+    std::set<CBlockIndex*> g_failed_blocks;
+
     /** Dirty block index entries. */
     std::set<CBlockIndex*> setDirtyBlockIndex;
 
@@ -802,6 +834,9 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         if (pool.existsProviderTxConflict(tx))
             return state.Invalid(ValidationInvalidReason::TX_MEMPOOL_POLICY, false, REJECT_DUPLICATE, "protx-dup");
 
+        // If we aren't going to actually accept it but just were verifying it, we are fine already
+        if(test_accept) return true;
+
         constexpr unsigned int scriptVerifyFlags = STANDARD_SCRIPT_VERIFY_FLAGS;
 
         // Check against previous transactions
@@ -879,7 +914,8 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         }
     }
 
-    GetMainSignals().TransactionAddedToMempool(ptx);
+    if (!test_accept)
+       GetMainSignals().TransactionAddedToMempool(ptx);
 
     return true;
 }
@@ -1005,13 +1041,7 @@ bool ReadBlockFromDisk(CBlock& block, const FlatFilePos& pos, const Consensus::P
 
 bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus::Params& consensusParams)
 {
-    FlatFilePos blockPos;
-    {
-        LOCK(cs_main);
-        blockPos = pindex->GetBlockPos();
-    }
-
-    if (!ReadBlockFromDisk(block, blockPos, consensusParams))
+    if (!ReadBlockFromDisk(block, pindex->GetBlockPos(), consensusParams))
         return false;
     if (block.GetHash() != pindex->GetBlockHash())
         return error("ReadBlockFromDisk(CBlock&, CBlockIndex*): GetHash() doesn't match index for %s at %s",
@@ -1178,7 +1208,7 @@ static void CheckForkWarningConditions() EXCLUSIVE_LOCKS_REQUIRED(cs_main)
     if (::ChainstateActive().IsInitialBlockDownload())
         return;
 
-    // If our best fork is no longer within 72 blocks (+/- 12 hours if no one mines it)
+    // If our best fork is no longer within 72 blocks (+/- 3 hours if no one mines it)
     // of our head, drop it
     if (pindexBestForkTip && ::ChainActive().Height() - pindexBestForkTip->nHeight >= 72)
         pindexBestForkTip = nullptr;
@@ -1187,20 +1217,27 @@ static void CheckForkWarningConditions() EXCLUSIVE_LOCKS_REQUIRED(cs_main)
     {
         if (!GetfLargeWorkForkFound() && pindexBestForkBase)
         {
-            std::string warning = std::string("'Warning: Large-work fork detected, forking after block ") +
-                pindexBestForkBase->phashBlock->ToString() + std::string("'");
-            AlertNotify(warning);
+            if(pindexBestForkBase->phashBlock){
+                std::string warning = std::string("'Warning: Large-work fork detected, forking after block ") +
+                    pindexBestForkBase->phashBlock->ToString() + std::string("'");
+                AlertNotify(warning);
+            }
         }
         if (pindexBestForkTip && pindexBestForkBase)
         {
-            LogPrintf("%s: Warning: Large valid fork found\n  forking the chain at height %d (%s)\n  lasting to height %d (%s).\nChain state database corruption likely.\n", __func__,
-                   pindexBestForkBase->nHeight, pindexBestForkBase->phashBlock->ToString(),
-                   pindexBestForkTip->nHeight, pindexBestForkTip->phashBlock->ToString());
-            SetfLargeWorkForkFound(true);
+            if(pindexBestForkBase->phashBlock){
+                LogPrintf("%s: Warning: Large valid fork found\n  forking the chain at height %d (%s)\n  lasting to height %d (%s).\nChain state database corruption likely.\n", __func__,
+                       pindexBestForkBase->nHeight, pindexBestForkBase->phashBlock->ToString(),
+                       pindexBestForkTip->nHeight, pindexBestForkTip->phashBlock->ToString());
+                SetfLargeWorkForkFound(true);
+            }
         }
         else
         {
-            LogPrintf("%s: Warning: Found invalid chain at least ~6 blocks longer than our best chain.\nChain state database corruption likely.\n", __func__);
+            if(pindexBestInvalid->nHeight > ::ChainActive().Height() + 6)
+                LogPrintf("%s: Warning: Found invalid chain at least ~6 blocks longer than our best chain.\nChain state database corruption likely.\n", __func__);
+            else
+                LogPrintf("%s: Warning: Found invalid chain which has higher work (at least ~6 blocks worth of work) than our best chain.\nChain state database corruption likely.\n", __func__);
             SetfLargeWorkInvalidChainFound(true);
         }
     }
@@ -4681,6 +4718,7 @@ void UnloadBlockIndex()
     mempool.clear();
     vinfoBlockFile.clear();
     nLastBlockFile = 0;
+    nBlockSequenceId = 1;
     setDirtyBlockIndex.clear();
     setDirtyFileInfo.clear();
     versionbitscache.Clear();

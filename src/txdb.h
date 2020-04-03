@@ -18,6 +18,7 @@
 #include <vector>
 
 class CBlockIndex;
+class CDiskTxPos;
 class CCoinsViewDBCursor;
 class uint256;
 
@@ -94,7 +95,14 @@ public:
     bool ReadBlockFileInfo(int nFile, CBlockFileInfo &info);
     bool ReadLastBlockFile(int &nFile);
     bool WriteReindexing(bool fReindexing);
-    void ReadReindexing(bool &fReindexing);
+
+    bool ReadTxIndex(const uint256 &txid, CDiskTxPos &pos);
+    bool ReadReindexing(bool &fReindexing);
+    bool HasTxIndex(const uint256& txid);
+    bool WriteTxIndex(const std::vector<std::pair<uint256, CDiskTxPos> >&vect);
+    bool ReadTxPos(const uint256 &txid, CDiskTxPos& pos) const;
+    bool FindTx(const uint256& tx_hash, uint256& block_hash, CTransactionRef& tx) const;
+
     bool WriteFlag(const std::string &name, bool fValue);
     bool ReadFlag(const std::string &name, bool &fValue);
     bool LoadBlockIndexGuts(const Consensus::Params& consensusParams, std::function<CBlockIndex*(const uint256&)> insertBlockIndex);
