@@ -2201,6 +2201,17 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         return true;
     }
 
+    //! GETDATA flood protection
+    if (GetAdjustedTime() - pfrom->getDataTimer > 60) {
+        if (!::ChainstateActive().IsInitialBlockDownload()) {
+            if (pfrom->getDataInPastMinute > 60) {
+                Misbehaving(pfrom->GetId(), 50);
+                LogPrintf("%s - GETDATA counter: %d/req in past minute\n", __func__, pfrom->getDataInPastMinute);
+            }
+        }
+        pfrom->getDataInPastMinute = 0;
+        pfrom->getDataTimer = GetAdjustedTime();
+    }
 
     if (!(pfrom->GetLocalServices() & NODE_BLOOM) &&
               (strCommand == NetMsgType::FILTERLOAD ||
@@ -2643,6 +2654,9 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
     if (strCommand == NetMsgType::GETDATA) {
         std::vector<CInv> vInv;
         vRecv >> vInv;
+
+	pfrom->getDataInPastMinute++;
+
         if (vInv.size() > MAX_INV_SZ)
         {
             LOCK(cs_main);
