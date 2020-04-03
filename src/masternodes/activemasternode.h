@@ -59,7 +59,7 @@ private:
 public:
     virtual void UpdatedBlockTip(const CBlockIndex* pindexNew, const CBlockIndex* pindexFork, bool fInitialDownload);
 
-    void Init();
+    void Init(const CBlockIndex* pindex);
 
     CDeterministicMNCPtr GetDMN() const { return mnListEntry; }
 

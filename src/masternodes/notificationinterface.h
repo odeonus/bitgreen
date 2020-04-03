@@ -20,11 +20,12 @@ public:
 
 protected:
     // CValidationInterface
-    void AcceptedBlockHeader(const CBlockIndex *pindexNew) ;
-    void NotifyHeaderTip(const CBlockIndex *pindexNew, bool fInitialDownload) ;
-    void UpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload) ;
-    void SyncTransaction(const CTransaction &tx, const CBlockIndex *pindex, int posInBlock) ;
-    void NotifyMasternodeListChanged(bool undo, const CDeterministicMNList& oldMNList, const CDeterministicMNListDiff& diff) ;
+    void AcceptedBlockHeader(const CBlockIndex *pindexNew) override;
+    void NotifyHeaderTip(const CBlockIndex *pindexNew, bool fInitialDownload) override;
+    void SynchronousUpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload) override;
+    void UpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload) override;
+    void SyncTransaction(const CTransaction &tx, const CBlockIndex *pindex, int posInBlock) override;
+    void NotifyMasternodeListChanged(bool undo, const CDeterministicMNList& oldMNList, const CDeterministicMNListDiff& diff) override;
     void NotifyChainLock(const CBlockIndex* pindex) ;
 
 private:

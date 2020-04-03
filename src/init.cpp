@@ -795,7 +795,12 @@ static void ThreadImport(std::vector<fs::path> vImportFiles)
 
     if (fMasternodeMode) {
         assert(activeMasternodeManager);
-        activeMasternodeManager->Init();
+        const CBlockIndex* pindexTip;
+        {
+            LOCK(cs_main);
+            pindexTip = ::ChainActive().Tip();
+        }
+        activeMasternodeManager->Init(pindexTip);
     }
 
 #ifdef ENABLE_WALLET

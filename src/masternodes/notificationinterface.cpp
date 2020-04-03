@@ -23,6 +23,7 @@
 void CMNNotificationInterface::InitializeCurrentBlockTip()
 {
     LOCK(cs_main);
+    SynchronousUpdatedBlockTip(::ChainActive().Tip(), nullptr, ::ChainstateActive().IsInitialBlockDownload());
     UpdatedBlockTip(ChainActive().Tip(), nullptr, ::ChainstateActive().IsInitialBlockDownload());
 }
 
@@ -37,12 +38,18 @@ void CMNNotificationInterface::NotifyHeaderTip(const CBlockIndex *pindexNew, boo
     masternodeSync.NotifyHeaderTip(pindexNew, fInitialDownload, connman);
 }
 
-void CMNNotificationInterface::UpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload)
+void CMNNotificationInterface::SynchronousUpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload)
 {
     if (pindexNew == pindexFork) // blocks were disconnected without any new ones
         return;
 
     deterministicMNManager->UpdatedBlockTip(pindexNew);
+}
+
+void CMNNotificationInterface::UpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload)
+{
+    if (pindexNew == pindexFork) // blocks were disconnected without any new ones
+        return;
 
     masternodeSync.UpdatedBlockTip(pindexNew, fInitialDownload, connman);
 

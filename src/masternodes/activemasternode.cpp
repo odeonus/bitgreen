@@ -56,7 +56,7 @@ std::string CActiveMasternodeManager::GetStatus() const
     }
 }
 
-void CActiveMasternodeManager::Init()
+void CActiveMasternodeManager::Init(const CBlockIndex* pindex)
 {
     LOCK(cs_main);
 
@@ -76,7 +76,7 @@ void CActiveMasternodeManager::Init()
         return;
     }
 
-    CDeterministicMNList mnList = deterministicMNManager->GetListAtChainTip();
+    CDeterministicMNList mnList = deterministicMNManager->GetListForBlock(pindex);
 
     CDeterministicMNCPtr dmn = mnList.GetMNByOperatorKey(*activeMasternodeInfo.blsPubKeyOperator);
     // MN not appeared on the chain yet
@@ -142,18 +142,18 @@ void CActiveMasternodeManager::UpdatedBlockTip(const CBlockIndex* pindexNew, con
             activeMasternodeInfo.proTxHash = uint256();
             activeMasternodeInfo.outpoint.SetNull();
             // MN might have reappeared in same block with a new ProTx
-            Init();
+            Init(pindexNew);
         } else if (mnList.GetMN(mnListEntry->proTxHash)->pdmnState->pubKeyOperator != mnListEntry->pdmnState->pubKeyOperator) {
             // MN operator key changed or revoked
             state = MASTERNODE_OPERATOR_KEY_CHANGED;
             activeMasternodeInfo.proTxHash = uint256();
             activeMasternodeInfo.outpoint.SetNull();
             // MN might have reappeared in same block with a new ProTx
-            Init();
+            Init(pindexNew);
         }
     } else {
         // MN might have (re)appeared with a new ProTx or we've found some peers and figured out our local address
-        Init();
+        Init(pindexNew);
     }
 }
 
