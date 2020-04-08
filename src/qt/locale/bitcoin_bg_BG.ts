@@ -66,10 +66,6 @@
         <translation>Тези са вашите Биткойн адреси за изпращане на монети. Винаги проверявайте количеството и получаващия адрес преди изпращане. </translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са вашите Биткойн адреси за получаване на монети. Препоръчително е да ползвате нов адрес на всяка транзакция.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>Копирай адрес</translation>
     </message>
@@ -202,10 +198,6 @@
         <translation>Преглед</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Възел</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Покажи общ преглед на портфейла</translation>
     </message>
@@ -262,24 +254,12 @@
         <translation>Промени паролата...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Адреси за пращане...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Адреси за получаване...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Отвори URI</translation>
     </message>
     <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Повторно индексиране на блоковете на диска...</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>портфейл</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -466,6 +446,12 @@
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -482,6 +468,9 @@
         <source>Error</source>
         <translation>грешка</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -613,9 +602,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -678,7 +664,7 @@
         <source>Wallet</source>
         <translation>портфейл</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -875,6 +861,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -893,21 +882,5 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>Биткойн ядро</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Информация</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Внимание</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>грешка</translation>
-    </message>
-</context>
+    </context>
 </TS>

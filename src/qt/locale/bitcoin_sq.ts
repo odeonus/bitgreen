@@ -58,10 +58,6 @@
         <translation>Këto janë BitGreen adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Këto janë BitGreen adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopjo adresen</translation>
     </message>
@@ -222,20 +218,8 @@
         <translation>&amp;Opsione</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Duke marr adresen</translation>
-    </message>
-    <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portofol</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -380,6 +364,12 @@
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -400,6 +390,9 @@
         <source>Error</source>
         <translation>Problem</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -454,9 +447,6 @@
         <translation>i/e panjohur</translation>
     </message>
 </context>
-<context>
-    <name>QObject::QObject</name>
-    </context>
 <context>
     <name>QRImageWidget</name>
     </context>
@@ -516,7 +506,7 @@
         <source>Wallet</source>
         <translation>Portofol</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -773,6 +763,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -792,14 +785,6 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>Berthama BitGreen</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informacion</translation>
-    </message>
-    <message>
         <source>Insufficient funds</source>
         <translation>Fonde te pamjaftueshme</translation>
     </message>
@@ -807,9 +792,5 @@
         <source>Rescanning...</source>
         <translation>Rikerkim</translation>
     </message>
-    <message>
-        <source>Error</source>
-        <translation>Problem</translation>
-    </message>
-</context>
+    </context>
 </TS>

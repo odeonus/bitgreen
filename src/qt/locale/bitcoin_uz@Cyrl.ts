@@ -86,10 +86,6 @@
         <translation>&amp;Кўриб чиқиш</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Улам</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Ҳамённинг умумий кўринишини кўрсатиш</translation>
     </message>
@@ -134,14 +130,6 @@
         <translation>Махфий сўзни &amp;ўзгартириш...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Жўнатилувчи манзиллар...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Қабул қилувчи манзиллар...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Интернет манзилни очиш</translation>
     </message>
@@ -172,14 +160,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>Хабарни &amp;тасдиқлаш...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Ҳамён</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -404,6 +384,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -444,6 +430,9 @@
         <source>Error</source>
         <translation>Хатолик</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -488,10 +477,6 @@
     <message>
         <source>Size of &amp;database cache</source>
         <translation>&amp;Маълумотлар базаси кеши</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>МБ</translation>
     </message>
     <message>
         <source>Number of script &amp;verification threads</source>
@@ -723,9 +708,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -914,10 +896,6 @@
         <translation>Сўралган тўлов тарихи</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
-        <translation>Тўловни &amp;сўраш</translation>
-    </message>
-    <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
         <translation>Танланган сўровни кўрсатиш (икки марта босилганда ҳам бир хил амал бажарилсин)</translation>
     </message>
@@ -952,7 +930,7 @@
         <source>Wallet</source>
         <translation>Ҳамён</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     </context>
@@ -1161,6 +1139,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1171,18 +1152,6 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Маълумот</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Диққат</translation>
-    </message>
     <message>
         <source>Insufficient funds</source>
         <translation>Кам миқдор</translation>
@@ -1202,10 +1171,6 @@
     <message>
         <source>Done loading</source>
         <translation>Юклаш тайёр</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Хатолик</translation>
     </message>
 </context>
 </TS>

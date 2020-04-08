@@ -70,10 +70,6 @@
         <translation>비트코인을 보내는 계좌 주소입니다. 코인을 보내기 전에 잔고와 받는 주소를 항상 확인하세요.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>비트코인을 받을 수 있는 계좌 주소입니다. 매 거래마다 새로운 주소 사용을 권장합니다. </translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>계좌 복사(&amp;C)</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>지갑 암호화 승인</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>경고: 만약 암호화 된 지갑의 비밀번호를 잃어버릴 경우, &lt;b&gt;모든 비트코인들을 잃어버릴 수 있습니다&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>지갑 암호화를 허용하시겠습니까?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>지갑 암호화 완료</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>암호화 처리 과정을 끝내기 위해 %1을 종료합니다. 지갑 암호화는 컴퓨터로의 멀웨어 감염으로 인한 비트코인 도난을 완전히 방지할 수 없음을 기억하세요.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>개요(&amp;O)</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>노드</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>지갑의 일반적 개요를 보여줍니다.</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>암호문 변경(&amp;C)...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>보내는 주소(&amp;S)</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>받는 주소(&amp;R)</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>&amp;URI 열기...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>지갑:&lt;br&gt;</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>&lt;br&gt;기본 지갑</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>메시지 확인(&amp;V)...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>비트코인</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>지갑</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>사용할 수 있는 비트코인 명령줄 옵션 목록을 가져오기 위해 %1 도움말 메시지를 표시합니다.</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>&lt;br&gt;기본 지갑</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -808,6 +776,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -898,6 +872,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -943,11 +920,7 @@
         <source>Hide</source>
         <translation>숨기기</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>알수없음. 헤더 동기화중 (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -994,10 +967,6 @@
         <translation>데이터베이스 캐시 크기(&amp;D)</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>메가바이트</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>스크립트 인증 쓰레드의 개수(&amp;V)</translation>
     </message>
@@ -1028,10 +997,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>서드-파티 URLs (예. 블록 탐색기)는 거래 탭의 컨텍스트 메뉴에 나타납니다. URL의 %s는 거래 해시값으로 대체됩니다. 여러 URLs는 수직 바 | 에서 나누어 집니다.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>명령줄 옵션 활성화는 위의 옵션들을 대체합니다:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1535,25 +1500,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>%1 명령 파싱 실패 </translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>에러: 지정한 데이터 폴더 "%1"은 존재하지 않습니다.</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>에러: 구성 파일 %1을 파싱할 수 없습니다</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>에러: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1695,6 +1641,70 @@
         <translation>동기화된 블록</translation>
     </message>
     <message>
+        <source>&amp;Wallet Repair</source>
+        <translation>&amp;지갑 복구</translation>
+    </message>
+    <message>
+        <source>Wallet repair options.</source>
+        <translation>지갑 복구 옵션.</translation>
+    </message>
+    <message>
+        <source>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</source>
+        <translation>아래 버튼들은 지갑을 고치기 위한 명령어 옵션들로 실행시 지갑을 재시작합니다, 손상된 블록체인 파일 또는 누락되었거나 오래된 트랜잭션들에 대한 문제를 해결합니다.</translation>
+    </message>
+    <message>
+        <source>Wallet In Use:</source>
+        <translation>사용중인 지갑:</translation>
+    </message>
+    <message>
+        <source>Salvage wallet</source>
+        <translation>지갑 복구</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
+        <translation>손상된 wallet.dat로 부터 개인키 복구 시도</translation>
+    </message>
+    <message>
+        <source>Rescan blockchain files</source>
+        <translation>블록체인 파일 재스캔</translation>
+    </message>
+    <message>
+        <source>Rescan the block chain for missing wallet transactions.</source>
+        <translation>거래내역 복구를 위한 블록체인 재검색</translation>
+    </message>
+    <message>
+        <source>Recover transactions 1</source>
+        <translation>트랜잭션 복구 1</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
+        <translation>블록체인에서 거래내역 복구 (메타 데이터 저장 예: 사용자 주소)</translation>
+    </message>
+    <message>
+        <source>Recover transactions 2</source>
+        <translation>트랜잭션 복구 2</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (drop meta-data).</source>
+        <translation>블록체인에서 거래내역 복구 (메타 데이터 삭제)</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet format</source>
+        <translation>지갑 구성 업그레이드</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</source>
+        <translation>시작시 지갑을 최신 포맷으로 업그레이드 (참고 : 지갑 자체의 업데이트 아님!)</translation>
+    </message>
+    <message>
+        <source>Rebuild index</source>
+        <translation>색인 재구축</translation>
+    </message>
+    <message>
+        <source>Rebuild block chain index from current blk000??.dat files.</source>
+        <translation>현재 blk000??.dat 파일의 블록체인 인덱스를 다시 구축합니다</translation>
+    </message>
+    <message>
         <source>User Agent</source>
         <translation>유저 에이전트</translation>
     </message>
@@ -1815,10 +1825,6 @@
         <translation>노드 추방 취소(&amp;U)</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>&lt;br&gt;기본 지갑</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>%1 RPC 콘솔에 오신걸 환영합니다</translation>
     </message>
@@ -1922,20 +1928,8 @@
         <translation>지우기</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>Bech32 주소 (BIP-173)는 더 적은 수수료와 오입금으로부터 방지해 줍니다. Bech32가 비활성화 되어있으면 P2SH 기반의 세그윗 주소가 대신 생성됩니다.</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Bech32 세그윗 주소 생성</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>지출기록 확인</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>지불 요청(&amp;R)</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2019,14 +2013,6 @@
     <message>
         <source>Wallet</source>
         <translation>지갑</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI 결과가 너무 길음, 라벨/메세지의 글을 줄이도록 하세요.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>URI를 QR 코드로 인코딩하는 중 오류가 발생했습니다.</translation>
     </message>
 </context>
 <context>
@@ -2151,14 +2137,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>숨기기</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>블록의 용량보다 거래의 용량이 작은 경우에는 최소한의 수수료만으로도 충분합니다. 그러나 비트코인 네트워크의 처리량보다 더 많은 거래 요구는 영원히 검증이 안 될 수도 있습니다.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(툴팁을 꼭 읽어보세요)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>권장:</translation>
     </message>
@@ -2260,14 +2238,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>또는</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>추후에 거래 수수료를 올릴 수 있습니다 (Replace-By-Fee, BIP-125 지원)</translation>
-    </message>
-    <message>
-        <source>from wallet %1</source>
-        <translation>%1 지갑에서</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>거래를 재검토 하십시오</translation>
     </message>
@@ -2322,10 +2292,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Payment request expired.</source>
         <translation>지불 요청이 만료됨.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>오직 %1 만의 수수료를 지불하기</translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
@@ -3062,6 +3028,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3110,7 +3079,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <source>Could not commit transaction</source>
         <translation>거래를 커밋 할 수 없습니다.</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3179,10 +3148,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>HTTP 서버를 시작할 수 없습니다. 자세한 사항은 디버그 로그를 확인 하세요.</translation>
-    </message>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>비트코인 코어</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3301,10 +3266,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>블록 데이터베이스를 여는데 오류</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>오류: 디스크 공간이 부족합니다!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>어떤 포트도 반응하지 않습니다. 사용자 반응=0 만약 원한다면</translation>
     </message>
@@ -3389,18 +3350,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>키값 생성 불가</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>지원하지 않는 인수 -benchmark 은 무시됩니다, -debug=bench 형태로 사용하세요.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>지원하지 않는 인수 -debugnet 은 무시됩니다, -debug=net 형태로 사용하세요.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>지원하지 않는 인수 -tor를 찾았습니다. -onion를 사용해주세요.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>지원되지 않는 로깅 카테고리 %s = %s.</translation>
     </message>
@@ -3437,20 +3386,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>축소 모드를 해제하고 데이터베이스를 재구성 하기 위해 -reindex를 사용해야 합니다. 이 명령은 모든 블록체인을 다시 다운로드 할 것 입니다.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>%s 불러오기 오류: 이미 HD 지갑이 존재하는 상태에서 HD 지갑을 비활성화 할 수 없습니다</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>블록 데이터베이스를 불러오는데 오류가 발생하였습니다, 종료됩니다.</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>체인 상태 데이터베이스 업그레이드 중 오류가 발생했습니다.</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>정보</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3505,10 +3446,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>거래액이 너무 적습니다</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>수수료 정책에 비해 거래가 너무 큽니다</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>너무 큰 거래</translation>
     </message>
@@ -3519,14 +3456,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>지갑(들) 검증중...</translation>
-    </message>
-    <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>지갑 %s는 데이터 디렉토리 %s 밖에 위치합니다.</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>경고</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -3541,10 +3470,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>-maxtxfee값이 너무 큽니다!  하나의 거래에 너무 큰 수수료가 지불 됩니다.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>%s 불러오기 오류: 비-HD 지갑이 존재하는 상태에서 HD 지갑을 활성화 할 수 없습니다</translation>
-    </message>
-    <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
         <translation>이것은 수수료 견적을 이용할 수 없을 때 지불 할 수 있는 거래 수수료입니다.</translation>
     </message>
@@ -3557,18 +3482,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>네트워크 버전 문자 (%i)의 길이가 최대길이 (%i)를 초과합니다. UA코멘트의 갯수나 길이를 줄이세요.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>지원하지 않는 인수 -socks를 찾았습니다. 설정된 SOCKS의 버전은 더이상 사용할 수 없으며, SOCK5 프록시만을 지원합니다.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>지원하지 않는 인수 -whitelistalwaysrelay 는 무시됩니다,  -whitelistrelay 나 -whitelistforcerelay 를 사용해 주세요.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>경고: 알려지지 않은 버전의 블록이 채굴되었습니다. 알려지지 않은 규칙이 적용되었을 가능성이 있습니다.</translation>
-    </message>
-    <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>경고 : 지갑파일이 손상되어 데이터가 복구되었습니다. 원래의 %s 파일은 %s 후에 %s 이름으로 저장됩니다. 잔액과 거래 내역이 정확하지 않다면 백업 파일로 부터 복원해야 합니다. </translation>
     </message>
@@ -3579,10 +3492,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>지갑 %s 로딩 에러,  중복된 -wallet 파일이름을 입력했습니다.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Keypool이 종료되었습니다. 먼저 keypoolrefill을 호출하십시오.</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3621,10 +3530,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>자금이 부족합니다!</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>거스름돈 주소 생성불가. 이 지갑에서는 개인키가 비활성화 되어 있습니다.</translation>
-    </message>
-    <message>
         <source>Cannot upgrade a non HD split wallet without upgrading to support pre split keypool. Please use -upgradewallet=169900 or -upgradewallet with no version specified.</source>
         <translation>HD split을 하지 않은 지갑은 pre split keypool로 업그레이드 하지 않은 이상 업그레이드가 불가능합니다. -upgradewallet=169900 이나 -upgradewallet (버전을 정하지 않고) 명령을 사용하십시오.</translation>
     </message>
@@ -3659,10 +3564,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Done loading</source>
         <translation>로딩 완료</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>오류</translation>
     </message>
 </context>
 </TS>

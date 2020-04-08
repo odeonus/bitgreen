@@ -576,7 +576,7 @@ void PoSMiner(std::shared_ptr<CWallet> pwallet)
     std::string strMintMessage = _("Info: Minting suspended due to locked wallet.").translated;
     std::string strMintSyncMessage = _("Info: Minting suspended while synchronizing wallet.").translated;
     std::string strMintBlockMessage = _("Info: Minting suspended due to block creation failure.").translated;
-    std::string strMintEmpty = _("").translated;
+    std::string strMintEmpty = "";
     int64_t nSleepTime = (Params().GetConsensus().nPosTargetSpacing / 2) * 1000;
 
     try {

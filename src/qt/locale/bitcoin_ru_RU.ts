@@ -70,10 +70,6 @@
         <translation>Это ваши BitGreen адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши BitGreen адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копировать адрес</translation>
     </message>
@@ -172,20 +168,12 @@
         <translation>Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете ваш кошелек и потеряете ваш пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОЙНЫ&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Вы уверены, что вы хотите зашифровать ваш кошелек?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Кошелек зашифрован</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 закроется сейчас для завершения процесса шифрования. Запомните что шифрование вашего кошелька не сможет полностью защитить ваши биткойны от кражи при помощи вредоносного ПО, заразившего ваш компьютер.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -250,10 +238,6 @@
         <translation>&amp;Обзор</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Узел</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Отобразить главное окно кошелька</translation>
     </message>
@@ -310,24 +294,12 @@
         <translation>&amp;Изменить пароль...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Адреса для отправки...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Адреса для получения...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Открыть &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Кошелек:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>Кошелек по умолчанию</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -376,14 +348,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Проверить сообщение...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Кошелек</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -492,6 +456,10 @@
     <message>
         <source>Up to date</source>
         <translation>Готов</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>Кошелек по умолчанию</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -756,6 +724,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -822,6 +796,9 @@
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -867,11 +844,7 @@
         <source>Hide</source>
         <translation>Спрятать</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Не известно. Синхронизация заголовков (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -904,10 +877,6 @@
     <message>
         <source>Size of &amp;database cache</source>
         <translation>Размер кеша &amp;базы данных</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>МБ</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -1263,17 +1232,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Ошибка: указанная директория данных "%1" не существует.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Ошибка: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1459,10 +1417,6 @@
         <translation>1 &amp;год</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>Кошелек по умолчанию</translation>
-    </message>
-    <message>
         <source>Type %1 for an overview of available commands.</source>
         <translation>Ввести %1 для обзора доступных команд.</translation>
     </message>
@@ -1502,20 +1456,8 @@
         <translation>Отчистить</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>"Родные" segwit адреса (Bech32 или BIP-173) в дальнейшем уменьшат комиссии ваших транзакций и предоставят улучшенную защиту от опечаток, однако старые кошельки не поддерживают эти адреса. Если не выбрано, будет создан совместимый со старыми кошелёк.</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Создать "родной" segwit (Bech32) адрес </translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>История платежных запросов</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Запросить платеж</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -1595,10 +1537,6 @@
     <message>
         <source>Wallet</source>
         <translation>Кошелек</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Ошибка преобразования URI в QR-код.</translation>
     </message>
 </context>
 <context>
@@ -2185,6 +2123,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -2221,7 +2162,7 @@
         <source>Could not commit transaction</source>
         <translation>Не удалось выполнить транзакцию</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -2268,10 +2209,6 @@
         <translation>Невозможно запустить HTTP-сервер. Для получения более детальной информации необходимо обратиться к журналу отладки.</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
         <source>The %s developers</source>
         <translation>Разработчики %s</translation>
     </message>
@@ -2296,10 +2233,6 @@
         <translation>Ошибка загрузки %s: кошелек требует более поздней версии %s</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Ошибка: место на диске заканчивается!</translation>
-    </message>
-    <message>
         <source>Importing...</source>
         <translation>Выполняется импорт...</translation>
     </message>
@@ -2320,24 +2253,12 @@
         <translation>Не удалось рассчитать комиссию и сдачу для транзакции </translation>
     </message>
     <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Неподдерживаемый аргумент -debugnet пропущен, необходимо использовать -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Обнаружен неподдерживаемый аргумент -tor, необходимо использовать -onion.</translation>
-    </message>
-    <message>
         <source>Verifying blocks...</source>
         <translation>Проверка блоков...</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Ошибка чтения с базы данных, выполняется закрытие.</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Информация</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -2350,10 +2271,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>Транзакция слишком большая</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Предупреждение</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -2398,10 +2315,6 @@
     <message>
         <source>Done loading</source>
         <translation>Загрузка завершена</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Ошибка</translation>
     </message>
 </context>
 </TS>

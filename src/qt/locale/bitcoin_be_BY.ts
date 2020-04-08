@@ -70,10 +70,6 @@
         <translation>Тут знаходзяцца Біткойн-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Тут знаходзяцца Біткойн-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>Капіяваць адрас</translation>
     </message>
@@ -172,10 +168,6 @@
         <translation>Пацвердзіце шыфраванне гаманца</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Увага: калі вы зашыфруеце свой гаманец і страціце парольную фразу, то &lt;b&gt;СТРАЦІЦЕ ЎСЕ СВАЕ БІТКОЙНЫ&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ці ўпэўненыя вы, што жадаеце зашыфраваць свой гаманец?</translation>
     </message>
@@ -238,10 +230,6 @@
         <translation>Агляд</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Вузел</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Паказвае агульныя звесткі аб гаманцы</translation>
     </message>
@@ -286,14 +274,6 @@
         <translation>&amp;Change Passphrase...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Адрасы дасылання...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Адрасы прымання...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Адчыниць &amp;URI...</translation>
     </message>
@@ -324,14 +304,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>Праверыць паведамленне...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>Біткойн</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Гаманец</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -642,6 +614,12 @@
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>(%1-bit)</source>
@@ -668,6 +646,9 @@
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -686,10 +667,6 @@
     <message>
         <source>Options</source>
         <translation>Опцыі</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>Мб</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -728,9 +705,6 @@
         <translation>невядома</translation>
     </message>
 </context>
-<context>
-    <name>QObject::QObject</name>
-    </context>
 <context>
     <name>QRImageWidget</name>
     </context>
@@ -790,7 +764,7 @@
         <source>Wallet</source>
         <translation>Гаманец</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1203,6 +1177,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1226,10 +1203,6 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
         <source>Do you want to rebuild the block database now?</source>
         <translation>Ці жадаеце вы перабудаваць зараз базу звестак блокаў?</translation>
     </message>
@@ -1250,10 +1223,6 @@
         <translation>Памылка адчынення базы звестак блокаў</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Памылка: Замала вольнага месца на дыску!</translation>
-    </message>
-    <message>
         <source>Importing...</source>
         <translation>Імпартаванне...</translation>
     </message>
@@ -1264,10 +1233,6 @@
     <message>
         <source>Verifying blocks...</source>
         <translation>Праверка блокаў...</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Інфармацыя</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -1284,10 +1249,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>Транзакцыя занадта вялікая</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Увага</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -1312,10 +1273,6 @@
     <message>
         <source>Done loading</source>
         <translation>Загрузка выканана</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Памылка</translation>
     </message>
 </context>
 </TS>

@@ -70,10 +70,6 @@
         <translation>Tai yra jūsų BitGreen adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas. </translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tai yra Jūsų BitGreen adresai įeinantiems mokėjimams. Kiekvienam mokėjimui rekomenduojama naudoti naują adresą. </translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopijuoti adresą</translation>
     </message>
@@ -176,10 +172,6 @@
         <translation>Patvirtinkite piniginės užšifravimą</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO BITCOINUS&lt;/b&gt;! </translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ar tikrai norite šifruoti savo piniginę?</translation>
     </message>
@@ -246,10 +238,6 @@
         <translation>&amp;Apžvalga</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Taškas</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Rodyti piniginės bendrą apžvalgą</translation>
     </message>
@@ -306,24 +294,12 @@
         <translation>&amp;Keisti slaptafrazę...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Siunčiami adresai...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Gaunami adresai...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Atidaryti &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Piniginė</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>numatyta piniginė</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -368,14 +344,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Tikrinti žinutę...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Piniginė</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -452,6 +420,10 @@
     <message>
         <source>Up to date</source>
         <translation>Atnaujinta</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>numatyta piniginė</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -640,6 +612,12 @@
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -670,6 +648,9 @@
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -692,10 +673,6 @@
     <message>
         <source>&amp;Main</source>
         <translation>&amp;Pagrindinės</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -895,9 +872,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -979,10 +953,6 @@
         <translation>Išvalyti konsolę</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>numatyta piniginė</translation>
-    </message>
-    <message>
         <source>never</source>
         <translation>Niekada</translation>
     </message>
@@ -1044,7 +1014,7 @@
         <source>Wallet</source>
         <translation>Piniginė</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1309,6 +1279,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1320,24 +1293,12 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen branduolys</translation>
-    </message>
-    <message>
         <source>Error opening block database</source>
         <translation>Klaida atveriant blokų duombazę</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
         <translation>Tikrinami blokai...</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informacija</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Įspėjimas</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -1358,10 +1319,6 @@
     <message>
         <source>Done loading</source>
         <translation>Įkėlimas baigtas</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Klaida</translation>
     </message>
 </context>
 </TS>
