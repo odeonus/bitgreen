@@ -207,51 +207,27 @@ bool ComputeNextStakeModifier(const CBlockIndex* pindexCurrent, uint64_t &nStake
     return true;
 }
 
-// V0.3: Stake modifier used to hash for a stake kernel is chosen as the stake
-// modifier about a selection interval later than the coin generating the kernel
 static bool GetKernelStakeModifierV03(CBlockIndex* pindexPrev, uint256 hashBlockFrom, uint64_t& nStakeModifier, int& nStakeModifierHeight, int64_t& nStakeModifierTime, bool fPrintProofOfStake)
 {
-    const Consensus::Params& params = Params().GetConsensus();
     nStakeModifier = 0;
     if (!::BlockIndex().count(hashBlockFrom))
         return error("GetKernelStakeModifier() : block not indexed");
+
     const CBlockIndex* pindexFrom = ::BlockIndex()[hashBlockFrom];
     nStakeModifierHeight = pindexFrom->nHeight;
     nStakeModifierTime = pindexFrom->GetBlockTime();
     int64_t nStakeModifierSelectionInterval = GetStakeModifierSelectionInterval();
-
-    // we need to iterate index forward but we cannot depend on ChainActive().Next()
-    // because there is no guarantee that we are checking blocks in active chain.
-    // So, we construct a temporary chain that we will iterate over.
-    // pindexFrom - this block contains coins that are used to generate PoS
-    // pindexPrev - this is a block that is previous to PoS block that we are checking, you can think of it as tip of our chain
-    std::vector<CBlockIndex*> tmpChain;
-    int32_t nDepth = pindexPrev->nHeight - (pindexFrom->nHeight-1); // -1 is used to also include pindexFrom
-    tmpChain.reserve(nDepth);
-    CBlockIndex* it = pindexPrev;
-    for (int i=1; i<=nDepth && !ChainActive().Contains(it); i++) {
-        tmpChain.push_back(it);
-        it = it->pprev;
-    }
-    std::reverse(tmpChain.begin(), tmpChain.end());
-    size_t n = 0;
-
     const CBlockIndex* pindex = pindexFrom;
+    CBlockIndex* pindexNext = ::ChainActive()[pindexFrom->nHeight + 1];
+
     // loop to find the stake modifier later by a selection interval
-    while (nStakeModifierTime < pindexFrom->GetBlockTime() + nStakeModifierSelectionInterval)
-    {
-        const CBlockIndex* old_pindex = pindex;
-        pindex = (!tmpChain.empty() && pindex->nHeight >= tmpChain[0]->nHeight - 1)? tmpChain[n++] : ChainActive().Next(pindex);
-        if (n > tmpChain.size() || pindex == nullptr) // check if tmpChain[n+1] exists
-        {   // reached best block; may happen if node is behind on block chain
-            if (fPrintProofOfStake || (old_pindex->GetBlockTime() + params.nStakeMinAge - nStakeModifierSelectionInterval > GetAdjustedTime()))
-                return error("GetKernelStakeModifier() : reached best block %s at height %d from block %s",
-                    old_pindex->GetBlockHash().ToString(), old_pindex->nHeight, hashBlockFrom.ToString());
-            else
-                return false;
+    while (nStakeModifierTime < pindexFrom->GetBlockTime() + nStakeModifierSelectionInterval) {
+        while (!pindexNext) {
+            return false;
         }
-        if (pindex->GeneratedStakeModifier())
-        {
+        pindex = pindexNext;
+        pindexNext = ::ChainActive()[pindexNext->nHeight + 1];
+        if (pindex->GeneratedStakeModifier()) {
             nStakeModifierHeight = pindex->nHeight;
             nStakeModifierTime = pindex->GetBlockTime();
         }

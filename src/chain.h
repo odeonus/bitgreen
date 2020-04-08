@@ -289,7 +289,7 @@ public:
         SetNull();
     }
 
-    explicit CBlockIndex(const CBlockHeader& block)
+    explicit CBlockIndex(const CBlock& block)
     {
         SetNull();
 

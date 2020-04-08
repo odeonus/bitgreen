@@ -1848,6 +1848,7 @@ bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlo
     pindex->nFlags           = nFlagsBackup;
     pindex->nStakeModifier   = nStakeModifierBackup;
     pindex->hashProofOfStake = hashProofOfStakeBackup;
+    pindex->SetStakeModifier(nStakeModifier, fGeneratedStakeModifier);
     // compute nStakeModifierChecksum end
 
     if (!CheckStakeModifierCheckpoints(pindex->nHeight, nStakeModifierChecksum))
