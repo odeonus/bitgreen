@@ -66,10 +66,6 @@
         <translation>ये भुगतान भेजने के लिए ये आपके बिटकॉइन पते हैं। हमेशा सिक्के भेजने से पहले राशि और प्राप्तकर्ता पते की जांच करें।</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>भुगतान प्राप्त करने के लिए ये आपके बीटकोइन पते हैं प्रत्येक लेनदेन के लिए एक नया प्राप्त पता उपयोग करने की सिफारिश की जाती है।</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;पता कॉपी करें </translation>
     </message>
@@ -183,14 +179,6 @@
         <translation>पहचान शब्द/अक्षर जो वॉलेट एनक्रिपशन के लिए इस्तेमाल किया है उसे बदलिए!</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>बीटकोइन</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>वॉलेट</translation>
-    </message>
-    <message>
         <source>&amp;File</source>
         <translation>&amp;फाइल</translation>
     </message>
@@ -285,6 +273,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -301,6 +295,9 @@
         <source>Error</source>
         <translation>भूल</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -365,9 +362,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -411,7 +405,7 @@
         <source>Wallet</source>
         <translation>वॉलेट</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -560,6 +554,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -583,14 +580,6 @@
         <translation>ब्लॉक्स जाँचे जा रहा है...</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>जानकारी</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>चेतावनी</translation>
-    </message>
-    <message>
         <source>Loading block index...</source>
         <translation>ब्लॉक इंडेक्स आ रहा है...</translation>
     </message>
@@ -605,10 +594,6 @@
     <message>
         <source>Done loading</source>
         <translation>लोड हो गया|</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>भूल</translation>
     </message>
 </context>
 </TS>

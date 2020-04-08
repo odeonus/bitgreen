@@ -70,10 +70,6 @@
         <translation>Nämä ovat BitGreen-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat BitGreen vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopioi osoite</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI BITCOINISI&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että haluat salata lompakkosi?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Lompakko salattiin</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Yleisnäkymä</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Solmu</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Lompakon tilanteen yleiskatsaus</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>&amp;Vaihda Tunnuslause...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Lähetysosoitteet...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Vastaanotto-osoitteet...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Avaa &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Lompakko:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>oletuslompakko</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>Varmista &amp;viesti...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Lompakko</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista BitGreenin komentorivivalinnoista</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>oletuslompakko</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -802,6 +770,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -892,6 +866,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -937,11 +914,7 @@
         <source>Hide</source>
         <translation>Piilota</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Tuntematon. Synkronoidaan tunnisteita (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -988,10 +961,6 @@
         <translation>&amp;Tietokannan välimuistin koko</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Säikeiden määrä skriptien &amp;varmistuksessa</translation>
     </message>
@@ -1022,10 +991,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Ulkopuoliset URL-osoitteet (esim. block explorer,) jotka esiintyvät siirrot-välilehdellä valikossa. %s URL-osoitteessa korvataan siirtotunnuksella. Useampi URL-osoite on eroteltu pystyviivalla |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktiiviset komentorivivalinnat jotka ohittavat ylläolevat valinnat:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1501,25 +1466,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>Virhe käsitellessä komentorivin valintaa: %1.</translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Virhe: Annettua data-hakemistoa "%1" ei ole olemassa.</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>Virhe: Asetustiedostoa ei voida käsitellä: %1.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Virhe: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1653,6 +1599,34 @@
         <translation>Synkronoidut lohkot</translation>
     </message>
     <message>
+        <source>&amp;Wallet Repair</source>
+        <translation>&amp;Lompakon korjaus</translation>
+    </message>
+    <message>
+        <source>Wallet repair options.</source>
+        <translation>Lompakon korjausvaihtoehdot.</translation>
+    </message>
+    <message>
+        <source>Wallet In Use:</source>
+        <translation>Käytössä oleva lompakko:</translation>
+    </message>
+    <message>
+        <source>Salvage wallet</source>
+        <translation>Pelasta lompakko</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
+        <translation>Yritä pelastaa yksityisavaimet korruptoituneesa wallet.dat tiedostosta.</translation>
+    </message>
+    <message>
+        <source>Rescan blockchain files</source>
+        <translation>Uudelleenskannaa blockchain tiedostot.</translation>
+    </message>
+    <message>
+        <source>Rescan the block chain for missing wallet transactions.</source>
+        <translation>Uudelleenskannaa blockchain puuttuvista rahansiirroista.</translation>
+    </message>
+    <message>
         <source>User Agent</source>
         <translation>Käyttöliittymä</translation>
     </message>
@@ -1773,10 +1747,6 @@
         <translation>&amp;Poista esto</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>oletuslompakko</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Tervetuloa %1 RPC-konsoliin.</translation>
     </message>
@@ -1868,16 +1838,8 @@
         <translation>Tyhjennä</translation>
     </message>
     <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Luo natiivi segwit (Bech32) -osoite</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>Pyydettyjen maksujen historia</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Vastaanota maksu</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -1961,14 +1923,6 @@
     <message>
         <source>Wallet</source>
         <translation>Lompakko</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Tuloksen URI on liian pitkä, yritä lyhentää otsikon tai viestin tekstiä.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Virhe käännettäessä URI:a QR-koodiksi.</translation>
     </message>
 </context>
 <context>
@@ -2085,14 +2039,6 @@
         <translation>Piilota</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Vähimmäispalkkion maksaminen käy hyvin, kunhan verkossa on vähemmän siirtotapahtumia kuin lohkoissa on tilaa. Huomaa, että tämä saattaa johtaa ei-koskaan-vahvistuvaan siirtoon, jos verkon käsittelykyky ylittyy.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(lue työkaluvinkki)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Suositeltu:</translation>
     </message>
@@ -2193,10 +2139,6 @@
         <translation>tai</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>Voit korottaa palkkiota myöhemmin (osoittaa Replace-By-Fee:tä, BIP-125).</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>Tarkistathan siirtosi.</translation>
     </message>
@@ -2243,10 +2185,6 @@
     <message>
         <source>Payment request expired.</source>
         <translation>Maksupyyntö vanhentui.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Maksa vain vaadittu kulu %1 </translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
@@ -2971,6 +2909,9 @@
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3019,7 +2960,7 @@
         <source>Could not commit transaction</source>
         <translation>Siirtoa ei voitu tehdä</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3088,10 +3029,6 @@
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
-    </message>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3166,10 +3103,6 @@
         <translation>Haluatko uudelleenrakentaa lohkotietokannan nyt?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Virhe luodessa %s: Et voi luoda ei-HD lompakkoja tällä versiolla.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Virhe alustaessa lohkotietokantaa</translation>
     </message>
@@ -3196,10 +3129,6 @@
     <message>
         <source>Error opening block database</source>
         <translation>Virhe avattaessa lohkoindeksiä</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Varoitus: Levytila on vähissä!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -3282,18 +3211,6 @@
         <translation>Avaimia ei voitu luoda</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Argumenttia -benchmark ei tueta, käytä -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argumenttia -debugnet ei tueta, käytä -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Argumenttia -tor ei tueta, käytä -onion.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>Lokikategoriaa %s=%s ei tueta.</translation>
     </message>
@@ -3322,20 +3239,12 @@
         <translation>Palataksesi karsimattomaan tilaan joudut uudelleenrakentamaan tietokannan -reindex -valinnalla. Tämä lataa koko lohkoketjun uudestaan.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Virhe ladattaessa %s: Et voi poistaa HD-ominaisuutta jo olemassa olevasta HD-lompakosta.</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Virheitä tietokantaa luettaessa, ohjelma pysäytetään.</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>Virhe päivittäessä chainstate-tietokantaa</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Tietoa</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3386,10 +3295,6 @@
         <translation>Siirtosumma liian pieni</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>Rahansiirto on liian suuri maksukulukäytännölle</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Siirtosumma liian iso</translation>
     </message>
@@ -3400,14 +3305,6 @@
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>Varmistetaan lompakko(ja)...</translation>
-    </message>
-    <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>Lompakko %s sijaitsee lompakkohakemiston %s ulkopuolella.</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Varoitus</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -3422,24 +3319,8 @@
         <translation>-maxtxfee on asetettu erittäin suureksi! Tämänkokoisia kuluja saatetaan maksaa yhdessä rahansiirrossa.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Virhe ladattaessa %s: Et voi ottaa HD:ta käyttöön jo olemassa olevalle ei-HD -lompakolle.</translation>
-    </message>
-    <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
         <translation>Tämän siirtomaksun maksat, kun siirtomaksun arviointi ei ole käytettävissä.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Ei tuettu argumentti -socks löytynyt. SOCKS -version asetusta ei enää tueta, ainoastaan SOCKS5 -välityspalvelimet on tuettu.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Argumenttia -whitelistalwaysrelay ei tueta ja se ohitettiin. Käytä -whitelistrelay ja/tai -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Varoitus: Tuntemattomia lohkoversioita louhitaan! Tuntemattomia sääntöjä saattaa olla voimassa</translation>
     </message>
     <message>
         <source>%s is set very high!</source>
@@ -3448,10 +3329,6 @@
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>Virhe ladattaessa lompakkoa %s. -wallet -tiedostonimi esiintyy useaan kertaan.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Avainallas tyhjentyi, ole hyvä ja kutsu keypoolrefill ensin</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3490,10 +3367,6 @@
         <translation>Lompakon saldo ei riitä</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>Vaihtorahaosoitetteen avainta ei voitu luoda. Yksityisavaimet on poistettu käytöstä tässä lompakossa.</translation>
-    </message>
-    <message>
         <source>Fee estimation failed. Fallbackfee is disabled. Wait a few blocks or enable -fallbackfee.</source>
         <translation>Siirtomaksun arviointi epäonnistui. Odota muutama lohko tai käytä -fallbackfee -valintaa..</translation>
     </message>
@@ -3516,10 +3389,6 @@
     <message>
         <source>Done loading</source>
         <translation>Lataus on valmis</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Virhe</translation>
     </message>
 </context>
 </TS>

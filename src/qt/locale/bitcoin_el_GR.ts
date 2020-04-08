@@ -70,10 +70,6 @@
         <translation>Αυτές είναι οι BitGreen διευθύνσεις σας για να στέλνετε πληρωμές. Να ελέγχετε πάντα το ποσό, καθώς και τη διεύθυνση παραλήπτη πριν στείλετε νομίσματα.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Αυτές είναι οι BitGreen διευθύνσεις σας για να λαμβάνετε πληρωμές. Προτείνετε να χρησιμοποιείτε μια νέα διεύθυνση παραλήπτη για κάθε συναλλαγή.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Αντιγραφή Διεύθυνσης</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Επιβεβαίωσε κρυπτογράφηση πορτοφολιού</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Προσόχη! Εάν κρυπτογραφήσεις το πορτοφόλι σου και χάσεις τη φράση αποκατάστασης, θα &lt;b&gt; ΧΑΣΕΙΣ ΟΛΑ ΣΟΥ ΤΑ BITCOIN &lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Είστε σίγουρος/η ότι θέλετε να κρυπτογραφήσετε το πορτοφόλι σας;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Πορτοφόλι κρυπτογραφήθηκε</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 θα κλείσει τώρα για να τελειώσει η διαδικασία κρυπτογράφησης. Να θυμάστε ότι κρυπτογραφόντας το πορτοφόλι σας δεν μπορείτε να προστατεύσετε πλήρως τα bitgreen σας απο κλοπή μέσω malware που μπορεί να προσβάλει τον υπολογιστή σας.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Επισκόπηση</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Κόμβος</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Εμφάνισε τη γενική εικόνα του πορτοφολιού</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>&amp;Άλλαξε Φράση Πρόσβασης</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Διευθύνσεις αποστολής</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Διευθύνσεις λήψης</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>'Ανοιγμα &amp;URI</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Πορτοφόλι</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>Προεπιλεγμένο πορτοφόλι</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -376,14 +348,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Πορτοφόλι</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -484,6 +448,10 @@
     <message>
         <source>Up to date</source>
         <translation>Ενημερωμένο</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>Προεπιλεγμένο πορτοφόλι</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -732,6 +700,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -786,6 +760,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -838,10 +815,6 @@
         <translation>Μέγεθος κρυφής μνήμης βάσης δεδομένων.</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Αριθμός script και γραμμές επαλήθευσης </translation>
     </message>
@@ -856,10 +829,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URLs από τρίτους (π.χ. ένας εξερευνητής μπλοκ) τα οποία εμφανίζονται στην καρτέλα συναλλαγών ως στοιχεία μενού. Το %s στα URL αντικαθίσταται από την τιμή της κατατεμαχισμένης συναλλαγής.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Ενεργές επιλογές γραμμής-εντολών που παρακάμπτουν τις παραπάνω επιλογές:</translation>
     </message>
     <message>
         <source>Open Configuration File</source>
@@ -1191,9 +1160,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -1355,10 +1321,6 @@
         <translation>1 &amp;χρόνος</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>Προεπιλεγμένο πορτοφόλι</translation>
-    </message>
-    <message>
         <source>via %1</source>
         <translation>μέσω %1</translation>
     </message>
@@ -1408,10 +1370,6 @@
     <message>
         <source>Clear</source>
         <translation>Καθαρισμός</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Αίτηση πληρωμής</translation>
     </message>
     <message>
         <source>Show</source>
@@ -1484,7 +1442,7 @@
         <source>Wallet</source>
         <translation>Πορτοφόλι</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1961,6 +1919,9 @@
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1979,10 +1940,6 @@
 </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Εντοπίσθηκε διεφθαρμένη βάση δεδομένων των μπλοκ</translation>
@@ -2008,10 +1965,6 @@
         <translation>Σφάλμα φόρτωσης της βάσης δεδομένων των μπλοκ</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Σφάλμα: Χαμηλός χώρος στο δίσκο!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Αποτυχία παρακολούθησης σε οποιαδήποτε θύρα. Χρησιμοποιήστε -listen=0 αν θέλετε αυτό.</translation>
     </message>
@@ -2032,10 +1985,6 @@
         <translation>Σφάλμα ανάγνωσης από τη βάση δεδομένων, γίνεται τερματισμός.</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>Πληροφορία</translation>
-    </message>
-    <message>
         <source>Signing transaction failed</source>
         <translation>Η υπογραφή συναλλαγής απέτυχε </translation>
     </message>
@@ -2050,10 +1999,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>Η συναλλαγή είναι πολύ μεγάλη</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Προειδοποίηση</translation>
     </message>
     <message>
         <source>Zapping all transactions from wallet...</source>
@@ -2086,10 +2031,6 @@
     <message>
         <source>Done loading</source>
         <translation>Η φόρτωση ολοκληρώθηκε</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Σφάλμα</translation>
     </message>
 </context>
 </TS>

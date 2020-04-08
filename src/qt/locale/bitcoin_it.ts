@@ -70,10 +70,6 @@
         <translation>Questi sono i tuoi indirizzi BitGreen per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare bitgreen.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono i tuoi indirizzi BitGreen per la ricezione di pagamenti. Si raccomanda di usare un nuovo indirizzo di ricezione per ogni transazione.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copia indirizzo</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Conferma la cifratura del portafoglio</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Attenzione: perdendo la passphrase di un portamonete cifrato &lt;b&gt;TUTTI I PROPRI BITCOIN ANDRANNO PERSI&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Cifrare veramente il portafoglio?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Portafoglio cifrato</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 verrà chiuso per completare il processo di cifratura. Ricorda che cifrare il tuo portafoglio non può proteggerlo contro potenziali furti di malware che potrebbero aver infettato il tuo computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Sintesi</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nodo</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Mostra lo stato generale del portamonete</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>&amp;Cambia passphrase...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Indirizzi di invio...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Indirizzi di &amp;ricezione...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Apri &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Portafoglio:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>Portafoglio predefinito:</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verifica messaggio...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portafoglio</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Mostra il messaggio di aiuto di %1 per ottenere una lista di opzioni di comando per BitGreen </translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>Portafoglio predefinito:</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -800,6 +768,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -890,6 +864,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -935,11 +912,7 @@
         <source>Hide</source>
         <translation>Nascondi</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Sconosciuto. Sincronizzazione Headers (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -986,10 +959,6 @@
         <translation>Dimensione della cache del &amp;database.</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Numero di thread di &amp;verifica degli script </translation>
     </message>
@@ -1021,10 +990,6 @@
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URL di terze parti (ad es. un block explorer) che appaiono nella tabella delle transazioni come voci nel menu contestuale. "%s" nell'URL è sostituito dall'hash della transazione.
 Per specificare più URL separarli con una barra verticale "|".</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Opzioni della riga di comando attive che sostituiscono i settaggi sopra elencati:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1528,17 +1493,6 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Errore: La cartella dati "%1" specificata non esiste.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Errore: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1680,6 +1634,78 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Blocchi sincronizzati</translation>
     </message>
     <message>
+        <source>&amp;Wallet Repair</source>
+        <translation>&amp;Riparazione Portafoglio</translation>
+    </message>
+    <message>
+        <source>Delete local Blockchain Folders</source>
+        <translation>Elimina cartelle locali della catena di blocchi</translation>
+    </message>
+    <message>
+        <source>Wallet repair options.</source>
+        <translation>Opzioni di riparazione del portafoglio.</translation>
+    </message>
+    <message>
+        <source>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</source>
+        <translation>I seguenti pulsanti riavvieranno il portafoglio con le opzioni da riga di comando per riparare il portafoglio, risolvere problemi con la catena di blocchi corrotta o transazioni mancanti / obsolete.</translation>
+    </message>
+    <message>
+        <source>Wallet In Use:</source>
+        <translation>Portafoglio in uso:</translation>
+    </message>
+    <message>
+        <source>Salvage wallet</source>
+        <translation>Salvataggio portafoglio</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
+        <translation>Prova a recuperare le chiavi private da un portafoglio corrotto wallet.dat.</translation>
+    </message>
+    <message>
+        <source>Rescan blockchain files</source>
+        <translation>Riscansione dei file della catena dei blocchi</translation>
+    </message>
+    <message>
+        <source>Rescan the block chain for missing wallet transactions.</source>
+        <translation>Riesegui la scansione della catena dei blocchi per transazioni del portafoglio mancanti.</translation>
+    </message>
+    <message>
+        <source>Recover transactions 1</source>
+        <translation>Recupera transazioni 1</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
+        <translation>Recupera le transazioni dalla catena dei blocchi (conserva i metadati, ad esempio il proprietario dell'account).</translation>
+    </message>
+    <message>
+        <source>Recover transactions 2</source>
+        <translation>Recupera transazioni 2</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (drop meta-data).</source>
+        <translation>Recupera le transazioni dalla catena dei blocchi (elimina i metadati).</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet format</source>
+        <translation>Aggiorna il formato del portafoglio</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</source>
+        <translation>Aggiorna il portafoglio all'ultimo formato al prossimo riavvio. (Nota: questo NON è un aggiornamento del programma!)</translation>
+    </message>
+    <message>
+        <source>Rebuild index</source>
+        <translation>Ricostruisci indice</translation>
+    </message>
+    <message>
+        <source>Rebuild block chain index from current blk000??.dat files.</source>
+        <translation>Ricostruisci l'indice della catena dei blocchi a partire dagli attuali file blk000???.dat.</translation>
+    </message>
+    <message>
+        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch.</source>
+        <translation>Elimina tutte le cartelle locali della catena dei blocchi in modo che il portafoglio si sincronizzi da zero.</translation>
+    </message>
+    <message>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
@@ -1800,10 +1826,6 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Elimina Ban</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>Portafoglio predefinito:</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Benvenuto nella console RPC di %1.</translation>
     </message>
@@ -1903,20 +1925,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Cancella</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>Gli indirizzi nativi segwit (noti anche come Bech32 o BIP-173) riducono le spese di transazione e offrono una migliore protezione dagli errori di battitura, ma i vecchi portafogli non li supportano. Se deselezionata, verrà creato un indirizzo compatibile con i portafogli meno recenti.</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Genera indirizzo nativo segwit (Bech32)</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>Cronologia pagamenti richiesti</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Richiedi pagamento</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2000,14 +2010,6 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <message>
         <source>Wallet</source>
         <translation>Portafoglio</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation> L'URI risultante è troppo lungo, prova a ridurre il testo nell'etichetta / messaggio.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation> Errore nella codifica dell'URI nel codice QR.</translation>
     </message>
 </context>
 <context>
@@ -2132,14 +2134,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Nascondi</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Non vi è alcuna controindicazione a pagare la commissione minima, a patto che il volume delle transazioni sia inferiore allo spazio disponibile nei blocchi. Occorre comunque essere consapevoli che ciò potrebbe impedire la conferma delle transazioni nel caso in cui la rete risultasse satura.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(leggi il suggerimento)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Raccomandata:</translation>
     </message>
@@ -2240,10 +2234,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>o</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>Si puo' aumentare la commissione successivamente (segnalando Replace-By-Fee, BIP-125).</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>Per favore, rivedi la tua transazione.</translation>
     </message>
@@ -2298,10 +2288,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <message>
         <source>Payment request expired.</source>
         <translation>Richiesta di pagamento scaduta.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation> Paga solamente la commissione richiesta di %1</translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
@@ -3030,6 +3016,9 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3078,7 +3067,7 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <source>Could not commit transaction</source>
         <translation>Non è stato possibile completare la transazione</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3149,10 +3138,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Impossibile avviare il server HTTP. Dettagli nel log di debug.</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
         <source>The %s developers</source>
         <translation>Sviluppatori di %s</translation>
     </message>
@@ -3167,10 +3152,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Errore lettura %s! Tutte le chiavi sono state lette correttamente, ma i dati delle transazioni o della rubrica potrebbero essere mancanti o non corretti.</translation>
-    </message>
-    <message>
-        <source>Group outputs by address, selecting all or none, instead of selecting on a per-output basis. Privacy is improved as an address is only used once (unless someone sends to it after spending from it), but may result in slightly higher fees as suboptimal coin selection may result due to the added limitation (default: %u)</source>
-        <translation>Raggruppa gli output per indirizzo, selezionando tutti o nessuno, invece di selezionarli in base all'output. La privacy è migliorata in quanto un indirizzo viene usato una sola volta (a meno che qualcuno vi invii denaro dopo che avevate già speso da quell'indirizzo), ma può comportare commissioni leggermente più alte visto che le limitazioni aggiunte possono condurre a una selezione subottimale degli input da spendere (default: %u)</translation>
     </message>
     <message>
         <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
@@ -3241,10 +3222,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Vuoi ricostruire ora il database dei blocchi?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Errore durante la creazione %s: non e' possibile creare portafogli non-HD con questa versione.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Errore durante l'inizializzazione del database dei blocchi</translation>
     </message>
@@ -3271,10 +3248,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <message>
         <source>Error opening block database</source>
         <translation>Errore durante l'apertura del database blocchi</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Errore: la spazio libero sul disco è insufficiente!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -3361,18 +3334,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Impossibile generare le chiavi</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Ignorata opzione -benchmark non supportata, utilizzare -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argomento -debugnet ignorato in quanto non supportato, usare -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Rilevato argomento -tor non supportato, utilizzare -onion.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>Categoria di registrazione non supportata %s=%s.</translation>
     </message>
@@ -3409,20 +3370,12 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Per ritornare alla modalità unpruned sarà necessario ricostruire il database utilizzando l'opzione -reindex. L'intera blockchain sarà riscaricata.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Errore caricamento %s: Non puoi disabilitare HD in un portafoglio HD già esistente</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Errore durante lalettura del database. Arresto in corso.</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>Errore durante l'aggiornamento del database chainstate</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informazioni</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3477,10 +3430,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Importo transazione troppo piccolo</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>Transazione troppo grande in base alla policy sulle commissioni</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Transazione troppo grande</translation>
     </message>
@@ -3497,14 +3446,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Verifica portafoglio/i...</translation>
     </message>
     <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>Il portafoglio %s e' situato fuori dalla directory del portafoglio %s </translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Attenzione</translation>
-    </message>
-    <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
         <translation>Attenzione: nuove regole non conosciute attivate (versionbit %i)</translation>
     </message>
@@ -3515,10 +3456,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>-maxtxfee è impostato molto alto! Commissioni così alte possono venir pagate anche su una singola transazione.</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Errore caricamento %s: Non puoi abilitare HD in un portafoglio non-HD già esistente</translation>
     </message>
     <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -3533,18 +3470,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>La lunghezza totale della stringa di network version (%i) eccede la lunghezza massima (%i). Ridurre il numero o la dimensione di uacomments.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Argomento -socks non supportato. Non è più possibile impostare la versione SOCKS, solamente i proxy SOCKS5 sono supportati.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Argomento non supportato -whitelistalwaysrelay è stato ignorato, utilizzare -whitelistrelay e/o -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Attenzione: si stanno minando versioni sconocsiute di blocchi! E' possibile che siano attive regole sconosciute</translation>
-    </message>
-    <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Attenzione: file del Portafoglio corrotto, dati recuperati! %s originale salvato come %s in %s; se il saldo o le transazioni non sono corrette effettua un ripristino da un backup.</translation>
     </message>
@@ -3555,10 +3480,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>Errore caricamento portafoglio %s. Il nome file -wallet specificato è duplicato.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Keypool esaurito, prima invocare keypoolrefill</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3597,10 +3518,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Fondi insufficienti</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>Impossibile generare una chiave di indirizzo di modifica. Le chiavi private sono disabilitate per questo portafoglio.</translation>
-    </message>
-    <message>
         <source>Cannot upgrade a non HD split wallet without upgrading to support pre split keypool. Please use -upgradewallet=169900 or -upgradewallet with no version specified.</source>
         <translation>Impossibile aggiornare un portafoglio diviso non HD senza aggiornamento per supportare il keypool pre-split. Si prega di utilizzare -upgradewallet = 169900 o -upgradewallet senza specificare la versione.</translation>
     </message>
@@ -3627,10 +3544,6 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <message>
         <source>Done loading</source>
         <translation>Caricamento completato</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Errore</translation>
     </message>
 </context>
 </TS>

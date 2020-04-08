@@ -90,14 +90,6 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>பணப்பை</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>&amp;அனுப்பு</translation>
     </message>
@@ -216,6 +208,12 @@
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -232,6 +230,9 @@
         <source>Error</source>
         <translation>தவறு</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -264,10 +265,6 @@
     <message>
         <source>&amp;Main</source>
         <translation>&amp;தலைமை</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>&amp;Network</source>
@@ -409,9 +406,6 @@
         <source>%1 GB</source>
         <translation>%1 GB</translation>
     </message>
-    </context>
-<context>
-    <name>QObject::QObject</name>
     </context>
 <context>
     <name>QRImageWidget</name>
@@ -584,7 +578,7 @@
         <source>Wallet</source>
         <translation>பணப்பை</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     </context>
@@ -701,6 +695,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -711,21 +708,5 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen மையம்</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>தகவல்</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>எச்சரிக்கை</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>தவறு</translation>
-    </message>
-</context>
+    </context>
 </TS>

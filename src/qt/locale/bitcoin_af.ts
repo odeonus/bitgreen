@@ -66,10 +66,6 @@
         <translation>Hierdie is die adresse vanwaar u BitGreen betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u BitGreens sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Dupliseer Adres</translation>
     </message>
@@ -172,10 +168,6 @@
         <translation>Bevestig dat die beursie gekodifiseer is</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U BITCOINS&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Is u seker dat u die beursie wil kodifiseer?</translation>
     </message>
@@ -246,10 +238,6 @@
         <translation>&amp;Oorsig</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Vertoon 'n algemene oorsig van die beursie</translation>
     </message>
@@ -306,14 +294,6 @@
         <translation>&amp;Verander Wagwoord</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Versending adresse...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Ontvanger adresse</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Oop &amp; URI...</translation>
     </message>
@@ -356,14 +336,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verifieer boodskap...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Beursie</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -742,6 +714,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -796,6 +774,9 @@
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -833,11 +814,7 @@
         <source>Hide</source>
         <translation>Versteek</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Onbekend. Besig Met Sinchroniseer Van Hoofde (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -884,16 +861,8 @@
         <translation>Grootte van &amp;databasis kas</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MG</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Aantal skrip &amp;verifikasie drade</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktiewe opdrag lyn opsies wat die boonste opsies ignoreer:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1197,13 +1166,6 @@
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error: %1</source>
-        <translation>Fout: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1376,10 +1338,6 @@
         <translation>Skoonmaak</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Versoek betaling</translation>
-    </message>
-    <message>
         <source>Show</source>
         <translation>Wys</translation>
     </message>
@@ -1449,14 +1407,6 @@
     <message>
         <source>Wallet</source>
         <translation>Beursie</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Gevolglike URI te lank, probeer teks verkort vir etiket/boodskap</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Fout met enkodering van URI na QR kode</translation>
     </message>
 </context>
 <context>
@@ -1567,13 +1517,6 @@ etlike ure of dae (of nooit) sal neem om te bevestig. Oorweeg om
         <translation>Versteek</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Om die minimumfooi te betaal is in die haak, mits daar minder transaksievolume
-as ruimte in die blok is. Wees bewus dat de gevolg kan wees dat 'n transaksie nooit
-bevestig nie indien daar meer aanvraag vir bitgreen transaksies is as wat die netwerk kan
-verwerk.</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Aanbeveel:</translation>
     </message>
@@ -1676,10 +1619,6 @@ transaksievertragingsrisiko.</translation>
         <translation>of</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>U kan die fooi later verhoog (sein Vervang-met-Fooi, BIP-125)</translation>
-    </message>
-    <message>
         <source>Transaction fee</source>
         <translation>Transaksie fooi</translation>
     </message>
@@ -1726,10 +1665,6 @@ transaksievertragingsrisiko.</translation>
     <message>
         <source>Payment request expired.</source>
         <translation>Betalings versoek verstryk.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Betaal slegs die verlangde fooi van %1</translation>
     </message>
     <message>
         <source>Warning: Invalid BitGreen address</source>
@@ -2043,6 +1978,9 @@ word die fooi eweredig verdeel.</translation>
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -2070,20 +2008,12 @@ word die fooi eweredig verdeel.</translation>
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Kern</translation>
-    </message>
-    <message>
         <source>Error loading %s</source>
         <translation>Fout met laai %s</translation>
     </message>
     <message>
         <source>Importing...</source>
         <translation>Besig met invoer...</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Inligting</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -2104,10 +2034,6 @@ word die fooi eweredig verdeel.</translation>
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>Besig met verifieer van beursie(s)...</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Waarskuwing</translation>
     </message>
     <message>
         <source>%s is set very high!</source>
@@ -2164,10 +2090,6 @@ word die fooi eweredig verdeel.</translation>
     <message>
         <source>Done loading</source>
         <translation>Klaar gelaai</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fout</translation>
     </message>
 </context>
 </TS>

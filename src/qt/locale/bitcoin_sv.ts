@@ -70,10 +70,6 @@
         <translation>Detta är dina BitGreen-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar bitgreen.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Detta är dina BitGreen-adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopiera adress</translation>
     </message>
@@ -177,20 +173,12 @@ Var vänlig och försök igen.</translation>
         <translation>Bekräfta kryptering av plånbok</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>VARNING: Om du krypterar din plånbok och glömmer ditt lösenord, kommer du att &lt;b&gt;FÖRLORA ALLA DINA BITCOIN&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Är du säker på att du vill kryptera din plånbok?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Plånbok krypterad</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 kommer nu att stänga ner för att slutföra krypteringen. Tänk på att en krypterad plånbok inte skyddar mot stöld om din dator är infekterad med en keylogger.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -255,10 +243,6 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Översikt</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nod</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Visa generell översikt av plånboken</translation>
     </message>
@@ -315,24 +299,12 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Ändra lösenord...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Av&amp;sändaradresser...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Mottaga&amp;radresser...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Öppna &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Plånbok:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>Standardplånbok</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -381,14 +353,6 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verifiera meddelande...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Plånbok</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -501,6 +465,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga BitGreen kommandoradsalternativ.</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>Standardplånbok</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -809,6 +777,12 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -899,6 +873,9 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -944,11 +921,7 @@ Var vänlig och försök igen.</translation>
         <source>Hide</source>
         <translation>Göm</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Okänd. Synkar huvuden (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -995,10 +968,6 @@ Var vänlig och försök igen.</translation>
         <translation>Storleken på &amp;databascache</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Antalet skript&amp;verifikationstrådar</translation>
     </message>
@@ -1029,10 +998,6 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Tredjeparts URL:er (t.ex. en blockutforskare) som finns i transaktionstabben som ett menyval i sammanhanget. %s i URL:en ersätts med tansaktionshashen. Flera URL:er är separerade med vertikala streck |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktiva kommandoradsalternativ som ersätter alternativen ovan:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1536,25 +1501,6 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>Kunde inte tolka argumentet: %1.</translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Fel: Angiven datakatalog "%1" finns inte.</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>Fel: Kan inte tolka konfigurationsfil: %1.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Fel: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1816,10 +1762,6 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Ta bort blockering</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>Standardplånbok</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Välkommen till %1 RPC-konsolen.</translation>
     </message>
@@ -1923,20 +1865,8 @@ Var vänlig och försök igen.</translation>
         <translation>Rensa</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>Bech32-addresser (BIP-173) är billigare att spendera från och har bättre skytt mot skrivfel mot konstnaden att äldre plånböcker inte förstår dem. När inte valet är gjort kommer en address som är kompatibel med äldre plånböcker att skapas istället.</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Skapa Bech32-adress</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>Historik för begärda betalningar</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>Begä&amp;r betalning</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2020,14 +1950,6 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Wallet</source>
         <translation>Plånbok</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI:n är för lång, försöka minska texten för etikett / meddelande.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Fel vid skapande av QR-kod från URI.</translation>
     </message>
 </context>
 <context>
@@ -2152,14 +2074,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Göm</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Att bara betala den minsta avgiften är helt ok så länge transaktionsvolymen är mindre än ledigt utrymme i blocken. Men tänk på att det kan bli en en transaktion som aldrig bekräftas om efterfrågan på bitgreen-transaktioner är större än vad nätverket kan hantera.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(läs verktygstips)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Rekommenderad:</translation>
     </message>
@@ -2260,14 +2174,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>eller</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>Du kan välja att höja avgiften senare (med ersättande avgift, BIP-125).</translation>
-    </message>
-    <message>
-        <source>from wallet %1</source>
-        <translation>från plånbok: %1</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>Var vänlig se över din transaktion.</translation>
     </message>
@@ -2322,10 +2228,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     <message>
         <source>Payment request expired.</source>
         <translation>Betalningsbegäran löpte ut.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Betala endast den nödvändiga avgiften på %1</translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
@@ -3062,6 +2964,9 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3110,7 +3015,7 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <source>Could not commit transaction</source>
         <translation>Kunde inte skicka transaktion</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3181,10 +3086,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Kunde inte starta HTTP-server. Se avlusningsloggen för detaljer.</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
         <source>The %s developers</source>
         <translation>%s-utvecklarna</translation>
     </message>
@@ -3199,10 +3100,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Fel vid läsning av %s! Alla nycklar lästes korrekt, men transaktionsdata eller poster i adressboken kanske saknas eller är felaktiga.</translation>
-    </message>
-    <message>
-        <source>Group outputs by address, selecting all or none, instead of selecting on a per-output basis. Privacy is improved as an address is only used once (unless someone sends to it after spending from it), but may result in slightly higher fees as suboptimal coin selection may result due to the added limitation (default: %u)</source>
-        <translation>Gruppera utgående transaktioner med adress, där samtliga eller inga används, istället för att välja vid varje utgående transaktion. Detta ökar din integritet genom att en adress enbart används en gång (om inte någon skickar till den efteråt), men kan öka dina utgifter då valet av ingående transaktioner görs suboptimalt (standardvärde: %u)</translation>
     </message>
     <message>
         <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
@@ -3273,10 +3170,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Vill du bygga om blockdatabasen nu?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Fel vid skapande av %s: Det är inte möjligt att skapa icke-HD plånböcker med denna version.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Fel vid initiering av blockdatabasen</translation>
     </message>
@@ -3307,10 +3200,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     <message>
         <source>Error opening block database</source>
         <translation>Fel vid öppning av blockdatabasen</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Fel: Hårddiskutrymme är lågt!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -3397,18 +3286,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Lyckas inte generera nycklar</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Argumentet -benchmark stöds inte och ignoreras, använd -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argumentet -debugnet stöds inte och ignoreras, använd -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Argumentet -tor hittades men stöds inte, använd -onion.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>Saknar stöd för loggningskategori %s=%s.</translation>
     </message>
@@ -3445,20 +3322,12 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Du måste bygga om databasen genom att använda -reindex för att återgå till obeskärt läge. Detta kommer att ladda ner hela blockkedjan på nytt.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Fel vid inläsning av %s: Du kan inte avaktivera HD på en redan existerande HD-plånbok</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Fel vid läsning från databas, avslutar.</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>Fel vid uppgradering av blockdatabasen</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Information</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3513,10 +3382,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Transaktions belopp för liten</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>Transaktionen är för stor för avgiftspolicyn</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Transaktionen är för stor</translation>
     </message>
@@ -3533,14 +3398,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Verifierar plånbok(er)...</translation>
     </message>
     <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>Plånbok %s är lokaliserad utanför plånboksmappen %s</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Varning</translation>
-    </message>
-    <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
         <translation>Varning: okända nya regler aktiverade (versionsbit %i)</translation>
     </message>
@@ -3551,10 +3408,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>-maxtxfee är väldigt högt satt! Så höga avgifter kan komma att betalas för en enstaka transaktion.</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Fel vid inläsning av %s: Du kan inte aktivera HD på en existerande icke-HD plånbok</translation>
     </message>
     <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -3569,18 +3422,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Total längd på strängen för nätverksversion (%i) överskrider maxlängden (%i). Minska numret eller storleken på uacomments.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Argumentet -socks hittades och stöds inte. Det är inte längre möjligt att sätta SOCKS-version längre, bara SOCKS5-proxy stöds.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Argumentet -whitelistalwaysrelay stöds inte utan ignoreras, använd -whitelistrelay och/eller -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Varning: Okända blockversioner bryts! Det är möjligt att okända regler används</translation>
-    </message>
-    <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Varning: Plånboksfilen var korrupt, data har räddats! Den ursprungliga %s har sparas som %s i %s. Om ditt saldo eller transaktioner är felaktiga bör du återställa från en säkerhetskopia.</translation>
     </message>
@@ -3591,10 +3432,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>Fel vid inläsningen av plånbok %s. Dublett -wallet filnamn angavs.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Nyckelpoolen har tagit slut, var vänlig anropa keypoolrefill först.</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3633,10 +3470,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Otillräckligt med bitgreens</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>Kan inte generera en nyckel för växeladress. Privata nycklar är avstängda för denna plånboken.</translation>
-    </message>
-    <message>
         <source>Cannot upgrade a non HD split wallet without upgrading to support pre split keypool. Please use -upgradewallet=169900 or -upgradewallet with no version specified.</source>
         <translation>Kan inte uppgradera till en icke-HD delad plånbok utan att uppgradera till att stödja nyckelpoolen innan splittring. Var vänlig använd -upgradewallet=169900 eller -upgradewallet utan version specificerad.</translation>
     </message>
@@ -3671,10 +3504,6 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     <message>
         <source>Done loading</source>
         <translation>Klar med laddning</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fel</translation>
     </message>
 </context>
 </TS>

@@ -74,10 +74,6 @@
         <translation>Сүлжээтэй тааруулж байна...</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Нод</translation>
-    </message>
-    <message>
         <source>&amp;Transactions</source>
         <translation>Гүйлгээнүүд</translation>
     </message>
@@ -118,24 +114,12 @@
         <translation>&amp;Нууц Үгийг Солих...</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Хүлээн авах хаяг</translation>
-    </message>
-    <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Түрүйвчийг цоожлох нууц үгийг солих</translation>
     </message>
     <message>
         <source>Open debugging and diagnostic console</source>
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>Биткойн</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Түрүйвч</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -224,6 +208,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -242,6 +232,9 @@
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Last block time</source>
@@ -256,10 +249,6 @@
     <message>
         <source>Options</source>
         <translation>Сонголтууд</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>МБ</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -314,9 +303,6 @@
         <translation>үл мэдэгдэх</translation>
     </message>
 </context>
-<context>
-    <name>QObject::QObject</name>
-    </context>
 <context>
     <name>QRImageWidget</name>
     </context>
@@ -412,7 +398,7 @@
         <source>Wallet</source>
         <translation>Түрүйвч</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     </context>
@@ -553,6 +539,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -563,10 +552,6 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>Information</source>
-        <translation>Мэдээллэл</translation>
-    </message>
     <message>
         <source>Insufficient funds</source>
         <translation>Таны дансны үлдэгдэл хүрэлцэхгүй байна</translation>
@@ -586,10 +571,6 @@
     <message>
         <source>Done loading</source>
         <translation>Ачааллаж дууслаа</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Алдаа</translation>
     </message>
 </context>
 </TS>

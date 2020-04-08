@@ -70,10 +70,6 @@
         <translation>您可以给这些比特币地址付款。在付款之前，务必要检查金额和收款地址是否正确。</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>您可以用这些比特币地址收款。建议在每次交易时，都使用一个新的收款地址。</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>复制地址(&amp;C)</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>确认钱包加密</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>警告: 如果把钱包加密后又忘记密码，你就会从此&lt;b&gt;失去其中所有的比特币了&lt;/b&gt;！</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>你确定要把钱包加密吗？</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>钱包已加密</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 现在要关闭，以完成加密过程。请注意，加密钱包不能完全防止入侵您电脑的恶意程序偷取您的比特币。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>概况(&amp;O)</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>节点</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>显示钱包概况</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>更改密码(&amp;C)...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>付款地址(&amp;S)...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>收款地址(&amp;R)...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>打开 &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>钱包：</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>默认钱包</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>验证消息(&amp;V)...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>比特币</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>钱包</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>显示 %1 帮助信息，获取可用命令行选项列表</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>默认钱包</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -807,6 +775,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -893,6 +867,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -938,11 +915,7 @@
         <source>Hide</source>
         <translation>隐藏</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>未知状态。同步区块头(%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -989,10 +962,6 @@
         <translation>数据库缓存大小(&amp;D)</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>脚本验证线程数(&amp;V)</translation>
     </message>
@@ -1023,10 +992,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>出现在交易的选项卡的上下文菜单项的第三方网址 (例如：区块浏览器) 。 %s的URL被替换为交易哈希。多个的URL需要竖线 | 分隔。</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>有效的命令行参数覆盖上述选项:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1527,25 +1492,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>解析命令行参数错误：%1</translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>错误：指定的数据目录“%1”不存在。</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>错误：无法解析配置文件：%1</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>错误：%1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1687,6 +1633,10 @@
         <translation>已同步区块</translation>
     </message>
     <message>
+        <source>&amp;Wallet Repair</source>
+        <translation>&amp;修复钱包</translation>
+    </message>
+    <message>
         <source>User Agent</source>
         <translation>用户代理</translation>
     </message>
@@ -1803,10 +1753,6 @@
         <translation>重新允许</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>默认钱包</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>欢迎使用 %1 的 RPC 控制台。</translation>
     </message>
@@ -1910,20 +1856,8 @@
         <translation>清除</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>原生隔离见证地址（又称为Bech32或者BIP-173）可减少您日后的交易费用，并且可以更好的防范打字错误，但旧版本的钱包不能识别这种地址。如果取消勾选，则会生成一个与旧版本钱包兼容的地址。</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>生成原生隔离见证 (Bech32)地址</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>请求付款的历史</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>请求付款(&amp;R)</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2007,14 +1941,6 @@
     <message>
         <source>Wallet</source>
         <translation>钱包</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI 太长，请试着精简标签或消息文本。</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>把 URI 编码成二维码时发生错误。</translation>
     </message>
 </context>
 <context>
@@ -2139,14 +2065,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>隐藏</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>交易量小时允许只支付最小交易费。但是请注意，当交易量大到超出网络可处理时您的交易可能永远无法确认。</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(请注意提示信息)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>推荐：</translation>
     </message>
@@ -2247,14 +2165,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>或</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>你可以之后再提高手续费（有BIP-125手续费追加的标记）</translation>
-    </message>
-    <message>
-        <source>from wallet %1</source>
-        <translation>从钱包%1</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>请检查您的交易。</translation>
     </message>
@@ -2309,10 +2219,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Payment request expired.</source>
         <translation>付款请求已过期。</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>只支付必要费用 %1</translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
@@ -3049,6 +2955,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3097,7 +3006,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <source>Could not commit transaction</source>
         <translation>无法提交交易</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3166,10 +3075,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>无法启动HTTP服务，查看日志获取更多信息</translation>
-    </message>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3256,10 +3161,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>你想现在就重建区块数据库吗？</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>生成%s发生错误：这个版本不能用来产生非HD钱包。</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>初始化区块数据库出错</translation>
     </message>
@@ -3286,10 +3187,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Error opening block database</source>
         <translation>导入区块数据库出错</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>错误：磁盘剩余空间低!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -3372,18 +3269,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>无法生成密钥</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>忽略不支持的选项 -benchmark，使用 -debug=bench</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>忽略不支持的选项 -debugnet，使用 -debug=net。</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>忽略不支持的选项 -tor，使用 -oinon</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>不支持的日志分类 %s=%s.</translation>
     </message>
@@ -3420,20 +3305,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>您需要使用 -reindex 重新构建数据库以返回未修剪的模式。这将重新下载整个区块链</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>加载%s发生错误：不能对已存在的HD钱包停用HD功能。</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>读取数据库出错，关闭中。</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>升级链状态数据库出错</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>信息</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3488,10 +3365,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>交易量太小</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>费用策略的交易太大</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>交易太大</translation>
     </message>
@@ -3508,14 +3381,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>正在检测钱包的完整性...</translation>
     </message>
     <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>钱包文件%s没有在钱包目录%s里面</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>警告</translation>
-    </message>
-    <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
         <translation>警告: 不明的交易规则被启用了(versionbit %i)</translation>
     </message>
@@ -3526,10 +3391,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>参数 -maxtxfee 设定了很高的金额！这是你一次交易就有可能付出的最高手续费。</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>加载%s发生错误：不能对已存在的非HD钱包启用HD功能</translation>
     </message>
     <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -3544,18 +3405,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>网络版本字符串的总长度 (%i) 超过最大长度 (%i) 了。请减少 uacomment 参数的数目或长度。</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>找到不再支持的 -socks 参数。现在只支持 SOCKS5 协议的代理服务器，因此不可以指定 SOCKS 协议版本。</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>一个不被支持的参数 -whitelistalwaysrelay 被忽略了。请使用 -whitelistrelay 或者 -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>警告: 未知的区块版本被挖掘！未知规则可能已生效</translation>
-    </message>
-    <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>警告：钱包文件损坏，但数据被救回！原始的钱包文件%s已经重命名为%s并存储到%s目录下 。如果您的账户余额或者交易记录不正确，请使用您的钱包备份文件恢复。</translation>
     </message>
@@ -3566,10 +3415,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>加载钱包 %s 出错。 重复的 -wallet 文件名。</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>密钥池已经耗尽，请先执行keypoolrefill</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3608,10 +3453,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>金额不足</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>无法生成一个找零地址密钥。对于此钱包，私钥已被禁用。</translation>
-    </message>
-    <message>
         <source>Cannot write to data directory '%s'; check permissions.</source>
         <translation>不能写入到数据目录'%s'；请检查文件权限。</translation>
     </message>
@@ -3634,10 +3475,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Done loading</source>
         <translation>加载完成</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>错误</translation>
     </message>
 </context>
 </TS>
