@@ -60,6 +60,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -68,6 +74,9 @@
         <source>Error</source>
         <translation>错误</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -93,9 +102,6 @@
     </context>
 <context>
     <name>QObject</name>
-    </context>
-<context>
-    <name>QObject::QObject</name>
     </context>
 <context>
     <name>QRImageWidget</name>
@@ -129,10 +135,6 @@
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
         <translation>收款人地址无效，请再次确认。</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>仅支付全额的%1</translation>
     </message>
     <message>
         <source>Warning: Invalid BitGreen address</source>
@@ -185,6 +187,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -200,16 +205,8 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>根据费率标准，本次转账超额</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>超额转账</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>警告</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -226,10 +223,6 @@
     <message>
         <source>Done loading</source>
         <translation>载入完成</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>错误</translation>
     </message>
 </context>
 </TS>

@@ -70,10 +70,6 @@
         <translation>Это ваши адреса BitGreen для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши адреса BitGreen для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>Копировать &amp;адрес</translation>
     </message>
@@ -176,10 +172,6 @@
         <translation>Подтвердить шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Предупреждение: если вы зашифруете бумажник и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОИНЫ&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Вы уверены, что хотите зашифровать ваш кошелёк?</translation>
     </message>
@@ -226,10 +218,6 @@
         <translation>&amp;Обзор</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Узел</translation>
-    </message>
-    <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакции</translation>
     </message>
@@ -270,10 +258,6 @@
         <translation>&amp;Зашифровать кошелёк...</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Кошелёк</translation>
-    </message>
-    <message>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
@@ -292,6 +276,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -300,6 +290,9 @@
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -327,13 +320,66 @@
     <name>QObject</name>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
     <name>RPCConsole</name>
+    <message>
+        <source>&amp;Wallet Repair</source>
+        <translation>&amp;Ремонт кошелька</translation>
+    </message>
+    <message>
+        <source>Wallet repair options.</source>
+        <translation>Опции ремонта кошелька.</translation>
+    </message>
+    <message>
+        <source>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</source>
+        <translation>Кнопка ниже перезапустит кошелёк с некоторыми опциями кммандной строки чтобы отремотировать кошелёк, файлы блокчейна и пропавшие / устаревшие транзакции.</translation>
+    </message>
+    <message>
+        <source>Wallet In Use:</source>
+        <translation>Используемый кошелек:</translation>
+    </message>
+    <message>
+        <source>Rescan blockchain files</source>
+        <translation>Пересканировать файлы блокчейна</translation>
+    </message>
+    <message>
+        <source>Rescan the block chain for missing wallet transactions.</source>
+        <translation>Пересканировать блокчейн для поиска пропущенных транзакций в кошельке.</translation>
+    </message>
+    <message>
+        <source>Recover transactions 1</source>
+        <translation>Востановление транзакций 1</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
+        <translation>Перезаписать транзакции из блокчейна (при сохранении мета-данных, таких как владелец кошелька).</translation>
+    </message>
+    <message>
+        <source>Recover transactions 2</source>
+        <translation>Востановление транзакций 2</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (drop meta-data).</source>
+        <translation>Перезаписать транзакции из блокчейна (с удалением мета-данных, таких как владелец кошелька).</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet format</source>
+        <translation>Обновить формат кошелька</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</source>
+        <translation>Обновить кошелек до последнего формата при запуске. (Примечание: это НЕ обновление самого кошелька!)</translation>
+    </message>
+    <message>
+        <source>Rebuild index</source>
+        <translation>Пересоздать индекс</translation>
+    </message>
+    <message>
+        <source>Rebuild block chain index from current blk000??.dat files.</source>
+        <translation>Перестроить индекс блокчейна из текущих blk000??.dat файлов.</translation>
+    </message>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -356,7 +402,7 @@
         <source>Wallet</source>
         <translation>Кошелёк</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -437,6 +483,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -490,10 +539,6 @@
     <message>
         <source>Done loading</source>
         <translation>Загрузка завершена</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Ошибка</translation>
     </message>
 </context>
 </TS>

@@ -122,10 +122,6 @@
         <translation>&amp;Alilan ing Passphrase...</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Address king pamag-Tanggap</translation>
-    </message>
-    <message>
         <source>Send coins to a BitGreen address</source>
         <translation>Magpadalang barya king BitGreen address</translation>
     </message>
@@ -148,14 +144,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Beripikan ing message...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Wallet</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -268,6 +256,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -292,6 +286,9 @@
         <source>Error</source>
         <translation>Mali</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -451,9 +448,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -536,7 +530,7 @@
         <source>Wallet</source>
         <translation>Wallet</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     </context>
@@ -725,6 +719,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -735,10 +732,6 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>Kapilubluban ning BitGreen</translation>
-    </message>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Mekapansin lang me-corrupt a block database</translation>
@@ -756,24 +749,12 @@
         <translation>Kamalian king pamag buklat king block database</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Kamalian: Mababa ne ing espasyu king disk!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Memali ya ing pamakiramdam kareng gang nanung port. Gamita me ini -listen=0 nung buri me ini.</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>&amp;Impormasion</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Maragul yang masiadu ing transaksion</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Kapabaluan</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
@@ -802,10 +783,6 @@
     <message>
         <source>Done loading</source>
         <translation>Yari ne ing pamag-load</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Mali</translation>
     </message>
 </context>
 </TS>

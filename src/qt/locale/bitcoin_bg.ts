@@ -70,10 +70,6 @@
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са Вашите Биткойн адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копирай адрес</translation>
     </message>
@@ -176,10 +172,6 @@
         <translation>Потвърдете на шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>ВНИМАНИЕ: Ако шифрирате вашият портфейл и изгубите паролата си, &lt;b&gt;ЩЕ ИЗГУБИТЕ ВСИЧКИТЕ СИ БИТКОИНИ&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Наистина ли желаете да шифрирате портфейла си?</translation>
     </message>
@@ -250,10 +242,6 @@
         <translation>&amp;Баланс</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Сървър</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Обобщена информация за портфейла</translation>
     </message>
@@ -310,24 +298,12 @@
         <translation>&amp;Смяна на паролата...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Изпращане на адресите...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Получаване на адресите...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Отвори &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Портфейл</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>Портфейл по подразбиране</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -372,14 +348,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Проверка на съобщение...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>Биткоин</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Портфейл</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -484,6 +452,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>Портфейл по подразбиране</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -762,6 +734,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -820,6 +798,9 @@
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -866,10 +847,6 @@
     <message>
         <source>Size of &amp;database cache</source>
         <translation>Размер на кеша в &amp;базата данни</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>Мегабайта</translation>
     </message>
     <message>
         <source>Number of script &amp;verification threads</source>
@@ -1229,13 +1206,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Грешка:Избраната "%1" директория не съществува.</translation>
-    </message>
-    </context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1385,10 +1355,6 @@
         <translation>Изчисти конзолата</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>Портфейл по подразбиране</translation>
-    </message>
-    <message>
         <source>via %1</source>
         <translation>посредством %1</translation>
     </message>
@@ -1450,10 +1416,6 @@
     <message>
         <source>Requested payments history</source>
         <translation>Изискана история на плащанията</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Изискване на плащане</translation>
     </message>
     <message>
         <source>Show</source>
@@ -1521,10 +1483,6 @@
     <message>
         <source>Wallet</source>
         <translation>Портфейл</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Грешка при създаването на QR Code от URI.</translation>
     </message>
 </context>
 <context>
@@ -2287,6 +2245,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -2338,20 +2299,12 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>Биткойн ядро</translation>
-    </message>
-    <message>
         <source>Do you want to rebuild the block database now?</source>
         <translation>Желаете ли да пресъздадете базата данни с блокове сега?</translation>
     </message>
     <message>
         <source>Error initializing block database</source>
         <translation>Грешка в пускането на базата данни с блокове</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Грешка: мястото на диска е малко!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -2366,10 +2319,6 @@
         <translation>Проверка на блоковете...</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>Информация</translation>
-    </message>
-    <message>
         <source>This is experimental software.</source>
         <translation>Това е експериментален софтуер.</translation>
     </message>
@@ -2380,10 +2329,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>Транзакцията е твърде голяма</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Предупреждение</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -2432,10 +2377,6 @@
     <message>
         <source>Done loading</source>
         <translation>Зареждането е завършено</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Грешка</translation>
     </message>
 </context>
 </TS>

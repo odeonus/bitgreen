@@ -76,6 +76,9 @@ QT_TRANSLATE_NOOP("bitgreen-core", ""
 "Total length of network version string (%i) exceeds maximum length (%i). "
 "Reduce the number or size of uacomments."),
 QT_TRANSLATE_NOOP("bitgreen-core", ""
+"Transaction index can't be disabled in full mode. Either start with -"
+"litemode command line switch or enable transaction index."),
+QT_TRANSLATE_NOOP("bitgreen-core", ""
 "Unable to replay blocks. You will need to rebuild the database using -"
 "reindex-chainstate."),
 QT_TRANSLATE_NOOP("bitgreen-core", ""
@@ -93,6 +96,12 @@ QT_TRANSLATE_NOOP("bitgreen-core", ""
 QT_TRANSLATE_NOOP("bitgreen-core", ""
 "Warning: We do not appear to fully agree with our peers! You may need to "
 "upgrade, or other nodes may need to upgrade."),
+QT_TRANSLATE_NOOP("bitgreen-core", ""
+"You are starting in lite mode, all BitGreen-specific functionality is "
+"disabled."),
+QT_TRANSLATE_NOOP("bitgreen-core", ""
+"You must specify a masternodeblsprivkey in the configuration. Please see "
+"documentation for help."),
 QT_TRANSLATE_NOOP("bitgreen-core", ""
 "You need to rebuild the database using -reindex to go back to unpruned "
 "mode.  This will redownload the entire blockchain"),
@@ -124,9 +133,16 @@ QT_TRANSLATE_NOOP("bitgreen-core", "Error: A fatal internal error occurred, see 
 QT_TRANSLATE_NOOP("bitgreen-core", "Error: Disk space is low for %s"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Error: Disk space is too low!"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Failed to listen on any port. Use -listen=0 if you want this."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Failed to load fulfilled requests cache from"),
+QT_TRANSLATE_NOOP("bitgreen-core", "Failed to load governance cache."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Failed to load masternode cache."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Failed to load sporks cache from"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Failed to rescan the wallet during initialization"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Importing..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
+QT_TRANSLATE_NOOP("bitgreen-core", "Info: Minting suspended due to block creation failure."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Info: Minting suspended due to locked wallet."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Info: Minting suspended while synchronizing wallet."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Initialization sanity check failed. %s is shutting down."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Insufficient funds"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Invalid -onion address or hostname: '%s'"),
@@ -135,11 +151,12 @@ QT_TRANSLATE_NOOP("bitgreen-core", "Invalid amount for -%s=<amount>: '%s'"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Invalid amount for -discardfee=<amount>: '%s'"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Invalid amount for -fallbackfee=<amount>: '%s'"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Invalid amount for -paytxfee=<amount>: '%s' (must be at least %s)"),
+QT_TRANSLATE_NOOP("bitgreen-core", "Invalid masternodeblsprivkey. Please see documentation."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Invalid netmask specified in -whitelist: '%s'"),
-QT_TRANSLATE_NOOP("bitgreen-core", "Keypool ran out, please call keypoolrefill first"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Loading P2P addresses..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Loading banlist..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Loading block index..."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Loading sporks cache..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Loading wallet..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Need to specify a port with -whitebind: '%s'"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Not enough file descriptors available."),
@@ -158,6 +175,11 @@ QT_TRANSLATE_NOOP("bitgreen-core", "Specified -walletdir \"%s\" is a relative pa
 QT_TRANSLATE_NOOP("bitgreen-core", "Specified -walletdir \"%s\" is not a directory"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Specified blocks directory \"%s\" does not exist."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Starting network threads..."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Synchronization failed"),
+QT_TRANSLATE_NOOP("bitgreen-core", "Synchronization finished"),
+QT_TRANSLATE_NOOP("bitgreen-core", "Synchronization pending..."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Synchronizing blockchain..."),
+QT_TRANSLATE_NOOP("bitgreen-core", "Synchronizing governance objects..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "The source code is available from %s."),
 QT_TRANSLATE_NOOP("bitgreen-core", "The specified config file %s does not exist\n"),
 QT_TRANSLATE_NOOP("bitgreen-core", "The transaction amount is too small to pay the fee"),
@@ -170,7 +192,6 @@ QT_TRANSLATE_NOOP("bitgreen-core", "Transaction amounts must not be negative"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Transaction fee and change calculation failed"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Transaction has too long of a mempool chain"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Transaction must have at least one recipient"),
-QT_TRANSLATE_NOOP("bitgreen-core", "Transaction too large for fee policy"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Transaction too large"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Unable to bind to %s on this computer (bind returned error %s)"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Unable to bind to %s on this computer. %s is probably already running."),
@@ -188,5 +209,6 @@ QT_TRANSLATE_NOOP("bitgreen-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Verifying wallet(s)..."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Wallet needed to be rewritten: restart %s to complete"),
 QT_TRANSLATE_NOOP("bitgreen-core", "Warning: unknown new rules activated (versionbit %i)"),
+QT_TRANSLATE_NOOP("bitgreen-core", "You can not start a masternode in lite mode."),
 QT_TRANSLATE_NOOP("bitgreen-core", "Zapping all transactions from wallet..."),
 };

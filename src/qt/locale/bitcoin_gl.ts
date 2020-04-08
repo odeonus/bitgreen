@@ -126,10 +126,6 @@
         <translation>&amp;Cambiar contrasinal...</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Direccións para recibir</translation>
-    </message>
-    <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Reindexando bloques no disco...</translation>
     </message>
@@ -156,14 +152,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verificar mensaxe...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Moedeiro</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -376,6 +364,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -408,6 +402,9 @@
         <source>Error</source>
         <translation>Erro</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -623,9 +620,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -725,10 +719,6 @@
         <source>Clear</source>
         <translation>Limpar</translation>
     </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Solicitar pago</translation>
-    </message>
     </context>
 <context>
     <name>ReceiveRequestDialog</name>
@@ -752,7 +742,7 @@
         <source>Wallet</source>
         <translation>Moedeiro</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     </context>
@@ -989,6 +979,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -999,10 +992,6 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>Core de BitGreen</translation>
-    </message>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Detectada base de datos de bloques corrupta.</translation>
@@ -1028,10 +1017,6 @@
         <translation>Erro abrindo base de datos de bloques</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Erro: Espacio en disco escaso!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Fallou escoitar en calquera porto. Emprega -listen=0 se queres esto.</translation>
     </message>
@@ -1048,10 +1033,6 @@
         <translation>Verificando bloques...</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>Información</translation>
-    </message>
-    <message>
         <source>Signing transaction failed</source>
         <translation>Fallou a sinatura da transacción</translation>
     </message>
@@ -1062,10 +1043,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>A transacción é demasiado grande</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Precaución</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
@@ -1094,10 +1071,6 @@
     <message>
         <source>Done loading</source>
         <translation>Carga completa</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Erro</translation>
     </message>
 </context>
 </TS>

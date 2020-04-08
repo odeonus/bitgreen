@@ -66,10 +66,6 @@
         <translation>Đây là các địa chỉ BitGreen để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ bitgreen của người nhận.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Đây là các địa chỉ BitGreen để bạn nhận tiền. Với mỗi giao dịch, bạn nên dùng một địa chỉ BitGreen mới để nhận tiền.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Chép Địa chỉ</translation>
     </message>
@@ -239,10 +235,6 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>&amp;Tổng quan</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Hiện thỉ thông tin sơ lược chung về Ví</translation>
     </message>
@@ -299,14 +291,6 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>&amp;Thay đổi mật khẩu...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Địa chỉ gửi</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Địa chỉ nhận</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Mở &amp;URI...</translation>
     </message>
@@ -353,14 +337,6 @@ Ví của bạn chưa được mã hóa.</translation>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Tin nhắn xác thực</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Ví</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -611,6 +587,12 @@ Ví của bạn chưa được mã hóa.</translation>
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -645,6 +627,9 @@ Ví của bạn chưa được mã hóa.</translation>
     </message>
     </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -675,10 +660,6 @@ Ví của bạn chưa được mã hóa.</translation>
     <message>
         <source>&amp;Main</source>
         <translation>&amp;Chính</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -802,9 +783,6 @@ Ví của bạn chưa được mã hóa.</translation>
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -897,10 +875,6 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Lịch sử yêu cầu thanh toán</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Yêu cầu thanh toán</translation>
-    </message>
-    <message>
         <source>Show</source>
         <translation>Hiển thị</translation>
     </message>
@@ -966,10 +940,6 @@ Ví của bạn chưa được mã hóa.</translation>
     <message>
         <source>Wallet</source>
         <translation>Ví</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Lỗi khi encode từ URI thành QR Code</translation>
     </message>
 </context>
 <context>
@@ -1056,10 +1026,6 @@ Ví của bạn chưa được mã hóa.</translation>
     <message>
         <source>Hide</source>
         <translation>Ẩn</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(Đọc hướng dẫn)</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -1184,6 +1150,9 @@ Ví của bạn chưa được mã hóa.</translation>
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1203,20 +1172,8 @@ Ví của bạn chưa được mã hóa.</translation>
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Thông tin</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Giao dịch quá lớn</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Chú ý</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -1241,10 +1198,6 @@ Ví của bạn chưa được mã hóa.</translation>
     <message>
         <source>Done loading</source>
         <translation>Đã nạp xong</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Lỗi</translation>
     </message>
 </context>
 </TS>

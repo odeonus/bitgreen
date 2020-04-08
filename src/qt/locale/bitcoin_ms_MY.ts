@@ -72,10 +72,6 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>Ini adalah alamat BitGreen anda untuk pembayaran. Periksa jumlah dan alamat penerima sebelum membuat penghantaran koin sentiasa.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ini adalah alamat BitGreen anda untuk menerima pembayaraan.  Anda disyorkan untuk menguna alamat menerima untuk setiap transaksi.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Salin Aamat</translation>
     </message>
@@ -179,20 +175,12 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>Mengesahkan enkripsi dompet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Amaran: Jika anda enkripkan dompet anda dan hilangkan frasa laluan, anda akan &lt;b&gt;ANDA AKAN HILANGKAN SEMUA BITCOIN ANDA&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Anda pasti untuk membuat enkripsi dompet anda?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Dompet dienkripsi</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 akan tutup untuk menyelesaikan proses enkripsi. Ingat bahawa enkripsi tidak boleh melidungi sepenuhnya bitgreens anda daripada dicuri oleh malware yang menjangkiti komputer anda.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -257,10 +245,6 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>&amp;Gambaran Keseluruhan</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nod</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Tunjuk gambaran keseluruhan umum dompet</translation>
     </message>
@@ -317,25 +301,12 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>&amp;Menukar frasa-laluan</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Menghantar frasa-laluan</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Menerima frasa-laluan...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Buka &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>dompet</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>dompet lalai
-</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +351,6 @@ Alihkan fail data ke dalam tab semasa</translation>
     <message>
         <source>&amp;Verify message...</source>
         <translation>sahkan mesej</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>dompet</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -444,6 +407,11 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>Tunjukkan senarai alamat dan label yang digunakan
 </translation>
     </message>
+    <message>
+        <source>default wallet</source>
+        <translation>dompet lalai
+</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -467,6 +435,12 @@ Alihkan fail data ke dalam tab semasa</translation>
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -475,6 +449,9 @@ Alihkan fail data ke dalam tab semasa</translation>
         <source>BitGreen</source>
         <translation>BitGreen</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -498,18 +475,10 @@ Alihkan fail data ke dalam tab semasa</translation>
     <name>QObject</name>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
     <name>RPCConsole</name>
-    <message>
-        <source>default wallet</source>
-        <translation>dompet lalai
-</translation>
-    </message>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -532,7 +501,7 @@ Alihkan fail data ke dalam tab semasa</translation>
         <source>Wallet</source>
         <translation>dompet</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -611,6 +580,9 @@ Alihkan fail data ke dalam tab semasa</translation>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
+    </context>
+<context>
+    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>

@@ -70,10 +70,6 @@
         <translation>این‌ها آدرس‌های بیتکوین برای پرداخت‌ها هستند. همیشه قبل از فرستادن سکه‌ها مقدار و آدرس دریافت‌کننده را بررسی نمایید.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>این‌ها آدرس‌های بیتکوین شما برای دریافت مبالغ می‌باشد. توصیه می‌شود برای هر تراکنش از یک آدرس جدید استفاده کنید.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>کپ&amp;ی کردن آدرس</translation>
     </message>
@@ -230,10 +226,6 @@
         <translation>&amp;بررسی اجمالی</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>گره</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>نمایش بررسی اجمالی کیف پول</translation>
     </message>
@@ -290,14 +282,6 @@
         <translation>&amp;تغییر گذرواژه...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;در حال ارسال آدرس ها...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;در حال دریافت آدرس ها...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>باز کردن &amp;آدرس</translation>
     </message>
@@ -340,14 +324,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>با&amp;زبینی پیام...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>بیت‌کوین</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>کیف پول</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -694,6 +670,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -742,6 +724,9 @@
         <source>%n GB of free space available</source>
         <translation><numerusform>%n گیگابایت فضا موجود است</numerusform><numerusform>%n گیگابایت فضا موجود است</numerusform></translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -810,10 +795,6 @@
     <message>
         <source>Automatically start %1 after logging in to the system.</source>
         <translation>اجرای خودکار %1 بعد زمان ورود به سیستم.</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>مگابایت</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -1073,9 +1054,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -1322,7 +1300,7 @@
         <source>Wallet</source>
         <translation>کیف پول</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1811,6 +1789,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1846,10 +1827,6 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation> هسته BitGreen </translation>
-    </message>
-    <message>
         <source>Copyright (C) %i-%i</source>
         <translation>حق تألیف (C) %i-%i</translation>
     </message>
@@ -1878,10 +1855,6 @@
         <translation>خطا در بازگشایی پایگاه داده ی بلوک</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>خطا: فضای دیسک کم است!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>شنیدن هر گونه درگاه انجام پذیر نیست. ازlisten=0  برای اینکار استفاده کیند.</translation>
     </message>
@@ -1898,10 +1871,6 @@
         <translation>در حال بازبینی بلوک‌ها...</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>اطلاعات</translation>
-    </message>
-    <message>
         <source>This is experimental software.</source>
         <translation>این یک نرم افزار آزمایشی است.</translation>
     </message>
@@ -1912,10 +1881,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>تراکنش بسیار بزرگ است</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>هشدار</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -1948,10 +1913,6 @@
     <message>
         <source>Done loading</source>
         <translation>بار گیری انجام شده است</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>خطا</translation>
     </message>
 </context>
 </TS>
