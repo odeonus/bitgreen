@@ -55,9 +55,30 @@ static void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& 
     // Blockchain contextual information (confirmations and blocktime) is not
     // available to code in bitgreen-common, so we query them here and push the
     // data into the returned UniValue.
-    TxToUniv(tx, uint256(), entry, true, RPCSerializationFlags());
 
     uint256 txid = tx.GetHash();
+
+    CSpentIndexTxInfo txSpentInfo;
+
+    for (const auto& txin : tx.vin) {
+        if (!tx.IsCoinBase() || !tx.IsCoinStake()) {
+            CSpentIndexValue spentInfo;
+            CSpentIndexKey spentKey(txin.prevout.hash, txin.prevout.n);
+            if (GetSpentIndex(spentKey, spentInfo)) {
+                txSpentInfo.mSpentInfo.emplace(spentKey, spentInfo);
+            }
+        }
+    }
+
+    for (unsigned int i = 0; i < tx.vout.size(); i++) {
+        CSpentIndexValue spentInfo;
+        CSpentIndexKey spentKey(txid, i);
+        if (GetSpentIndex(spentKey, spentInfo)) {
+            txSpentInfo.mSpentInfo.emplace(spentKey, spentInfo);
+        }
+    }
+
+    TxToUniv(tx, uint256(), entry, true, &txSpentInfo);
 
     if (!tx.vExtraPayload.empty()) {
         entry.pushKV("extraPayloadSize", (uint64_t)tx.vExtraPayload.size());
