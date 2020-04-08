@@ -1760,7 +1760,7 @@ static int64_t nBlocksTotal = 0;
 /**
  * proof-of-stake
  */
-bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool fJustCheck)
+bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool fJustCheck)
 {
     uint256 hashProofOfStake = uint256();
     // verify hash target and signature of coinstake tx
