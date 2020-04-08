@@ -110,7 +110,6 @@ CChain& ChainActive() { return g_chainstate.m_chain; }
  */
 RecursiveMutex cs_main;
 
-std::vector<uint256> vecStakeSeen;
 CBlockIndex *pindexBestHeader = nullptr;
 Mutex g_best_block_mutex;
 std::condition_variable g_best_block_cv;
@@ -1761,12 +1760,6 @@ static int64_t nBlocksTotal = 0;
 /**
  * proof-of-stake
  */
-void maintainStakeSeen()
-{
-    if (vecStakeSeen.size() > 1024)
-        vecStakeSeen.erase(vecStakeSeen.begin(), vecStakeSeen.begin() + 128);
-}
-
 bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool fJustCheck)
 {
     uint256 hashProofOfStake = uint256();
@@ -1776,15 +1769,14 @@ bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlo
         return false; // do not error here as we expect this during initial block download
     }
 
-    //! make sure we havent seen this stake previously
-    for (const auto& seenStake : vecStakeSeen) {
-       if (seenStake == hashProofOfStake &&
-           pindex->nHeight >= Params().GetConsensus().nStakeEnforcement) {
-           LogPrintf(" * already seen this stake (%s), discarding block..\n", hashProofOfStake.ToString().c_str());
-           return false;
-       }
+    // make sure we havent seen this stake previously
+    if (pindex->nHeight >= Params().GetConsensus().StakeEnforcement() &&
+        std::find(m_blockman.m_pos_index.begin(), m_blockman.m_pos_index.end(), hashProofOfStake) != m_blockman.m_pos_index.end()) {
+        return error(" * already seen this stake (%s), discarding block..", hashProofOfStake.ToString());
     }
-    maintainStakeSeen();
+
+    // set stake hash as seen
+    m_blockman.InsertPoSIndex(hashProofOfStake);
 
     // compute stake entropy bit for stake modifier
     unsigned int nEntropyBit = GetStakeEntropyBit(block);
@@ -1820,9 +1812,6 @@ bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlo
 
     if (fJustCheck)
         return true;
-
-    //! if we get this far, its good
-    vecStakeSeen.push_back(hashProofOfStake);
 
     // write everything to index
     if (block.IsProofOfStake())
@@ -4172,12 +4161,27 @@ CBlockIndex * BlockManager::InsertBlockIndex(const uint256& hash)
     return pindexNew;
 }
 
+void BlockManager::InsertPoSIndex(const uint256& hash)
+{
+    AssertLockHeld(cs_main);
+
+    if (hash.IsNull())
+        return;
+
+    // Check if exists
+    if (std::find(m_pos_index.begin(), m_pos_index.end(), hash) != m_pos_index.end())
+        return;
+
+    // Create new
+    m_pos_index.push_back(hash);
+}
+
 bool BlockManager::LoadBlockIndex(
     const Consensus::Params& consensus_params,
     CBlockTreeDB& blocktree,
     std::set<CBlockIndex*, CBlockIndexWorkComparator>& block_index_candidates)
 {
-    if (!blocktree.LoadBlockIndexGuts(consensus_params, [this](const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main) { return this->InsertBlockIndex(hash); }))
+    if (!blocktree.LoadBlockIndexGuts(consensus_params, [this](const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main) { CBlockIndex* idx = this->InsertBlockIndex(hash); if (!hash.IsNull()) {this->InsertPoSIndex(idx->hashProofOfStake);} return idx; }))
         return false;
 
     // Calculate nChainWork
