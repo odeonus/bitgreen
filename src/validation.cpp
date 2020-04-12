@@ -1775,9 +1775,6 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
         return error(" * already seen this stake (%s), discarding block..", hashProofOfStake.ToString());
     }
 
-    // set stake hash as seen
-    m_blockman.InsertPoSIndex(hashProofOfStake);
-
     // compute stake entropy bit for stake modifier
     unsigned int nEntropyBit = GetStakeEntropyBit(block);
 
@@ -1812,6 +1809,9 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
 
     if (fJustCheck)
         return true;
+
+    // set stake hash as seen
+    m_blockman.InsertPoSIndex(hashProofOfStake);
 
     // write everything to index
     if (block.IsProofOfStake())
