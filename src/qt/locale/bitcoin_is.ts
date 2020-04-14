@@ -66,10 +66,6 @@
         <translation>Þetta eru BitGreen færslugildin sem senda greiðslur. Skoðið ævinlega vel upphæðina og færslugildin sem þiggja greiðslur áður en mynt er send.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Þetta eru BitGreen færslugildin sem þiggja greiðslur. Mælt er með að nota aldrei sama færslugildið til að þiggja fleiri en eina greiðslu.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Afrita færslugildi</translation>
     </message>
@@ -168,20 +164,12 @@
         <translation>Staðfesta dulkóðun veskis</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Viðvörun: Ef þú dulkóðar veskið og týnir lykilsetningunn þá munt þú &lt;b&gt;TAPA ALLRI ÞINNI BITCOIN MYNT&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ertu viss um að þú viljir dulkóða veskið þitt?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Veski dulkóðað</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 lokast núna til að dulkóðun klárist. Mundu að dulkóðun veskis kemur ekki að fullu í veg fyrir að mynt verði stolið úr tölvunni þinni með aðstoð smitforrita. </translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -246,10 +234,6 @@
         <translation>&amp;Yfirlit</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Hnútur</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Sýna almennt yfirlit af veski</translation>
     </message>
@@ -306,14 +290,6 @@
         <translation>&amp;Breyta lykilsetningu</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Sendi færslugildi...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Tek við færslugildum...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Opna &amp;URL...</translation>
     </message>
@@ -360,14 +336,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Yfirfara skilaboð...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Veski</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -658,6 +626,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -670,6 +644,9 @@
         <source>Error</source>
         <translation>Villa</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -745,9 +722,6 @@
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -806,11 +780,7 @@
         <source>Wallet</source>
         <translation>Veski</translation>
     </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI varð of langt, reyndu að minnka texta í merki / skilaboðum.</translation>
-    </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -847,10 +817,6 @@
     <message>
         <source>Change:</source>
         <translation>Skiptimynt:</translation>
-    </message>
-    <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Það er í lagi að greiða einungis lágmarksupphæðina svo framarlega sem færslurúmtakið er minna en plássið í blokkunum. En gætið þess að þegar það er meiri eftirspurn eftir bitgreen færslum en netið getur unnið úr þá gæti svo farið að færslurnar verða aldrei samþykktar.</translation>
     </message>
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
@@ -951,6 +917,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -977,21 +946,5 @@
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Viðvörun: Netið er ekki í fullu samræmi! Einhver námuvinnsla virðist í ólagi.</translation>
     </message>
-    <message>
-        <source>Information</source>
-        <translation>Upplýsingar</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Viðvörun</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Viðvörun: Óþekkt blokkarútgáfa í námavinnslu! Það er mögulegt að óþekktum reglum sé fylgt</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Villa</translation>
-    </message>
-</context>
+    </context>
 </TS>

@@ -62,10 +62,11 @@ public:
         TAB_INFO = 0,
         TAB_CONSOLE = 1,
         TAB_GRAPH = 2,
-        TAB_PEERS = 3
+        TAB_PEERS = 3,
+        TAB_REPAIR = 4
     };
 
-    std::vector<TabTypes> tabs() const { return {TAB_INFO, TAB_CONSOLE, TAB_GRAPH, TAB_PEERS}; }
+    std::vector<TabTypes> tabs() const { return {TAB_INFO, TAB_CONSOLE, TAB_GRAPH, TAB_PEERS, TAB_REPAIR}; }
 
     TabTypes tabFocus() const;
     QString tabTitle(TabTypes tab_type) const;
@@ -94,6 +95,21 @@ private Q_SLOTS:
     void showOrHideBanTableIfRequired();
     /** clear the selected node */
     void clearSelectedNode();
+    /** Restart wallet with "-salvagewallet" */
+    void on_btn_salvagewallet_clicked();
+    /** Restart wallet with "-rescan" */
+    void on_btn_rescan_clicked();
+    /** Restart wallet with "-zapwallettxes=1" */
+    void on_btn_zapwallettxes1_clicked();
+    /** Restart wallet with "-zapwallettxes=2" */
+    void on_btn_zapwallettxes2_clicked();
+    /** Restart wallet with "-upgradewallet" */
+    void on_btn_upgradewallet_clicked();
+    /** Restart wallet with "-reindex" */
+    void on_btn_reindex_clicked();
+    /** Restart wallet with "-resync" */
+    void on_btn_resync_clicked();
+
 
 public Q_SLOTS:
     void clear(bool clearHistory = true);
@@ -131,10 +147,15 @@ public Q_SLOTS:
     void unbanSelectedNode();
     /** set which tab has the focus (is visible) */
     void setTabFocus(enum TabTypes tabType);
+    /** set which wallet is in use */
+    void setCurrentWalletBySelectorIndex(int index);
+
 
 Q_SIGNALS:
     // For RPC command executor
     void cmdRequest(const QString &command, const WalletModel* wallet_model);
+    /** Get restart command-line parameters and handle restart */
+    void handleRestart(QStringList args);
 
 private:
     void startExecutor();
@@ -170,6 +191,8 @@ private:
 
     /** Update UI with latest network info from model. */
     void updateNetworkState();
+    /** Build parameter list for restart */
+    void buildParameterlist(QString arg);
 };
 
 #endif // BITGREEN_QT_RPCCONSOLE_H

@@ -70,10 +70,6 @@
         <translation>Ово су ваше Биткоин адресе за слање уплата. Увек добро проверите износ и адресу на коју шаљете пре него што пошаљете уплату.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ово су ваше Биткоин адресе за примање уплате. Препоручује се да се за сваку трансакцију користи нова адреса.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копирај Адресу</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Потврди шифрирање новчаника</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Упозорење: Уколико шифрирате новчаник и изгубите своју лозинку, &lt;b&gt;ИЗГУБИЋЕТЕ СВЕ СВОЈЕ БИТКОИНЕ&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Да ли сте сигурни да желите да шифрирате свој новчаник?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Новчаник шифриран</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 ће се сада затворити како би се завршио процес шифрирања.  Запамтите да шифрирањем свог новчаника не можете у потпуности заштити своје биткоине од крађе од стране злоћудних програма и компјутерских инфекција.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Општи преглед</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Ноде</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Погледајте општи преглед новчаника</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Адресе за слање...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Адресе за пријем</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Отвори &amp;УРИ...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Новчаник</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>подразумевани новчаник</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Верификовање поруке...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>Биткоин</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Новчаник</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Прикажи  поруку помоћи %1 за листу са могућим опцијама Биткоин командне линије</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>подразумевани новчаник</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -773,6 +741,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -833,6 +807,9 @@
         <source>Error</source>
         <translation>Greška</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -952,9 +929,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -962,10 +936,6 @@
     <message>
         <source>Last block time</source>
         <translation>Време последњег блока</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>подразумевани новчаник</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -1026,7 +996,7 @@
         <source>Wallet</source>
         <translation>Новчаник</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1232,6 +1202,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1251,14 +1224,6 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>Information</source>
-        <translation>Информације</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Упозорење</translation>
-    </message>
-    <message>
         <source>Insufficient funds</source>
         <translation>Nedovoljno sredstava</translation>
     </message>
@@ -1277,10 +1242,6 @@
     <message>
         <source>Done loading</source>
         <translation>Završeno učitavanje</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Greška</translation>
     </message>
 </context>
 </TS>

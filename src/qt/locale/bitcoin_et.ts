@@ -70,10 +70,6 @@
         <translation>Need on sinu BitGreen aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu BitGreen aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopeeri Aadress</translation>
     </message>
@@ -170,10 +166,6 @@
     <message>
         <source>Confirm wallet encryption</source>
         <translation>Kinnita rahakoti krüpteerimine.</translation>
-    </message>
-    <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA BITCOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -316,14 +308,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Kontrolli sõnumit...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Rahakott</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -646,6 +630,12 @@
     </message>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -670,6 +660,9 @@
         <source>Error</source>
         <translation>Tõrge</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -714,10 +707,6 @@
     <message>
         <source>&amp;Main</source>
         <translation>&amp;Peamine</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -949,9 +938,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>Save QR Code</source>
@@ -1157,14 +1143,6 @@
     <message>
         <source>Wallet</source>
         <translation>Rahakott</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI liiga pikk, proovi vähendada märke / sõnumi pikkust.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Tõrge URI'st QR koodi loomisel</translation>
     </message>
 </context>
 <context>
@@ -1879,6 +1857,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1918,10 +1899,6 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreeni tuumik</translation>
-    </message>
-    <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>See on test-versioon - kasutamine omal riisikol - ära kasuta mining'uks ega kaupmeeste programmides</translation>
     </message>
@@ -1950,20 +1927,12 @@
         <translation>Tõrge bloki andmebaasi avamisel</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Tõrge: liiga vähe kettaruumi!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Pordi kuulamine nurjus. Soovikorral kasuta -listen=0.</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
         <translation>Kontrollin blokke...</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informatsioon</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -1980,10 +1949,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>Tehing liiga suur</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Hoiatus</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
@@ -2012,10 +1977,6 @@
     <message>
         <source>Done loading</source>
         <translation>Laetud</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Tõrge</translation>
     </message>
 </context>
 </TS>

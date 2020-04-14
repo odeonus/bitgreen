@@ -70,10 +70,6 @@
         <translation>Estes são os seus endereços para enviar pagamentos. Sempre cheque a quantia e o endereço do destinatário antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes são os seus endereços para receber pagamentos. É recomendado usar um novo para cada transação.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copiar endereço</translation>
     </message>
@@ -176,10 +172,6 @@
         <translation>Confirmar criptografia da carteira</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Aviso: Se você criptografar sua carteira e perder sua senha, você vai &lt;b&gt;PERDER TODOS OS SEUS BITCOINS&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Tem certeza que deseja criptografar a carteira?</translation>
     </message>
@@ -250,10 +242,6 @@
         <translation>&amp;Visão geral</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nó</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Mostrar visão geral da carteira</translation>
     </message>
@@ -310,24 +298,12 @@
         <translation>&amp;Mudar frase de segurança...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Endereço&amp;s de envio...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Endereços de &amp;recebimento...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Abrir &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Carteira:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>carteira padrão</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -376,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verificar mensagem...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Carteira</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -496,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Mostrar a mensagem de ajuda do %1 para obter uma lista com possíveis opções de linha de comando BitGreen</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>carteira padrão</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -804,6 +776,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -894,6 +872,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -939,11 +920,7 @@
         <source>Hide</source>
         <translation>Ocultar</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Desconhecido. Sincronizando cabeçalhos (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -990,10 +967,6 @@
         <translation>Tamanho do banco de &amp;dados do cache</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Número de threads do script de &amp;verificação</translation>
     </message>
@@ -1024,10 +997,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URLs de terceiros (exemplo: explorador de blocos) que aparecem na aba de transações como itens do menu de contexto. %s na URL é substituido pela hash da transação. Múltiplas URLs são separadas pela barra vertical |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Opções de linha de comando ativas que sobrescrevem as opções acima:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1531,25 +1500,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>Erro ao analisar argumentos da linha de comando: %1.</translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Erro: Diretório de dados especificado "%1" não existe.</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>Erro: Não é possível analisar o arquivo de configuração: %1.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Erro: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1691,6 +1641,38 @@
         <translation>Blocos Sincronizados</translation>
     </message>
     <message>
+        <source>&amp;Wallet Repair</source>
+        <translation>&amp;Reparo da Carteira</translation>
+    </message>
+    <message>
+        <source>Wallet repair options.</source>
+        <translation>Opções de reparo da Carteira</translation>
+    </message>
+    <message>
+        <source>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</source>
+        <translation>Os botões abaixo vão reiniciar a carteira com opções de linha de comando para reparar a carteira, corrigir problemas com os arquivos corrompidos da blockchain ou transações perdidas/obsoletas.</translation>
+    </message>
+    <message>
+        <source>Rescan blockchain files</source>
+        <translation>Reescanear os arquivos da blockchain</translation>
+    </message>
+    <message>
+        <source>Recover transactions 1</source>
+        <translation>Recuperar transações 1</translation>
+    </message>
+    <message>
+        <source>Recover transactions 2</source>
+        <translation>Recuperar transações 2</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet format</source>
+        <translation>Atualizar formato da carteira</translation>
+    </message>
+    <message>
+        <source>Rebuild index</source>
+        <translation>Reconstruir índice</translation>
+    </message>
+    <message>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
@@ -1811,10 +1793,6 @@
         <translation>&amp;Desbanir</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>carteira padrão</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Bem-vindo ao console RPC do %1.</translation>
     </message>
@@ -1918,20 +1896,8 @@
         <translation>Limpar</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>Endereços segwit nativos (também conhecidos como Bench32 ou BIP-173) reduzem suas taxas de transação mais adiante e oferecem melhor proteção contra erros de digitação, porém carteiras antigas não têm suporte a eles. Quando não estiver rubricado, um endereço compatível com cateiras antigas será criado como alternativa.</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Gere um endereço segwit (Bench32) nativo</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>Histórico de cobranças</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Requisitar Pagamento</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2015,14 +1981,6 @@
     <message>
         <source>Wallet</source>
         <translation>Carteira</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI resultante muito longa. Tente reduzir o texto do rótulo ou da mensagem.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Erro ao codificar o URI em código QR</translation>
     </message>
 </context>
 <context>
@@ -2147,14 +2105,6 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Ocultar</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Pagando apenas a taxa mínima é bom, desde que haja pouco volume de transações. Mas esteja ciente de que isso pode acabar em uma transação nunca confirmanda uma vez que há mais demanda por transações do que a rede pode processar.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(Leia o popup)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Recomendado:</translation>
     </message>
@@ -2255,14 +2205,6 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>ou</translation>
     </message>
     <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>Você pode aumentar a taxa depois (sinaliza Replace-By-Fee, BIP-125).</translation>
-    </message>
-    <message>
-        <source>from wallet %1</source>
-        <translation>da carteira %1</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>Revise a sua transação.</translation>
     </message>
@@ -2317,10 +2259,6 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     <message>
         <source>Payment request expired.</source>
         <translation>Pedido de pagamento expirado.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Pagar somente a taxa requerida de %1</translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
@@ -3057,6 +2995,9 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3105,7 +3046,7 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <source>Could not commit transaction</source>
         <translation>Não foi possível mandar a transação</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3174,10 +3115,6 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>Não foi possível iniciar o servidor HTTP. Veja o log de depuração para detaihes.</translation>
-    </message>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3264,10 +3201,6 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Você quer reconstruir o banco de dados de blocos agora?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Erro ao criar %s: Você não pode criar carteiras não-HD com esta versão.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Erro ao inicializar banco de dados de blocos</translation>
     </message>
@@ -3298,10 +3231,6 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     <message>
         <source>Error opening block database</source>
         <translation>Erro ao abrir banco de dados de blocos</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Erro: Espaço em disco insuficiente!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -3389,18 +3318,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Não foi possível gerar chaves</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Argumento não suportado -benchmark ignorado, use -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argumento não suportado -debugnet ignorado, use -debug=net</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Argumento não suportado encontrado: -tor. Use -onion.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>Categoria de log desconhecida %s=%s.</translation>
     </message>
@@ -3437,20 +3354,12 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Você precisa reconstruir o banco de dados usando -reindex para sair do modo prune. Isso irá causar o download de todo o blockchain novamente.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Erro carregando %s: Você não pode desabilitar o HD em uma carteira HD existente</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Erro ao ler o banco de dados. Encerrando.</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>Erro ao atualizar banco de dados do chainstate</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informação</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3505,10 +3414,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Quantidade da transação muito pequena</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>Transação muito grande para política de taxa</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Transação muito grande</translation>
     </message>
@@ -3525,14 +3430,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Verificando carteira(s)...</translation>
     </message>
     <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>Carteira %s reside fora do diretório da carteira %s</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Atenção</translation>
-    </message>
-    <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
         <translation>Aviso: Novas regras desconhecidas foram ativadas (versionbit %i)</translation>
     </message>
@@ -3543,10 +3440,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>A valor especificado de -maxtxfee está muito alto! Taxas grandes assim podem ser atribuidas numa transação única.</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Erro carregando %s: Não é permitido habilitar HD em uma carteira não-HD já existente</translation>
     </message>
     <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -3561,18 +3454,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>O tamanho total da string de versão da rede (%i) excede o tamanho máximo (%i). Reduza o número ou tamanho de uacomments.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Argumento inválido -socks encontrado. Definir a versão do SOCKS não é mais possível, somente proxys SOCK5 são suportados.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Argumento não suportado -whitelistalwaysrelay foi ignorado, utilize -whitelistrelay e/ou -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Aviso: Versões de bloco desconhecidas sendo mineradas! É possível que regras desconhecidas estejam ativas</translation>
-    </message>
-    <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Atenção: Arquivo da carteira corrompido, dados recuperados! Original %s salvo como %s em %s; se seu saldo ou transações estiverem incorretos, você deve restaurar o backup.</translation>
     </message>
@@ -3583,10 +3464,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>Erro ao carregar carteira %s. Duplicado o nome do arquivo de -wallet.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Keypool exaurida, por gentileza execute keypoolrefill primeiro</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3625,10 +3502,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Saldo insuficiente</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>Não é possível gerar um endereço de troco. Chaves privadas estão desabilitadas para essa carteira.</translation>
-    </message>
-    <message>
         <source>Cannot upgrade a non HD split wallet without upgrading to support pre split keypool. Please use -upgradewallet=169900 or -upgradewallet with no version specified.</source>
         <translation>Não é possível fazer upgrade de uma carteira dividida não HD sem fazer upgrade para ser compatível com a keypool antes da divisão. Use -upgradewallet=169900 ou -upgradewallet sem especificar nenhuma versão.</translation>
     </message>
@@ -3663,10 +3536,6 @@ Diretório de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Done loading</source>
         <translation>Carregamento terminado!</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Erro</translation>
     </message>
 </context>
 </TS>

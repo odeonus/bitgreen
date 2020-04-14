@@ -66,10 +66,6 @@
         <translation>Dit is jou BitGreen-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit is jou BitGreen-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat jy munte stuur.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopie Adres</translation>
     </message>
@@ -172,20 +168,12 @@
         <translation>Bevestig beursie enkripsie.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: As jy jou beursie enkripteer en jou wagwoord verloor, sal jy &lt;b&gt;AL JOU BITCOINS VERLOOR&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Is jy seker jy wil jou beursie enkripteer?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Beursie enkriptasie voltooi</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 gaan nou toe maak om die enkripsie proses klaar te maak. Onthou dat jou bitgreens nie ten volle beskerm kan word deur die beursie te enkrip teen "malware" wat jou rekenaar besmet.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -250,10 +238,6 @@
         <translation>&amp;Oorsig</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Wys algemene oorsig van die beursie</translation>
     </message>
@@ -310,14 +294,6 @@
         <translation>Verander wagwoord frase...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Uitstuur adresse...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Ontvang adresse...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Maak &amp;URI oop...</translation>
     </message>
@@ -364,14 +340,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verifieer boodskap...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Beursie</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -770,6 +738,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -810,6 +784,9 @@
         <source>Error</source>
         <translation>Fout</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -957,9 +934,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -1010,7 +984,7 @@
         <source>Wallet</source>
         <translation>Beursie</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1411,6 +1385,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1434,20 +1411,8 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Fout: Hardeskyf spasie is baie laag!</translation>
-    </message>
-    <message>
         <source>Importing...</source>
         <translation>Invoer proses tans besig..</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informasie</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Waarskuwing</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -1464,10 +1429,6 @@
     <message>
         <source>Done loading</source>
         <translation>Klaar gelaai</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fout</translation>
     </message>
 </context>
 </TS>

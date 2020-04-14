@@ -66,10 +66,6 @@
         <translation>Estas son tus direcciones BitGreen para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones BitGreen para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>Copiar dirección</translation>
     </message>
@@ -180,10 +176,6 @@
         <translation>Sincronizando con la red...</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nodo</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Mostrar visión general de la billetera</translation>
     </message>
@@ -208,10 +200,6 @@
         <translation>&amp;Opciones...</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Recepción de direcciones</translation>
-    </message>
-    <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Reindexando bloques en el disco...</translation>
     </message>
@@ -230,14 +218,6 @@
     <message>
         <source>Open debugging and diagnostic console</source>
         <translation>Abre la consola de depuración y diágnostico</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Billetera</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -470,6 +450,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -514,6 +500,9 @@
         <source>Error</source>
         <translation>Error</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -597,9 +586,6 @@
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -650,7 +636,7 @@
         <source>Wallet</source>
         <translation>Billetera</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -775,6 +761,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -786,24 +775,12 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Información</translation>
-    </message>
-    <message>
         <source>Transaction amount too small</source>
         <translation>Transacción muy pequeña</translation>
     </message>
     <message>
         <source>Transaction too large</source>
         <translation>Transacción muy grande</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Advertencia</translation>
     </message>
     <message>
         <source>This is the minimum transaction fee you pay on every transaction.</source>
@@ -844,10 +821,6 @@
     <message>
         <source>Done loading</source>
         <translation>Carga lista</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Error</translation>
     </message>
 </context>
 </TS>

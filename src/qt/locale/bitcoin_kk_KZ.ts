@@ -70,14 +70,6 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>Биткоин</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Әмиян</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>Жіберу</translation>
     </message>
@@ -164,6 +156,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -176,6 +174,9 @@
         <source>Error</source>
         <translation>қате</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -215,9 +216,6 @@
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -240,7 +238,7 @@
         <source>Wallet</source>
         <translation>Әмиян</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     </context>
@@ -301,6 +299,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -312,10 +313,6 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>Information</source>
-        <translation>Информация</translation>
-    </message>
-    <message>
         <source>Transaction amount too small</source>
         <translation>Транзакция өте кішкентай</translation>
     </message>
@@ -323,13 +320,5 @@
         <source>Transaction too large</source>
         <translation>Транзакция өте үлкен</translation>
     </message>
-    <message>
-        <source>Warning</source>
-        <translation>Ескерту</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>қате</translation>
-    </message>
-</context>
+    </context>
 </TS>

@@ -66,10 +66,6 @@
         <translation>這些是你要付款過去的 BitGreen 位址。在付款之前，務必要檢查金額和收款位址是否正確。</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>這些是你用來收款的 BitGreen 位址。建議在每次交易時，都使用一個新的收款位址。</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>複製地址 &amp;C</translation>
     </message>
@@ -168,20 +164,12 @@
         <translation>確認錢包加密</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>警告: 如果你將錢包加密後又忘記密碼，你就會&lt;b&gt;失去所有 BitGreen 了&lt;/b&gt;！</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>你確定要把錢包加密嗎？</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>錢包已加密</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 現在要關閉來完成加密程序。請記得將錢包加密不能完全防止你的 BitGreens 經被入侵電腦的惡意程式偷取。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -246,10 +234,6 @@
         <translation>總覽 &amp;O</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>節點</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>顯示錢包一般總覽</translation>
     </message>
@@ -306,14 +290,6 @@
         <translation>改變密碼... &amp;C</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>付款位址... &amp;S</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>收款位址... &amp;R</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>開啓網址... &amp;U</translation>
     </message>
@@ -344,14 +320,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>驗證訊息... &amp;V</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>錢包</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -422,6 +390,12 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -434,6 +408,9 @@
         <source>Error</source>
         <translation>錯誤</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -529,9 +506,6 @@
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>Save QR Code</source>
@@ -590,7 +564,7 @@
         <source>Wallet</source>
         <translation>錢包</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -675,6 +649,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -693,17 +670,5 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>Information</source>
-        <translation>資訊</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>警告</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>錯誤</translation>
-    </message>
-</context>
+    </context>
 </TS>

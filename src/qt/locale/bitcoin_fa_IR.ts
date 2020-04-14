@@ -70,10 +70,6 @@
         <translation>اینها آدرس‌های شما برای ارسال وجوه هستند. همیشه قبل از ارسال، مقدار و آدرس گیرنده را بررسی کنید.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>اینها آدرس‌های بیتکوین شما برای دریافت وجوه هستند. توصیه می‌شود برای هر دریافت از یک آدرس جدید استفاده کنید.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>کپی آدرس</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>تایید رمزگذاری کیف پول</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>اخطار: اگر کیف‌پول خود را رمزگذاری کرده و رمز خود را فراموش کنید، شما &lt;b&gt;تمام بیت‌کوین‌های خود را از دست خواهید داد&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>آیا از رمزگذاری کیف‌پول خود اطمینان دارید؟</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>کیف پول رمزگذاری شده است</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 برای اتمام فرایند رمزگذاری بسته خواهد شد. به خاطر داشته باشید که رمزگذاری WALLET شما،  کامپیوتر شما را از آلودگی به بدافزارها مصون نمی دارد.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>بازبینی</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>گره</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>نمای کلی از wallet را نشان بده</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>تغییر رمز/پَس فرِیز</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>درحال ارسال آدرس‌ها…</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>دریافت آدرس ها</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>بازکردن آدرس...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>کیف پول:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>کیف پول پیش‌فرض</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -376,14 +348,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>تایید پیام</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>بیت کوین</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>کیف پول</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -488,6 +452,10 @@
     <message>
         <source>Up to date</source>
         <translation>به روز</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>کیف پول پیش‌فرض</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -712,6 +680,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -752,6 +726,9 @@
         <source>Error</source>
         <translation>خطا</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -824,10 +801,6 @@
     <message>
         <source>Size of &amp;database cache</source>
         <translation>اندازه کش پایگاه داده.</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>مگابایت</translation>
     </message>
     <message>
         <source>Open Configuration File</source>
@@ -1095,9 +1068,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1307,10 +1277,6 @@
         <translation>&amp;خارج کردن از بن</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>کیف پول پیش‌فرض</translation>
-    </message>
-    <message>
         <source>Network activity disabled</source>
         <translation>فعالیت شبکه غیر فعال شد</translation>
     </message>
@@ -1360,10 +1326,6 @@
     <message>
         <source>Requested payments history</source>
         <translation>تاریخچه پرداخت های درخواست شده</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;درخواست پرداخت</translation>
     </message>
     <message>
         <source>Show</source>
@@ -1436,7 +1398,7 @@
         <source>Wallet</source>
         <translation>کیف پول</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1633,10 +1595,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>or</source>
         <translation>یا</translation>
-    </message>
-    <message>
-        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
-        <translation>تو میتوانی بعدا هزینه کارمزد را افزایش بدی(signals Replace-By-Fee, BIP-125)</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2181,6 +2139,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -2240,10 +2201,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>هسته بیت کوین</translation>
-    </message>
-    <message>
         <source>Change index out of range</source>
         <translation>تغییر دادن اندیس خارج از دامنه</translation>
     </message>
@@ -2262,10 +2219,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Error opening block database</source>
         <translation>خطا در بازکردن پایگاه داده بلاک block</translation>
-    </message>
-    <message>
-        <source>Error: Disk space is low!</source>
-        <translation>حطا:فضای دیسک کم است!</translation>
     </message>
     <message>
         <source>Importing...</source>
@@ -2308,10 +2261,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>خواندن از پایگاه داده با خطا مواجه شد,در حال خاموش شدن.</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>اطلاعات</translation>
-    </message>
-    <message>
         <source>Signing transaction failed</source>
         <translation>ثبت تراکنش با خطا مواجه شد</translation>
     </message>
@@ -2328,10 +2277,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>حجم تراکنش خیلی کم است</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>حجم تراکنش خیلی زیاد است به خاطر سیاست های کارمزدی بیت کوین</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>حجم تراکنش خیلی زیاد است</translation>
     </message>
@@ -2344,24 +2289,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>در حال تایید شدن کیف پول(ها)...</translation>
     </message>
     <message>
-        <source>Warning</source>
-        <translation>هشدار</translation>
-    </message>
-    <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
         <translation>این هزینه تراکنشی است که در صورت عدم وجود هزینه تخمینی، پرداخت می کنید.</translation>
     </message>
     <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>هشدار:یک بلاک از یک نسخه ناشناس در حال ماین شدن است.در این اتفاق ممکن است قوانین ناشناسی اثرات نامعلوم بگذارند.</translation>
-    </message>
-    <message>
         <source>%s is set very high!</source>
         <translation>%s بسیار بزرگ انتخاب شده است.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>کلید استخر تمام شده است، لطفاً درخواست کلید استخر را پرنمایید.</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -2384,10 +2317,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>وجوه ناکافی</translation>
     </message>
     <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>نمیتوان تغییر-آدرس کلید را تولید کرد.کلید های خصوصی در این کیف پول غیر فعال شده اند.</translation>
-    </message>
-    <message>
         <source>Loading block index...</source>
         <translation>لود شدن نمایه بلاکها..</translation>
     </message>
@@ -2406,10 +2335,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Done loading</source>
         <translation>اتمام لود شدن</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>خطا</translation>
     </message>
 </context>
 </TS>

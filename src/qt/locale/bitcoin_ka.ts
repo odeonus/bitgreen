@@ -70,10 +70,6 @@
         <translation>ეს არის თქვენი ბიტკოინ-მისამართები, რომელთაგანაც შეგიძლიათ გადახდა. აუცილებლად შეამოწმეთ თანხა და მიმღები მისამართი გაგზავნამდე.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>ეს არის თქვენი ბიტკოინ-მისამართები, რომლებზეც შეგიძლიათ მიიღოთ თანხები. რეკომენდებულია ყოველი ტრანსაქციისათვის ახალი მიმღები მისამართის გამოყენება.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>მისამართის კოპირება</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>საფულის დაშიფრვის დადასტურება</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>გაფრთხილება: თუ თქვენ დაშიფრავთ თქვენს საფულეს და ამის შემდეგ დაკარგავთ გასაშიფრ ფრაზას, &lt;b&gt;თქვენ დაკარგავთ ყველა ბიტკოინს!&lt;/b&gt;</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>დარწმუნებული ხარ რომ საფულის დაშიფვრა გსურს?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>საფულე დაშიფრულია</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 ახლა დაიხურება დაშიფრვის პროცესის დასასრულებლად. გახსოვდეთ, რომ თქვენი საფული დაშიფრვა სრულად არ იცავს თქვენს ბიტკოინებს მოპარვისგან მავნე პროგრამების მიერ თქვენი კომპიუტერის ინფიცირების საშუალებით.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -236,10 +224,6 @@
     <message>
         <source>&amp;Overview</source>
         <translation>მიმ&amp;ოხილვა</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>კვანძი</translation>
     </message>
     <message>
         <source>Show general overview of wallet</source>
@@ -298,24 +282,12 @@
         <translation>ფრაზა-პაროლის შე&amp;ცვლა</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>გაგზავნის მი&amp;სამართი</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>მიღების მისამა&amp;რთი</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>&amp;URI-ის გახსნა...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>საფულე:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>ნაგულისხმევი საფულე</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -352,14 +324,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;ვერიფიკაცია</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>საფულე</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -452,6 +416,10 @@
     <message>
         <source>Up to date</source>
         <translation>განახლებულია</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>ნაგულისხმევი საფულე</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -656,6 +624,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -700,6 +674,9 @@
         <source>Error</source>
         <translation>შეცდომა</translation>
     </message>
+    </context>
+<context>
+    <name>MasternodeList</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -762,20 +739,12 @@
         <translation>მონაცემთა ბაზის კეშის სი&amp;დიდე</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>სკრიპტის &amp;ვერიფიცირების ნაკადების რაოდენობა</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>პროქსის IP-მისამართი (მაგ.: IPv4: 127.0.0.1 / IPv6: ::1)</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>საკომანდო სტრიქონის აქტიური ოპციები, რომლებიც გადაფარავენ ზემოთნაჩვენებს:</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -999,9 +968,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -1086,10 +1052,6 @@
         <source>Clear console</source>
         <translation>კონსოლის გასუფთავება</translation>
     </message>
-    <message>
-        <source>default wallet</source>
-        <translation>ნაგულისხმევი საფულე</translation>
-    </message>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -1132,10 +1094,6 @@
     <message>
         <source>Requested payments history</source>
         <translation>მოთხოვნილი გადახდების ისტორია</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;გადახდის მოთხოვნა</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -1192,7 +1150,7 @@
         <source>Wallet</source>
         <translation>საფულე</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1521,6 +1479,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1531,10 +1492,6 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
     <message>
         <source>Corrupted block database detected</source>
         <translation>შენიშნულია ბლოკთა ბაზის დაზიანება</translation>
@@ -1560,10 +1517,6 @@
         <translation>ბლოკთა ბაზის შექმნა ვერ მოხერხდა</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>შეცდომა: დისზე არ არის ადგილი!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>ვერ ხერხდება პორტების მიყურადება. თუ გსურთ, გამოიყენეთ -listen=0.</translation>
     </message>
@@ -1580,10 +1533,6 @@
         <translation>ბლოკების ვერიფიკაცია...</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>ინფორმაცია</translation>
-    </message>
-    <message>
         <source>Signing transaction failed</source>
         <translation>ტრანსაქციების ხელმოწერა ვერ მოხერხდა</translation>
     </message>
@@ -1594,10 +1543,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>ტრანსაქცია ძალიან დიდია</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>გაფრთხილება</translation>
     </message>
     <message>
         <source>Zapping all transactions from wallet...</source>
@@ -1630,10 +1575,6 @@
     <message>
         <source>Done loading</source>
         <translation>ჩატვირთვა დასრულებულია</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>შეცდომა</translation>
     </message>
 </context>
 </TS>

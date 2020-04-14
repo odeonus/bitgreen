@@ -302,8 +302,7 @@ bool CheckStakeKernelHash(unsigned int nBits, CBlockIndex* pindexPrev, const CBl
         if (!fHardenedChecks) {
             return error("%s: nTime violation", __func__);
         } else {
-            LogPrintf("Timestamp violation (nTimeTx < txPrevTime)\n");
-            return false;
+            return error("%s: timestamp violation (nTimeTx < txPrevTime)", __func__);
         }
     }
 
@@ -313,8 +312,7 @@ bool CheckStakeKernelHash(unsigned int nBits, CBlockIndex* pindexPrev, const CBl
         if (!fHardenedChecks) {
             return error("%s: min age violation", __func__);
         } else {
-            LogPrintf("Minimum age violation (nTimeBlockFrom + params.nStakeMinAge > nTimeTx)\n");
-            return false;
+            return error("%s: min age violation (nTimeBlockFrom + params.nStakeMinAge > nTimeTx)", __func__);
         }
     }
 
@@ -409,7 +407,7 @@ bool CheckProofOfStake(const CBlock &block, CBlockIndex* pindexPrev, uint256& ha
 
     // returning zero from GetLastHeight() indicates error
     if (nBlockFromHeight == 0 && fHardenedChecks)
-        return false;
+        return error("%s: returning zero from GetLastHeight()", __func__);
 
     if (!Params().GetConsensus().HasStakeMinDepth(nPreviousBlockHeight+1, nBlockFromHeight) && fHardenedChecks) {
         LogPrintf("\n%s : min age violation - height=%d - nHeightBlockFrom=%d (depth=%d)\n", __func__, nPreviousBlockHeight, nBlockFromHeight, nPreviousBlockHeight - nBlockFromHeight);

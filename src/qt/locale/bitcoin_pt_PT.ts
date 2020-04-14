@@ -70,10 +70,6 @@
         <translation>Estes são os seus endereços BitGreen para enviar pagamentos. Verifique sempre o valor e o endereço de envio antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes são os seus endereços BitGreen para receber pagamentos. É recomendado que utilize um endereço novo para cada transação.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copiar Endereço</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Aviso: se encriptar a sua carteira e perder a sua frase de segurnça, &lt;b&gt;PERDERÁ TODOS OS SEUS BITCOINS&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Tem a certeza que deseja encriptar a sua carteira?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Carteira encriptada</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus bitgreens de serem roubados por programas maliciosos que infetem o seu computador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Resumo</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nó</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Mostrar resumo geral da carteira</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>Alterar &amp;Frase de Segurança...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>A &amp;enviar os endereços...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>A &amp;receber os endereços...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Abrir &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Carteira:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>carteira predefinida</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verificar mensagem...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Carteira</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Mostrar a mensagem de ajuda %1 para obter uma lista com possíveis opções a usar na linha de comandos.</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>carteira predefinida</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -800,6 +768,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -886,6 +860,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -931,11 +908,7 @@
         <source>Hide</source>
         <translation>Ocultar</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Desconhecido. Sincronização de Cabeçalhos (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -982,10 +955,6 @@
         <translation>Tamanho da cache da base de &amp;dados</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Número de processos de &amp;verificação de scripts</translation>
     </message>
@@ -1017,10 +986,6 @@
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URLs de outrem (ex. um explorador de blocos) que aparece no separador de transações como itens do menu de contexto.
 %s do URL é substituído por hash de transação. Vários URLs são separados por barra vertical |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Ativar as opções da linha de comando que se sobrepõem às opções acima:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1512,25 +1477,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>Erro ao analisar os argumentos da linha de comando: %1.</translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Erro: a pasta de dados especificada "%1" não existe.</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>Erro: não é possível analisar o ficheiro de configuração: %1.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Erro: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1788,10 +1734,6 @@
         <translation>&amp;Desbanir</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>carteira predefinida</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Bem-vindo à consola RPC da %1.</translation>
     </message>
@@ -1895,20 +1837,8 @@
         <translation>Limpar</translation>
     </message>
     <message>
-        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
-        <translation>Endereços nativos SegWit (também conhecidos como Bech32 ou BIP-173) reduzem as taxas da sua transação mais tarde e oferecem melhor proteção contra erros, mas carteiras antigas não os suportam. Quando não selecionado, um endereço compatível com carteiras antigas irá ser criado em vez.</translation>
-    </message>
-    <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Gerar endereço nativo SegWit (Bech32)</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>Histórico de pagamentos solicitados</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Requisitar Pagamento</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -1992,14 +1922,6 @@
     <message>
         <source>Wallet</source>
         <translation>Carteira</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI resultante muito longo. Tente reduzir o texto do rótulo / mensagem.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Erro ao codificar URI em Código QR.</translation>
     </message>
 </context>
 <context>
@@ -2112,14 +2034,6 @@
         <translation>Esconder</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Pode pagar somente a taxa mínima desde que haja um volume de transações inferior ao espaço nos blocos. No entanto tenha em atenção que esta opção poderá acabar em uma transação nunca confirmada assim que os pedidos de transações excedam a capacidade de processamento da rede.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(leia a dica)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Recomendado:</translation>
     </message>
@@ -2212,10 +2126,6 @@
         <translation>ou</translation>
     </message>
     <message>
-        <source>from wallet %1</source>
-        <translation>da carteira %1</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>Por favor, reveja a sua transação.</translation>
     </message>
@@ -2267,10 +2177,6 @@
     <message>
         <source>Payment request expired.</source>
         <translation>Pedido de pagamento expirado.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Pague apenas a taxa obrigatória de %1</translation>
     </message>
     <message>
         <source>Warning: Invalid BitGreen address</source>
@@ -2991,6 +2897,9 @@
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3039,7 +2948,7 @@
         <source>Could not commit transaction</source>
         <translation>Não foi possível cometer a transação</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3108,10 +3017,6 @@
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>Não é possível iniciar o servidor HTTP. Verifique o debug.log para detalhes.</translation>
-    </message>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3206,10 +3111,6 @@
         <translation>Erro ao abrir a base de dados de blocos</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Erro: Pouco espaço em disco!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Falhou a escutar em qualquer porta. Use -listen=0 se quiser isto.</translation>
     </message>
@@ -3279,18 +3180,6 @@ A pasta de blocos especificados "%s" não existe.</translation>
         <translation>Cálculo da taxa de transação e de troco falhou</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Argumento não suportado -benchmark ignorado, use -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argumento não suportado -debugnet ignorado, use -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Argumento não suportado -tor encontrado, use -onion.</translation>
-    </message>
-    <message>
         <source>Upgrading UTXO database</source>
         <translation>A atualizar a base de dados UTXO</translation>
     </message>
@@ -3325,10 +3214,6 @@ A pasta de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Erro ao ler da base de dados, encerrando.</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informação</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3371,10 +3256,6 @@ A pasta de blocos especificados "%s" não existe.</translation>
         <translation>Quantia da transação é muito baixa</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>Transação demasiado grande para a política de taxas</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Transação grande demais</translation>
     </message>
@@ -3389,14 +3270,6 @@ A pasta de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>A verificar a(s) carteira(s)...</translation>
-    </message>
-    <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>A carteira %s reside fora da pasta da carteira %s</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Aviso</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -3421,18 +3294,6 @@ A pasta de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
         <translation>Comprimento total da entrada da versão de rede (%i) excede o comprimento máximo (%i). Reduzir o número ou o tamanho de uacomments.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Encontrado um argumento não suportado -socks. Definir a versão do SOCKS já não é possível, apenas proxies SOCKS5 são suportados.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Argumento não suportado -whitelistalwaysrelay ignorado, utilize -whitelistrelay e/ou -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Atenção: Versões desconhecidas de blocos estão a ser mineradas! É possível que regras desconhecias estão a ser efetuadas</translation>
     </message>
     <message>
         <source>%s is set very high!</source>
@@ -3493,10 +3354,6 @@ A pasta de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Done loading</source>
         <translation>Carregamento concluído</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Erro</translation>
     </message>
 </context>
 </TS>

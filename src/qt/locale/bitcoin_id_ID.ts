@@ -70,10 +70,6 @@
         <translation>Berikut ialah alamat-alamat BitGreen Anda yang digunakan untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Berikut ialah alamat-alamat BitGreen Anda yang digunakan untuk menerima pembayaran. Dianjurkan untuk menggunakan alamat penerimaan baru untuk setiap transaksi.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Salin Alamat</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Konfirmasi pengenkripsian dompet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Peringatan: Jika Anda mengenkripsi dompet Anda dan lupa kata sandi Anda, Anda akan &lt;b&gt;KEHILANGAN SEMUA BITCOIN ANDA&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Apakah Anda yakin ingin enkripsi dompet Anda?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Dompet terenkripsi</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 sekarang akan ditutup untuk menyelesaikan proses enkripsi. Ingatlah bahwa mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi komputer Anda dari pencurian malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Kilasan</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Tampilkan gambaran umum dompet Anda</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>&amp;Ubah Kata Kunci...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Alamat-alamat untuk mengirim...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Alamat-alamat untuk menerima...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Buka &amp;URI</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Wallet:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>wallet default</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verifikasi pesan...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Dompet</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah BitGreen yang memungkinkan</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>wallet default</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -804,6 +772,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -894,6 +868,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -939,11 +916,7 @@
         <source>Hide</source>
         <translation>Sembunyikan</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Tidak diketahui. Menyinkronisasikan Headers (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -990,10 +963,6 @@
         <translation>Ukuran cache &amp;database</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Jumlah script &amp;verification threads</translation>
     </message>
@@ -1024,10 +993,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URL pihak ketika (misalnya sebuah block explorer) yang mumcul dalam tab transaksi sebagai konteks menu. %s dalam URL diganti dengan kode transaksi. URL dipisahkan dengan tanda vertikal |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Pilihan command-line yang aktif menimpa diatas opsi: </translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1419,9 +1384,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -1541,10 +1503,6 @@
         <translation>1 &amp;tahun</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>wallet default</translation>
-    </message>
-    <message>
         <source>Yes</source>
         <translation>Ya</translation>
     </message>
@@ -1594,10 +1552,6 @@
     <message>
         <source>Requested payments history</source>
         <translation>Riwayat pembayaran yang diminta Anda</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Minta pembayaran</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -1658,7 +1612,7 @@
         <source>Wallet</source>
         <translation>Dompet</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -2019,6 +1973,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -2029,10 +1986,6 @@
     </context>
 <context>
     <name>bitgreen-core</name>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
-    </message>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Menemukan database blok yang rusak </translation>
@@ -2058,10 +2011,6 @@
         <translation>Menemukan masalah membukakan database blok</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Gagal: Hard disk hampir terisi!</translation>
-    </message>
-    <message>
         <source>Importing...</source>
         <translation>mengimpor...</translation>
     </message>
@@ -2078,10 +2027,6 @@
         <translation>Blok-blok sedang diverifikasi...</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>Informasi</translation>
-    </message>
-    <message>
         <source>Signing transaction failed</source>
         <translation>Tandatangani transaksi tergagal</translation>
     </message>
@@ -2092,10 +2037,6 @@
     <message>
         <source>Transaction too large</source>
         <translation>Transaksi terlalu besar</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Peringatan</translation>
     </message>
     <message>
         <source>Zapping all transactions from wallet...</source>
@@ -2128,10 +2069,6 @@
     <message>
         <source>Done loading</source>
         <translation>Memuat selesai</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Gagal</translation>
     </message>
 </context>
 </TS>

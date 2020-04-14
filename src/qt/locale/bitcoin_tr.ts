@@ -70,10 +70,6 @@
         <translation>Bunlar ödemeleri göndermek için kullanacağınız BitGreen adreslerinizdir. BitGreen yollamadan önce tutarı ve alıcının alım adresini her zaman kontrol ediniz.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için kullanacağınız BitGreen adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
-    </message>
-    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Adresi Kopyala</translation>
     </message>
@@ -176,20 +172,12 @@
         <translation>Cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Uyarı: Eğer cüzdanınızı şifreler ve parolanızı kaybederseniz &lt;b&gt;TÜM BİTCOİNLERİNİZİ KAYBEDECEKSİNİZ&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Cüzdanınızı şifrelemek istediğinizden emin misiniz?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Cüzdan şifrelendi</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>Şifreleme işleminin bitirilmesi için %1 kapatılacak. Her ne kadar cüzdanınızı şifreleseniz de şifrelemenin bitgreenlerinizi bilgisayarınıza bulaşan zararlılardan tam olarak koruyamayacağını unutmayın.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +242,6 @@
         <translation>&amp;Genel bakış</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Düğüm</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Cüzdana genel bakışı göster</translation>
     </message>
@@ -314,24 +298,12 @@
         <translation>&amp;Parolayı Değiştir...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Gönderme adresleri...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Alma adresleri...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>&amp;URI Aç...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Cüzdan:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>varsayılan cüzdan</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -380,14 +352,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>İletiyi &amp;kontrol et...</translation>
-    </message>
-    <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Cüzdan</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -500,6 +464,10 @@
     <message>
         <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
         <translation>Olası BitGreen komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>varsayılan cüzdan</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -804,6 +772,12 @@
     </message>
 </context>
 <context>
+    <name>GovernanceDialog</name>
+    </context>
+<context>
+    <name>GovernanceList</name>
+    </context>
+<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -878,6 +852,9 @@
     </message>
 </context>
 <context>
+    <name>MasternodeList</name>
+    </context>
+<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -923,11 +900,7 @@
         <source>Hide</source>
         <translation>Gizle</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Bilinmeyen. Üstbilgiler Senkronize Ediliyor (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -974,10 +947,6 @@
         <translation>&amp;Veritabanı önbelleğinin boyutu</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>İş parçacıklarını &amp;denetleme betiği sayısı</translation>
     </message>
@@ -1008,10 +977,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>İşlemler sekmesinde bağlam menüsü unsurları olarak görünen üçüncü taraf bağlantıları (mesela bir blok tarayıcısı). URL'deki %s, işlem hash değeri ile değiştirilecektir. Birden çok bağlantılar düşey çubuklar | ile ayrılacaktır.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Yukarıdaki seçeneklerin yerine geçen etkin komut satırı seçenekleri:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1495,21 +1460,6 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Hata: Belirtilen "%1" veri klasörü yoktur.</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>Hata: %1 yapılandırma dosyası ayrıştırılamadı. </translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Hata: %1</translation>
-    </message>
-</context>
-<context>
     <name>QRImageWidget</name>
     <message>
         <source>&amp;Save Image...</source>
@@ -1771,10 +1721,6 @@
         <translation>&amp;Yasaklamayı Kaldır</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>varsayılan cüzdan</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>%1 RPC konsoluna hoş geldiniz.</translation>
     </message>
@@ -1878,16 +1824,8 @@
         <translation>Temizle</translation>
     </message>
     <message>
-        <source>Generate native segwit (Bech32) address</source>
-        <translation>Yerli segwit (Bech32) adresi oluştur</translation>
-    </message>
-    <message>
         <source>Requested payments history</source>
         <translation>Talep edilen ödemelerin tarihçesi</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>Ödeme &amp;talep et</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -1971,14 +1909,6 @@
     <message>
         <source>Wallet</source>
         <translation>Cüzdan</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Sonuç URI çok uzun, etiket ya da ileti metnini kısaltmayı deneyiniz.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>URI'nin QR koduna kodlanmasında hata oluştu.</translation>
     </message>
 </context>
 <context>
@@ -2091,14 +2021,6 @@
         <translation>Gizle</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Gerekli olan en az ücreti ödemek, bloklarda boşluktan daha az işlem hacmi olduğu sürece bir sorun çıkarmaz. Fakat ağın işleyecebileceğinden daha çok bitgreen işlemi talebi olduğunda bunun asla doğrulanmayan bir işlem olabileceğinin farkında olmalısınız.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(bilgi balonunu oku)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Tavsiye edilen:</translation>
     </message>
@@ -2191,10 +2113,6 @@
         <translation>veya</translation>
     </message>
     <message>
-        <source>from wallet %1</source>
-        <translation>cüzdan %1'den</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>Lütfen, işleminizi gözden geçirin.</translation>
     </message>
@@ -2245,10 +2163,6 @@
     <message>
         <source>Payment request expired.</source>
         <translation>Ödeme talebinin geçerlilik süresi bitti.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Sadece asgari ücret olan %1 tutarını öde</translation>
     </message>
     <message>
         <source>Warning: Invalid BitGreen address</source>
@@ -2977,6 +2891,9 @@
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3017,7 +2934,7 @@
         <source>Could not commit transaction</source>
         <translation>Alışveriş taahüt edilemedi.</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3086,10 +3003,6 @@
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>HTTP sunucusu başlatılamadı. Ayrıntılar için debug.log dosyasına bakınız.</translation>
-    </message>
-    <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Çekirdeği</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3192,10 +3105,6 @@
         <translation>Blok veritabanının açılışı sırasında hata</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Hata: Disk alanı düşük!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Herhangi bir portun dinlenmesi başarısız oldu. Bunu istiyorsanız -listen=0 seçeneğini kullanınız.</translation>
     </message>
@@ -3276,18 +3185,6 @@
         <translation>Anahtar üretilemiyor</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Desteklenmeyen -benchmark argümanı görmezden gelindi, -debug=bench kullanınız.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Desteklenmeyen -debugnet argümanı görmezden gelindi, debug=net kullanınız.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Deskteklenmeyen -tor argümanı bulundu, -onion kullanınız.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>Desteklenmeyen günlük kategorisi %s=%s.</translation>
     </message>
@@ -3324,20 +3221,12 @@
         <translation>Budama olmayan kipe dönmek için veritabanını -reindex ile tekrar derlemeniz gerekir. Bu, tüm blok zincirini tekrar indirecektir</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>%s yüklemesinde hata: Zaten HD olan bir cüzdanda HD devre dışı bırakılamaz </translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Veritabanından okumada hata, kapatılıyor.</translation>
     </message>
     <message>
         <source>Error upgrading chainstate database</source>
         <translation>Zincirdurumu veritabanı yükseltme hatası</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Bilgi</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3392,10 +3281,6 @@
         <translation>İşlem tutarı çok düşük</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>Ücret politikası için işlem çok büyük</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>İşlem çok büyük</translation>
     </message>
@@ -3412,14 +3297,6 @@
         <translation>Cüzdan(lar) kontrol ediliyor...</translation>
     </message>
     <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>Cüzdan %s, %s cüzdan klasörünün dışında bulunuyor</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Uyarı</translation>
-    </message>
-    <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
         <translation>Uyarı: bilinmeyen yeni kurallar etkinleştirilmiştir (versionbit %i)</translation>
     </message>
@@ -3430,10 +3307,6 @@
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>-maxtxfee çok yüksek bir değere ayarlanmış! Bu denli yüksek ücretler tek bir işlemde ödenebilir.</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>%s yüklenmesinde hata: zaten var olan ve HD olmayan bir cüzdanda HD etkinleştirilemez.</translation>
     </message>
     <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -3448,18 +3321,6 @@
         <translation>Ağ sürümü zincirinin toplam boyutu (%i) en yüksek boyutu geçmektedir (%i). Kullanıcı aracı açıklamasının sayısı veya boyutunu azaltınız.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Desteklenmeyen -socks argümanı bulundu. SOCKS sürümünün ayarlanması artık mümkün değildir, sadece SOCKS5 vekilleri desteklenmektedir.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Desteklenmeyen argüman -whitelistalwaysrelay görmezden gelindi, -whitelistrelay ve/veya -whitelistforcerelay kullanın.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Uyarı: Bilinmeyen blok sürümü oluşturulmaya çalışılıyor. Bilinmeyen kuralların işlemesi mümkündür.</translation>
-    </message>
-    <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Uyarı: wallet.dat bozuk, veriler geri kazanıldı! Özgün %s, %s olarak %s klasörüne kaydedildi; bakiyeniz ya da işlemleriniz yanlışsa bir yedeklemeden tekrar yüklemeniz gerekir.</translation>
     </message>
@@ -3470,10 +3331,6 @@
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>%s cüzdanı yüklenirken hata oluştu. Belirtilen -wallet dosya adında başka bir kopya daha var.</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Keypool tükendi, lütfen önce keypoolrefill'i çağırın</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3538,10 +3395,6 @@
     <message>
         <source>Done loading</source>
         <translation>Yükleme tamamlandı</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Hata</translation>
     </message>
 </context>
 </TS>
