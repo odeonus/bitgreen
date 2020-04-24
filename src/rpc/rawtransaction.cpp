@@ -59,7 +59,6 @@ static void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& 
     uint256 txid = tx.GetHash();
 
     CSpentIndexTxInfo txSpentInfo;
-
     for (const auto& txin : tx.vin) {
         if (!tx.IsCoinBase() || !tx.IsCoinStake()) {
             CSpentIndexValue spentInfo;
@@ -132,20 +131,23 @@ static void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& 
     bool chainLock = false;
     if (!hashBlock.IsNull()) {
         LOCK(cs_main);
-
         entry.pushKV("blockhash", hashBlock.GetHex());
-        CBlockIndex* pindex = LookupBlockIndex(hashBlock);
-        if (pindex) {
-            if (::ChainActive().Contains(pindex)) {
+        BlockMap::iterator mi = ::BlockIndex().find(hashBlock);
+        if (mi != ::BlockIndex().end() && (*mi).second) {
+            CBlockIndex* pindex = (*mi).second;
+            if (ChainActive().Contains(pindex)) {
+                entry.pushKV("height", pindex->nHeight);
                 entry.pushKV("confirmations", 1 + ::ChainActive().Height() - pindex->nHeight);
                 entry.pushKV("time", pindex->GetBlockTime());
                 entry.pushKV("blocktime", pindex->GetBlockTime());
                 chainLock = llmq::chainLocksHandler->HasChainLock(pindex->nHeight, pindex->GetBlockHash());
-            }
-            else
+            } else {
+                entry.pushKV("height", -1);
                 entry.pushKV("confirmations", 0);
+            }
         }
     }
+
     bool fLLMQLocked = llmq::quorumInstantSendManager->IsLocked(txid);
     entry.pushKV("instantlock", fLLMQLocked || chainLock);
     entry.pushKV("instantlock_internal", fLLMQLocked);
