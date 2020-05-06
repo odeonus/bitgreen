@@ -329,16 +329,12 @@ void CGovernanceManager::AddGovernanceObject(CGovernanceObject& govobj, CConnman
     // SHOULD WE ADD THIS OBJECT TO ANY OTHER MANANGERS?
 
     LogPrint(BCLog::GOBJECT, "CGovernanceManager::AddGovernanceObject -- Before trigger block, GetDataAsPlainString = %s, nObjectType = %d\n",
-                govobj.GetDataAsPlainString(), govobj.nObjectType);
+                govobj.GetDataAsPlainString(), govobj.GetObjectType());
 
-    if (govobj.nObjectType == GOVERNANCE_OBJECT_TRIGGER) {
+    if (govobj.GetObjectType() == GOVERNANCE_OBJECT_TRIGGER) {
         if (!triggerman.AddNewTrigger(nHash)) {
             LogPrint(BCLog::GOBJECT, "CGovernanceManager::AddGovernanceObject -- undo adding invalid trigger object: hash = %s\n", nHash.ToString());
-            CGovernanceObject& objref = objpair.first->second;
-            objref.fCachedDelete = true;
-            if (objref.nDeletionTime == 0) {
-                objref.nDeletionTime = GetAdjustedTime();
-            }
+            objpair.first->second.PrepareDeletion(GetAdjustedTime());
             return;
         }
     }
@@ -379,7 +375,6 @@ void CGovernanceManager::UpdateCachesAndClean()
             continue;
         }
         it->second.ClearMasternodeVotes();
-        it->second.fDirtyCache = true;
     }
 
     ScopedLockBool guard(cs, fRateChecksEnabled, false);
@@ -453,10 +448,7 @@ void CGovernanceManager::UpdateCachesAndClean()
                 CProposalValidator validator(pObj->GetDataAsHexString(), true);
                 if (!validator.Validate()) {
                     LogPrintf("CGovernanceManager::UpdateCachesAndClean -- set for deletion expired obj %s\n", strHash);
-                    pObj->fCachedDelete = true;
-                    if (pObj->nDeletionTime == 0) {
-                        pObj->nDeletionTime = nNow;
-                    }
+                    pObj->PrepareDeletion(nNow);
                 }
             }
             ++it;
@@ -1060,7 +1052,7 @@ int CGovernanceManager::RequestGovernanceObjectVotes(NodeId id) // const std::ve
                 if (mapAskedRecently[nHash].size() >= nPeersPerHashMax) continue;
             }
 
-            if (objPair.second.nObjectType == GOVERNANCE_OBJECT_TRIGGER) {
+            if (objPair.second.GetObjectType() == GOVERNANCE_OBJECT_TRIGGER) {
                 vTriggerObjHashes.push_back(nHash);
             } else {
                 vOtherObjHashes.push_back(nHash);
@@ -1171,15 +1163,12 @@ void CGovernanceManager::AddCachedTriggers()
     for (auto& objpair : mapObjects) {
         CGovernanceObject& govobj = objpair.second;
 
-        if (govobj.nObjectType != GOVERNANCE_OBJECT_TRIGGER) {
+        if (govobj.GetObjectType() != GOVERNANCE_OBJECT_TRIGGER) {
             continue;
         }
 
         if (!triggerman.AddNewTrigger(govobj.GetHash())) {
-            govobj.fCachedDelete = true;
-            if (govobj.nDeletionTime == 0) {
-                govobj.nDeletionTime = GetAdjustedTime();
-            }
+            govobj.PrepareDeletion(GetAdjustedTime());
         }
     }
 }

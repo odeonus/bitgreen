@@ -107,10 +107,6 @@ struct vote_rec_t {
 
 class CGovernanceObject
 {
-    friend class CGovernanceManager;
-    friend class CGovernanceTriggerManager;
-    friend class CSuperblock;
-
 public: // Types
     typedef std::map<COutPoint, vote_rec_t> vote_m_t;
 
@@ -249,6 +245,11 @@ public:
         return fExpired;
     }
 
+    void SetExpired()
+    {
+        fExpired = true;
+    }
+
     const CGovernanceObjectVoteFile& GetVoteFile() const
     {
         return fileVotes;
@@ -275,6 +276,14 @@ public:
     void UpdateLocalValidity();
 
     void UpdateSentinelVariables();
+
+    void PrepareDeletion(int64_t nDeletionTime_)
+    {
+        fCachedDelete = true;
+        if (nDeletionTime == 0) {
+            nDeletionTime = nDeletionTime_;
+        }
+    }
 
     CAmount GetMinCollateralFee() const;
 
@@ -332,7 +341,6 @@ public:
         // AFTER DESERIALIZATION OCCURS, CACHED VARIABLES MUST BE CALCULATED MANUALLY
     }
 
-private:
     // FUNCTIONS FOR DEALING WITH DATA STRING
     void LoadData();
     void GetData(UniValue& objResult);
