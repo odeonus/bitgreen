@@ -701,13 +701,14 @@ std::string CSuperblockManager::GetRequiredPaymentsString(int nBlockHeight)
 
             CTxDestination address1;
             ExtractDestination(payment.script, address1);
+            std::string address2 = EncodeDestination(address1);
 
             // RETURN NICE OUTPUT FOR CONSOLE
 
-            if(ret != "Unknown") {
-                ret += ", " + EncodeDestination(address1);
+            if (ret != "Unknown") {
+                ret += ", " + address2;
             } else {
-                ret = EncodeDestination(address1);
+                ret = address2;
             }
         }
     }
