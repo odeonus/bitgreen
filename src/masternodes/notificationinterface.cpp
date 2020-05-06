@@ -69,8 +69,6 @@ void CMNNotificationInterface::SyncTransaction(const CTransaction &tx, const CBl
 void CMNNotificationInterface::NotifyMasternodeListChanged(bool undo, const CDeterministicMNList& oldMNList, const CDeterministicMNListDiff& diff)
 {
     CMNAuth::NotifyMasternodeListChanged(undo, oldMNList, diff);
-    governance.CheckMasternodeOrphanObjects(connman);
-    governance.CheckMasternodeOrphanVotes(connman);
     governance.UpdateCachesAndClean();
 }
 
