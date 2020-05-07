@@ -291,7 +291,7 @@ public:
         consensus.fPowNoRetargeting = false;
         consensus.nPosTargetSpacing = 2 * 60; // PoS: 2 minutes
         consensus.nPosTargetTimespan = 60 * 40;
-        consensus.nStakeMinAge = 60 * 10; // 10 minutes
+        consensus.nStakeMinAge = 60 * 1;  // 1 minute
         consensus.nStakeMaxAge = 60 * 60; // 1 hour
         consensus.nModifierInterval = 60; // Modifier interval: time to elapse before new modifier is computed (1 minute)
         consensus.nLastPoWBlock = 200;
@@ -300,9 +300,9 @@ public:
         consensus.nMasternodeMinimumConfirmations = 1;
 
         // Stake constants
-        consensus.nStakeEnforcement = 60000;
-        consensus.nMinStakeAmount = 150 * COIN;
-        consensus.nMinStakeHistory = 600;
+        consensus.nStakeEnforcement = 200;
+        consensus.nMinStakeAmount = 1 * COIN;
+        consensus.nMinStakeHistory = 10;
 
         // Governance
         consensus.nSuperblockCycle = 24; // Superblocks can be issued hourly on testnet
@@ -380,7 +380,7 @@ public:
         fAllowMultiplePorts = false;
         nFulfilledRequestExpireTime = 5 * 60; // fulfilled requests expire in 5 minutes
 
-        vSporkAddresses = {"GMWbuDW6m6WCc7Zc9W3CSuviXzqPKK3eBj"};
+        vSporkAddresses = {"gprpehZBigGDp7sNMjEKY46afAd9BWtd29"};
         nMinSporkKeys = 1;
 
         checkpointData = {
