@@ -1078,11 +1078,18 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     */
 
     // Supply on old chain
-    if (nHeight == 1)
-        return 9851721 * COIN;
+    if (Params().NetworkIDString() == "main") {
+        if (nHeight == 1)
+            return 9851721 * COIN;
 
-    if (nHeight <= 7500)
-        return 0 * COIN;
+        if (nHeight <= 7500)
+            return 0 * COIN;
+    }
+
+    if (Params().NetworkIDString() == "test") {
+        if (nHeight == 1)
+            return 10000 * COIN;
+    }
 
     CAmount nSubsidy = 10 * COIN;
     if (nHeight >= 175000) nSubsidy = 5 * COIN;
