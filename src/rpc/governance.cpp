@@ -132,9 +132,8 @@ void gobject_prepare_help(CWallet* const pwallet)
                 "2. revision      (numeric, required) object revision in the system\n"
                 "3. time          (numeric, required) time this object was created\n"
                 "4. data-hex      (string, required)  data in hex string form\n"
-                "5. use-IS        (boolean, optional, default=false) InstantSend lock the collateral, only requiring one chain confirmation\n"
-                "6. outputHash    (string, optional) the single output to submit the proposal fee from\n"
-                "7. outputIndex   (numeric, optional) The output index.\n"
+                "5. outputHash    (string, optional) the single output to submit the proposal fee from\n"
+                "6. outputIndex   (numeric, optional) The output index.\n"
                 );
 }
 
@@ -142,7 +141,7 @@ UniValue gobject_prepare(const JSONRPCRequest& request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
     CWallet* const pwallet = wallet.get();
-    if (request.fHelp || (request.params.size() != 5 && request.params.size() != 6 && request.params.size() != 8))
+    if (request.fHelp || (request.params.size() != 5 && request.params.size() != 6 && request.params.size() != 7))
         gobject_prepare_help(pwallet);
 
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
@@ -166,18 +165,16 @@ UniValue gobject_prepare(const JSONRPCRequest& request)
     int nRevision = atoi(strRevision);
     int64_t nTime = atoi64(strTime);
     std::string strDataHex = request.params[4].get_str();
-    bool useIS = false;
-    if (request.params.size() > 5) useIS = request.params[5].getBool();
 
     // CREATE A NEW COLLATERAL TRANSACTION FOR THIS SPECIFIC OBJECT
 
     CGovernanceObject govobj(hashParent, nRevision, nTime, uint256(), strDataHex);
 
-    // This command is dangerous because it consumes 5 DASH irreversibly.
+    // This command is dangerous because it consumes 5 BITG irreversibly.
     // If params are lost, it's very hard to bruteforce them and yet
     // users ignore all instructions on dashcentral etc. and do not save them...
     // Let's log them here and hope users do not mess with debug.log
-    LogPrint(BCLog::GOBJECT, "params: %s %s %s %s, data: %s, hash: %s\n",
+    LogPrintf("gobject_prepare -- params: %s %s %s %s, data: %s, hash: %s\n",
                 request.params[1].get_str(), request.params[2].get_str(),
                 request.params[3].get_str(), request.params[4].get_str(),
                 govobj.GetDataAsPlainString(), govobj.GetHash().ToString());
@@ -202,9 +199,9 @@ UniValue gobject_prepare(const JSONRPCRequest& request)
     // If specified, spend this outpoint as the proposal fee
     COutPoint outpoint;
     outpoint.SetNull();
-    if (request.params.size() == 8) {
-        uint256 collateralHash = ParseHashV(request.params[6], "outputHash");
-        int32_t collateralIndex = UniValue(UniValue::VNUM, request.params[7].getValStr()).get_int();
+    if (request.params.size() == 7) {
+        uint256 collateralHash = ParseHashV(request.params[5], "outputHash");
+        int32_t collateralIndex = UniValue(UniValue::VNUM, request.params[6].getValStr()).get_int();
         if (collateralHash.IsNull() || collateralIndex < 0) {
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, strprintf("invalid hash or index: %s-%d", collateralHash.ToString(), collateralIndex));
         }
@@ -221,11 +218,11 @@ UniValue gobject_prepare(const JSONRPCRequest& request)
     CValidationState state;
     mapValue_t mapValue;
     if (!pwallet->CommitTransaction(tx, std::move(mapValue), {}, state)) {
-        throw JSONRPCError(RPC_INTERNAL_ERROR, "CommitTransaction failed!" /* Reason given: " + state.GetRejectReason()*/);
+        throw JSONRPCError(RPC_INTERNAL_ERROR, "CommitTransaction failed! Reason given: " + state.GetRejectReason());
     }
 
-//  LogPrint(BCLog::GOBJECT, "GetDataAsPlainString = %s, hash = %s, txid = %s\n",
-//              govobj.GetDataAsPlainString(), govobj.GetHash().ToString(), tx.GetHash().ToString());
+    LogPrint(BCLog::GOBJECT, "GetDataAsPlainString = %s, hash = %s, txid = %s\n",
+                govobj.GetDataAsPlainString(), govobj.GetHash().ToString(), tx->GetHash().ToString());
 
     return tx->GetHash().ToString();
 }
@@ -877,8 +874,8 @@ UniValue gobject_getcurrentvotes(const JSONRPCRequest& request)
 [[ noreturn ]] void gobject_help()
 {
     throw std::runtime_error(
-            "gobject \"command\"...\n"
-            "Manage governance objects\n"
+            "gobject \"command\" ...\n"
+            "Set of commands to manage governance objects.\n"
             "\nAvailable commands:\n"
             "  check              - Validate governance object data (proposal only)\n"
 #ifdef ENABLE_WALLET
@@ -960,13 +957,13 @@ UniValue voteraw(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 7)
         throw std::runtime_error(
-                "voteraw <masternode-tx-hash> <masternode-tx-index> <governance-hash> <vote-signal> [yes|no|abstain] <time> <vote-sig>\n"
+                "voteraw <mn-collateral-tx-hash> <mn-collateral-tx-index> <governance-hash> <vote-signal> [yes|no|abstain] <time> <vote-sig>\n"
                 "Compile and relay a governance vote with provided external signature instead of signing vote internally\n"
                 );
 
-    uint256 hashMnTx = ParseHashV(request.params[0], "mn tx hash");
-    int nMnTxIndex = request.params[1].get_int();
-    COutPoint outpoint = COutPoint(hashMnTx, nMnTxIndex);
+    uint256 hashMnCollateralTx = ParseHashV(request.params[0], "mn collateral tx hash");
+    int nMnCollateralTxIndex = request.params[1].get_int();
+    COutPoint outpoint = COutPoint(hashMnCollateralTx, nMnCollateralTxIndex);
 
     uint256 hashGovObj = ParseHashV(request.params[2], "Governance hash");
     std::string strVoteSignal = request.params[3].get_str();
@@ -1085,10 +1082,7 @@ UniValue getsuperblockbudget(const JSONRPCRequest& request)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Block height out of range");
     }
 
-    CAmount nBudget = CSuperblock::GetPaymentsLimit(nBlockHeight);
-    std::string strBudget = FormatMoney(nBudget);
-
-    return strBudget;
+    return ValueFromAmount(CSuperblock::GetPaymentsLimit(nBlockHeight));
 }
 
 static const CRPCCommand commands[] =
