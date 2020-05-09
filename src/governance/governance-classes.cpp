@@ -602,7 +602,9 @@ bool CSuperblock::IsValid(const CTransaction& txNew, int nBlockHeight, CAmount b
     }
 
     // miner and masternodes should not get more than they would usually get
-    CAmount nBlockValue = txNew.GetValueOut();
+    CCoinsViewCache view(pcoinsTip.get());
+    CAmount nValueIn = view.GetValueIn(txNew);
+    CAmount nBlockValue = txNew.GetValueOut() - nValueIn;
     if (nBlockValue > blockReward + nPaymentsTotalAmount) {
         LogPrintf("CSuperblock::IsValid -- ERROR: Block invalid, block value limit exceeded: block %lld, limit %lld\n", nBlockValue, blockReward + nPaymentsTotalAmount);
         return false;
