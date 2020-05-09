@@ -254,7 +254,7 @@ UniValue gobject_submit(const JSONRPCRequest& request)
     auto mnList = deterministicMNManager->GetListAtChainTip();
     bool fMnFound = mnList.HasValidMNByCollateral(activeMasternodeInfo.outpoint);
 
-    LogPrint(BCLog::GOBJECT, "gobject_submit -- pubKeyOperator = %s, outpoint = %s, params.size() = %lld, fMnFound = %d\n",
+    LogPrintf("gobject_submit -- pubKeyOperator = %s, outpoint = %s, params.size() = %lld, fMnFound = %d\n",
             (activeMasternodeInfo.blsPubKeyOperator ? activeMasternodeInfo.blsPubKeyOperator->ToString() : "N/A"),
             activeMasternodeInfo.outpoint.ToStringShort(), request.params.size(), fMnFound);
 
@@ -282,8 +282,8 @@ UniValue gobject_submit(const JSONRPCRequest& request)
 
     CGovernanceObject govobj(hashParent, nRevision, nTime, txidFee, strDataHex);
 
-    LogPrint(BCLog::GOBJECT, "gobject_submit -- GetDataAsPlainString = %s, hash = %s, txid = %s\n",
-                govobj.GetDataAsPlainString(), govobj.GetHash().ToString(), request.params[5].get_str());
+    LogPrintf("gobject_submit -- GetDataAsPlainString = %s, hash = %s, txid = %s\n",
+                govobj.GetDataAsPlainString(), govobj.GetHash().ToString(), txidFee.ToString());
 
     if (govobj.GetObjectType() == GOVERNANCE_OBJECT_PROPOSAL) {
         CProposalValidator validator(strDataHex, false);
