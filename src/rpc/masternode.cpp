@@ -136,7 +136,7 @@ UniValue GetNextMasternodeForPayment(int heightShift)
     obj.pushKV("height", mnList.GetHeight() + heightShift);
     obj.pushKV("IP:port", payee->pdmnState->addr.ToString());
     obj.pushKV("proTxHash", payee->proTxHash.ToString());
-    obj.pushKV("outpoint", payee->collateralOutpoint.ToString());
+    obj.pushKV("outpoint", payee->collateralOutpoint.ToStringShort());
 
     CTxDestination dest;
     std::string payeeStr = "UNKNOWN";
@@ -234,10 +234,10 @@ UniValue masternode_status(const JSONRPCRequest& request)
     UniValue mnObj(UniValue::VOBJ);
 
     // keep compatibility with legacy status for now (might get deprecated/removed later)
-    mnObj.pushKV("outpoint", activeMasternodeInfo.outpoint.ToString());
+    mnObj.pushKV("outpoint", activeMasternodeInfo.outpoint.ToStringShort());
     mnObj.pushKV("service", activeMasternodeInfo.service.ToString());
 
-    auto dmn = activeMasternodeManager->GetDMN();
+    auto dmn = deterministicMNManager->GetListAtChainTip().GetMN(activeMasternodeInfo.proTxHash);
     if (dmn) {
         mnObj.pushKV("proTxHash", dmn->proTxHash.ToString());
         mnObj.pushKV("collateralHash", dmn->collateralOutpoint.hash.ToString());
@@ -299,7 +299,8 @@ UniValue masternode_winners(const JSONRPCRequest& request)
     return obj;
 }
 
-[[noreturn]] void masternode_help() {
+[[noreturn]] void masternode_help()
+{
     throw std::runtime_error(
         "masternode \"command\"...\n"
         "Set of commands to execute masternode related actions\n"
@@ -395,7 +396,7 @@ UniValue masternodelist(const JSONRPCRequest& request)
     };
 
     mnList.ForEachMN(false, [&](const CDeterministicMNCPtr& dmn) {
-        std::string strOutpoint = dmn->collateralOutpoint.ToString();
+        std::string strOutpoint = dmn->collateralOutpoint.ToStringShort();
         Coin coin;
         std::string collateralAddressStr = "UNKNOWN";
         if (GetUTXOCoin(dmn->collateralOutpoint, coin)) {

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018 The Dash Core developers
+// Copyright (c) 2014-2019 The Dash Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -143,7 +143,7 @@ void CGovernanceTriggerManager::CleanAndRemove()
         CGovernanceObject* pObj = nullptr;
         CSuperblock_sptr& pSuperblock = it->second;
         if (!pSuperblock) {
-            LogPrint(BCLog::GOBJECT, "CGovernanceTriggerManager::CleanAndRemove -- NULL superblock marked for removal\n");
+            LogPrint(BCLog::GOBJECT, "CGovernanceTriggerManager::CleanAndRemove -- nullptr superblock\n");
             remove = true;
         } else {
             pObj = governance.FindGovernanceObject(it->first);
@@ -160,9 +160,15 @@ void CGovernanceTriggerManager::CleanAndRemove()
                 remove = true;
                 break;
             case SEEN_OBJECT_IS_VALID:
-            case SEEN_OBJECT_EXECUTED:
-                remove = pSuperblock->IsExpired();
+            case SEEN_OBJECT_EXECUTED: {
+                LogPrint(BCLog::GOBJECT, "CGovernanceTriggerManager::CleanAndRemove -- Valid trigger found\n");
+                if (pSuperblock->IsExpired()) {
+                    // update corresponding object
+                    pObj->SetExpired();
+                    remove = true;
+                }
                 break;
+            }
             default:
                 break;
             }
@@ -170,18 +176,13 @@ void CGovernanceTriggerManager::CleanAndRemove()
         LogPrint(BCLog::GOBJECT, "CGovernanceTriggerManager::CleanAndRemove -- %smarked for removal\n", remove ? "" : "NOT ");
 
         if (remove) {
-            std::string strDataAsPlainString = "NULL";
+            std::string strDataAsPlainString = "nullptr";
             if (pObj) {
                 strDataAsPlainString = pObj->GetDataAsPlainString();
+                // mark corresponding object for deletion
+                pObj->PrepareDeletion(GetAdjustedTime());
             }
             LogPrint(BCLog::GOBJECT, "CGovernanceTriggerManager::CleanAndRemove -- Removing trigger object %s\n", strDataAsPlainString);
-            // mark corresponding object for deletion
-            if (pObj) {
-                pObj->fCachedDelete = true;
-                if (pObj->nDeletionTime == 0) {
-                    pObj->nDeletionTime = GetAdjustedTime();
-                }
-            }
             // delete the trigger
             mapTrigger.erase(it++);
         } else {
@@ -601,7 +602,9 @@ bool CSuperblock::IsValid(const CTransaction& txNew, int nBlockHeight, CAmount b
     }
 
     // miner and masternodes should not get more than they would usually get
-    CAmount nBlockValue = txNew.GetValueOut();
+    CCoinsViewCache view(pcoinsTip.get());
+    CAmount nValueIn = view.GetValueIn(txNew);
+    CAmount nBlockValue = txNew.GetValueOut() - nValueIn;
     if (nBlockValue > blockReward + nPaymentsTotalAmount) {
         LogPrintf("CSuperblock::IsValid -- ERROR: Block invalid, block value limit exceeded: block %lld, limit %lld\n", nBlockValue, blockReward + nPaymentsTotalAmount);
         return false;
@@ -643,9 +646,8 @@ bool CSuperblock::IsValid(const CTransaction& txNew, int nBlockHeight, CAmount b
     return true;
 }
 
-bool CSuperblock::IsExpired()
+bool CSuperblock::IsExpired() const
 {
-    bool fExpired{false};
     int nExpirationBlocks{0};
     // Executed triggers are kept for another superblock cycle (approximately 1 month),
     // other valid triggers are kept for ~1 day only, everything else is pruned after ~1h.
@@ -667,16 +669,10 @@ bool CSuperblock::IsExpired()
 
     if (governance.GetCachedBlockHeight() > nExpirationBlock) {
         LogPrint(BCLog::GOBJECT, "CSuperblock::IsExpired -- Outdated trigger found\n");
-        fExpired = true;
-        CGovernanceObject* pgovobj = GetGovernanceObject();
-        if (pgovobj) {
-            LogPrint(BCLog::GOBJECT, "CSuperblock::IsExpired -- Expiring outdated object: %s\n", pgovobj->GetHash().ToString());
-            pgovobj->fExpired = true;
-            pgovobj->nDeletionTime = GetAdjustedTime();
-        }
+        return true;
     }
 
-    return fExpired;
+    return false;
 }
 
 /**
@@ -707,13 +703,14 @@ std::string CSuperblockManager::GetRequiredPaymentsString(int nBlockHeight)
 
             CTxDestination address1;
             ExtractDestination(payment.script, address1);
+            std::string address2 = EncodeDestination(address1);
 
             // RETURN NICE OUTPUT FOR CONSOLE
 
-            if(ret != "Unknown") {
-                ret += ", " + EncodeDestination(address1);
+            if (ret != "Unknown") {
+                ret += ", " + address2;
             } else {
-                ret = EncodeDestination(address1);
+                ret = address2;
             }
         }
     }

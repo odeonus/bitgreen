@@ -226,10 +226,21 @@ std::string CInv::GetCommand() const
     int masked = type & MSG_TYPE_MASK;
     switch (masked)
     {
-    case MSG_TX:             return cmd.append(NetMsgType::TX);
-    case MSG_BLOCK:          return cmd.append(NetMsgType::BLOCK);
-    case MSG_FILTERED_BLOCK: return cmd.append(NetMsgType::MERKLEBLOCK);
-    case MSG_CMPCT_BLOCK:    return cmd.append(NetMsgType::CMPCTBLOCK);
+    case MSG_TX:                            return cmd.append(NetMsgType::TX);
+    case MSG_BLOCK:                         return cmd.append(NetMsgType::BLOCK);
+    case MSG_FILTERED_BLOCK:                return cmd.append(NetMsgType::MERKLEBLOCK);
+    case MSG_CMPCT_BLOCK:                   return cmd.append(NetMsgType::CMPCTBLOCK);
+    case MSG_SPORK:                         return cmd.append(NetMsgType::SPORK);
+    case MSG_GOVERNANCE_OBJECT:             return cmd.append(NetMsgType::MNGOVERNANCEOBJECT);
+    case MSG_GOVERNANCE_OBJECT_VOTE:        return cmd.append(NetMsgType::MNGOVERNANCEOBJECTVOTE);
+    case MSG_QUORUM_FINAL_COMMITMENT:       return cmd.append(NetMsgType::QFCOMMITMENT);
+    case MSG_QUORUM_CONTRIB:                return cmd.append(NetMsgType::QCONTRIB);
+    case MSG_QUORUM_COMPLAINT:              return cmd.append(NetMsgType::QCOMPLAINT);
+    case MSG_QUORUM_JUSTIFICATION:          return cmd.append(NetMsgType::QJUSTIFICATION);
+    case MSG_QUORUM_PREMATURE_COMMITMENT:   return cmd.append(NetMsgType::QPCOMMITMENT);
+    case MSG_QUORUM_RECOVERED_SIG:          return cmd.append(NetMsgType::QSIGREC);
+    case MSG_CLSIG:                         return cmd.append(NetMsgType::CLSIG);
+    case MSG_ISLOCK:                        return cmd.append(NetMsgType::ISLOCK);
     default:
         throw std::out_of_range(strprintf("CInv::GetCommand(): type=%d unknown type", type));
     }
@@ -241,7 +252,8 @@ bool CInv::IsKnownType() const
         type == MSG_QUORUM_FINAL_COMMITMENT || type == MSG_QUORUM_CONTRIB ||
         type == MSG_QUORUM_COMPLAINT || type == MSG_QUORUM_JUSTIFICATION ||
         type == MSG_QUORUM_PREMATURE_COMMITMENT || type == MSG_QUORUM_RECOVERED_SIG ||
-        type == MSG_CLSIG || type == MSG_SPORK || type == MSG_ISLOCK);
+        type == MSG_CLSIG || type == MSG_SPORK || type == MSG_ISLOCK ||
+        type == MSG_GOVERNANCE_OBJECT || type == MSG_GOVERNANCE_OBJECT_VOTE);
 }
 
 std::string CInv::ToString() const

@@ -159,6 +159,7 @@ const CLogCategoryDesc LogCategories[] =
     {BCLog::CHAINLOCKS, "chainlocks"},
     {BCLog::INSTANTSEND, "instantsend"},
     {BCLog::MASTERNODE, "masternode"},
+    {BCLog::GOBJECT, "gobject"},
     {BCLog::ALL, "1"},
     {BCLog::ALL, "all"}
 };

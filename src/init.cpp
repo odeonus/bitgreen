@@ -1914,28 +1914,58 @@ bool AppInitMain(InitInterfaces& interfaces)
     // ********************************************************* Step 10-B: Load cache data
 
     // LOAD SERIALIZED DAT FILES INTO DATA CACHES FOR INTERNAL USE
-    bool fIgnoreCacheFiles = fLiteMode || fReindex || fReindexChainState;
-    if (!fIgnoreCacheFiles) {
-        boost::filesystem::path pathDB = GetDataDir();
-        std::string strDBName;
 
-        strDBName = "mncache.dat";
-        CFlatDB<CMasternodeMetaMan> flatdb1(strDBName, "magicMasternodeCache");
-        if(!flatdb1.Load(mmetaman)) {
-            return InitError(_("Failed to load masternode cache.").translated);
+    bool fLoadCacheFiles = !(fLiteMode || fReindex || fReindexChainState);
+    {
+        LOCK(cs_main);
+        // was blocks/chainstate deleted?
+        if (ChainActive().Tip() == nullptr) {
+            fLoadCacheFiles = false;
         }
+    }
+    fs::path pathDB = GetDataDir();
+    std::string strDBName;
 
-        strDBName = "governance.dat";
-        CFlatDB<CGovernanceManager> flatdb3(strDBName, "magicGovernanceCache");
+    strDBName = "mncache.dat";
+    uiInterface.InitMessage(_("Loading masternode cache...").translated);
+    CFlatDB<CMasternodeMetaMan> flatdb1(strDBName, "magicMasternodeCache");
+    if (fLoadCacheFiles) {
+        if(!flatdb1.Load(mmetaman)) {
+            return InitError(_("Failed to load masternode cache from").translated + "\n" + (pathDB / strDBName).string());
+        }
+    } else {
+        CMasternodeMetaMan mmetamanTmp;
+        if(!flatdb1.Dump(mmetamanTmp)) {
+            return InitError(_("Failed to clear masternode cache at").translated + "\n" + (pathDB / strDBName).string());
+        }
+    }
+
+    strDBName = "governance.dat";
+    uiInterface.InitMessage(_("Loading governance cache...").translated);
+    CFlatDB<CGovernanceManager> flatdb3(strDBName, "magicGovernanceCache");
+    if (fLoadCacheFiles) {
         if(!flatdb3.Load(governance)) {
-            return InitError(_("Failed to load governance cache.").translated);
+            return InitError(_("Failed to load governance cache from").translated+ "\n" + (pathDB / strDBName).string());
         }
         governance.InitOnLoad();
+    } else {
+        CGovernanceManager governanceTmp;
+        if(!flatdb3.Dump(governanceTmp)) {
+            return InitError(_("Failed to clear governance cache at").translated + "\n" + (pathDB / strDBName).string());
+        }
+    }
 
-        strDBName = "netfulfilled.dat";
-        CFlatDB<CNetFulfilledRequestManager> flatdb4(strDBName, "magicFulfilledCache");
+    strDBName = "netfulfilled.dat";
+    uiInterface.InitMessage(_("Loading fulfilled requests cache...").translated);
+    CFlatDB<CNetFulfilledRequestManager> flatdb4(strDBName, "magicFulfilledCache");
+    if (fLoadCacheFiles) {
         if(!flatdb4.Load(netfulfilledman)) {
             return InitError(_("Failed to load fulfilled requests cache from").translated + "\n" + (pathDB / strDBName).string());
+        }
+    } else {
+        CNetFulfilledRequestManager netfulfilledmanTmp;
+        if(!flatdb4.Dump(netfulfilledmanTmp)) {
+            return InitError(_("Failed to clear fulfilled requests cache at").translated + "\n" + (pathDB / strDBName).string());
         }
     }
 
@@ -1944,9 +1974,10 @@ bool AppInitMain(InitInterfaces& interfaces)
     if (!fLiteMode) {
         scheduler.scheduleEvery(boost::bind(&CNetFulfilledRequestManager::DoMaintenance, boost::ref(netfulfilledman)), 60 * 1000);
         scheduler.scheduleEvery(boost::bind(&CMasternodeSync::DoMaintenance, boost::ref(masternodeSync), boost::ref(*g_connman)), 1 * 1000);
-        scheduler.scheduleEvery(boost::bind(&CMasternodeUtils::DoMaintenance, boost::ref(*g_connman)), 1 * 1000);
         scheduler.scheduleEvery(boost::bind(&CGovernanceManager::DoMaintenance, boost::ref(governance)), 60 * 5 * 1000);
     }
+
+    scheduler.scheduleEvery(boost::bind(&CMasternodeUtils::DoMaintenance, boost::ref(*g_connman)), 1 * 1000);
 
     llmq::StartLLMQSystem();
 
