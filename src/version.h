@@ -45,4 +45,9 @@ static const int INVALID_CB_NO_BAN_VERSION = 70016;
 //! introduction of LLMQs
 static const int LLMQS_PROTO_VERSION = 70016;
 
+//! minimal proto version after fork block
+static const int MIN_PEER_PROTO_VERSION_V15 = 70216;
+static const int BLOCKHEIGHT_PROTO_VERSION_V15 = 116760;
+
+
 #endif // BITGREEN_VERSION_H

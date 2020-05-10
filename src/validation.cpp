@@ -1772,7 +1772,7 @@ static int64_t nBlocksTotal = 0;
 /**
  * proof-of-stake
  */
-bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool fJustCheck)
+bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool fJustCheck, bool fDuplicateCheck)
 {
     uint256 hashProofOfStake = uint256();
     // verify hash target and signature of coinstake tx
@@ -1782,7 +1782,7 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
     }
 
     // make sure we havent seen this stake previously
-    if (pindex->nHeight >= Params().GetConsensus().StakeEnforcement() &&
+    if (fDuplicateCheck && pindex->nHeight >= Params().GetConsensus().StakeEnforcement() &&
         std::find(m_blockman.m_pos_index.begin(), m_blockman.m_pos_index.end(), hashProofOfStake) != m_blockman.m_pos_index.end()) {
         return error(" * already seen this stake (%s), discarding block..", hashProofOfStake.ToString());
     }
@@ -1846,14 +1846,14 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
  *  Validity checks that depend on the UTXO set are also done; ConnectBlock()
  *  can fail if those validity checks fail (among other reasons). */
 bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pindex,
-                  CCoinsViewCache& view, const CChainParams& chainparams, bool fJustCheck)
+                  CCoinsViewCache& view, const CChainParams& chainparams, bool fJustCheck, bool fDuplicateCheck)
 {
     AssertLockHeld(cs_main);
     assert(pindex);
     assert(*pindex->phashBlock == block.GetHash());
     int64_t nTimeStart = GetTimeMicros();
 
-    if (pindex->nStakeModifier == 0 && pindex->nStakeModifierChecksum == 0 && !PoSContextualBlockChecks(block, state, pindex, fJustCheck))
+    if (pindex->nStakeModifier == 0 && pindex->nStakeModifierChecksum == 0 && !PoSContextualBlockChecks(block, state, pindex, fJustCheck, fDuplicateCheck))
         return error("%s: failed proof-of-stake checks: %s", __func__, FormatStateMessage(state));
 
     // Check it again in case a previous version let a bad block in
@@ -3957,7 +3957,7 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
         return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
     if (!ContextualCheckBlock(block, state, chainparams.GetConsensus(), pindexPrev))
         return error("%s: Consensus::ContextualCheckBlock: %s", __func__, FormatStateMessage(state));
-    if (!::ChainstateActive().ConnectBlock(block, state, &indexDummy, viewNew, chainparams, true))
+    if (!::ChainstateActive().ConnectBlock(block, state, &indexDummy, viewNew, chainparams, true, true))
         return false;
     assert(state.IsValid());
 
@@ -5292,4 +5292,12 @@ bool GetBlockHash(uint256& hashRet, int nBlockHeight)
     if (nBlockHeight == -1) nBlockHeight = ChainActive().Height();
     hashRet = ChainActive()[nBlockHeight]->GetBlockHash();
     return true;
+}
+
+int ActiveProtocol()
+{
+    if (ChainActive().Tip()->nHeight >= BLOCKHEIGHT_PROTO_VERSION_V15)
+        return MIN_PEER_PROTO_VERSION_V15;
+
+    return MIN_PEER_PROTO_VERSION;
 }
