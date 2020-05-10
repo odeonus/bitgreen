@@ -254,10 +254,15 @@ public:
 
         checkpointData = {
             {
-                {     1, uint256S("0x0000062cf9ac97b1582474e313770e4609c338ed6fae01142da65722353465f3")},
-                {   100, uint256S("0x000005faf4d7d9dccd3a1986eb7150a22f21f80664d5deb91cb1ca38eb305e7e")},
-                {  6439, uint256S("0x7c6f9621fe18f22e57d042a3804be45a9ace2d17a305036242d7ba90b68345cb")},
-                { 70004, uint256S("0x2da7cf773e5032a76aa4480b033c1ac6978ff64531f168c92d022c90f5bf7996")}
+                {      1, uint256S("0x0000062cf9ac97b1582474e313770e4609c338ed6fae01142da65722353465f3")},
+                {    100, uint256S("0x000005faf4d7d9dccd3a1986eb7150a22f21f80664d5deb91cb1ca38eb305e7e")},
+                {   6439, uint256S("0x7c6f9621fe18f22e57d042a3804be45a9ace2d17a305036242d7ba90b68345cb")},
+                {  70004, uint256S("0x2da7cf773e5032a76aa4480b033c1ac6978ff64531f168c92d022c90f5bf7996")},
+                {  80000, uint256S("0x1f6545f0cd4a07a02a5b0175f22b371fc1839839df8d835c04f6420a08d43877")},
+                {  90000, uint256S("0x1d4a1b059b96fa871e9aa09eca0e2ed18ef369556ef8ee88bacf3b3705812e26")},
+                { 100000, uint256S("0x8a58bc2b0d6b13229f4ec1d9733317a82e62dbc035e09384ee9e73b77a3e3c76")},
+                { 105000, uint256S("0xa9e075e368ebc428c223055d4c3db108106098237dc9f55af687f56781c4d932")},
+                { 110000, uint256S("0xfc62dddbd615c0c5d34fc24cb4f6d6b86f02465c036ac42d1bda585e1ac3d066")}
             }};
 
         chainTxData = ChainTxData{
