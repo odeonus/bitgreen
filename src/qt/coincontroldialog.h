@@ -55,6 +55,7 @@ public:
     static QList<CAmount> payAmounts;
     static CCoinControl *coinControl();
     static bool fSubtractFeeFromAmount;
+    static int nSplitBlockDummy;
 
 private:
     Ui::CoinControlDialog *ui;

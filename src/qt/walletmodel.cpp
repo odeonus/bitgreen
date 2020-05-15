@@ -690,3 +690,15 @@ bool WalletModel::isMultiwallet()
 {
     return m_node.getWallets().size() > 1;
 }
+
+
+bool WalletModel::isMine(CTxDestination address)
+{
+    std::vector<std::shared_ptr<CWallet>> wallets = GetWallets();
+    for (auto & pwallet : wallets) {
+        if(IsMine(*pwallet, address) == true) {
+            return true;
+        }
+    }
+    return false;
+}
