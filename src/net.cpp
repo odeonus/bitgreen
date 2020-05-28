@@ -98,6 +98,34 @@ void CConnman::AddOneShot(const std::string& strDest)
     vOneShots.push_back(strDest);
 }
 
+std::vector<CNode*> CConnman::CopyNodeVector(std::function<bool(const CNode* pnode)> cond)
+{
+    std::vector<CNode*> vecNodesCopy;
+    LOCK(cs_vNodes);
+    vecNodesCopy.reserve(vNodes.size());
+    for(size_t i = 0; i < vNodes.size(); ++i) {
+        CNode* pnode = vNodes[i];
+        if (!cond(pnode))
+            continue;
+        pnode->AddRef();
+        vecNodesCopy.push_back(pnode);
+    }
+    return vecNodesCopy;
+}
+
+std::vector<CNode*> CConnman::CopyNodeVector()
+{
+    return CopyNodeVector(AllNodes);
+}
+
+void CConnman::ReleaseNodeVector(const std::vector<CNode*>& vecNodes)
+{
+    for(size_t i = 0; i < vecNodes.size(); ++i) {
+        CNode* pnode = vecNodes[i];
+        pnode->Release();
+    }
+}
+
 unsigned short GetListenPort()
 {
     return (unsigned short)(gArgs.GetArg("-port", Params().GetDefaultPort()));

@@ -947,9 +947,19 @@ void CGovernanceManager::RequestGovernanceObject(CNode* pfrom, const uint256& nH
     g_connman->PushMessage(pfrom, msgMaker.Make(NetMsgType::MNGOVERNANCESYNC, nHash, filter));
 }
 
-int CGovernanceManager::RequestGovernanceObjectVotes(NodeId id) // const std::vector<CNode*>& vNodesCopy, CConnman& connman
+int CGovernanceManager::RequestGovernanceObjectVotes(CNode* pnode, CConnman& connman)
+{
+    if (pnode->nVersion < MIN_GOVERNANCE_PEER_PROTO_VERSION) return -3;
+    std::vector<CNode*> vNodesCopy;
+    vNodesCopy.push_back(pnode);
+    return RequestGovernanceObjectVotes(vNodesCopy, connman);
+}
+
+int CGovernanceManager::RequestGovernanceObjectVotes(const std::vector<CNode*>& vNodesCopy, CConnman& connman)
 {
     static std::map<uint256, std::map<CService, int64_t> > mapAskedRecently;
+
+    if (vNodesCopy.empty()) return -1;
 
     int64_t nNow = GetTime();
     int nTimeout = 60 * 60;
@@ -971,7 +981,7 @@ int CGovernanceManager::RequestGovernanceObjectVotes(NodeId id) // const std::ve
 
     {
         // LOCK2(cs_main, cs);
-        LOCK(cs);
+        LOCK2(cs_main, cs);
 
         if (mapObjects.empty()) return -2;
 
@@ -1016,31 +1026,28 @@ int CGovernanceManager::RequestGovernanceObjectVotes(NodeId id) // const std::ve
         }
         bool fAsked = false;
 
-        g_connman->ForEachNode([&](CNode* pnode) {
-            // Request per node, exclude other nodes.
-            if (id > -1 && pnode->GetId() != id) return;
-
+        for (const auto& pnode : vNodesCopy) {
             // Only use regular peers, don't try to ask from outbound "masternode" connections -
             // they stay connected for a short period of time and it's possible that we won't get everything we should.
             // Only use outbound connections - inbound connection could be a "masternode" connection
             // initiated from another node, so skip it too.
-            if (pnode->fMasternode || (fMasternodeMode && pnode->fInbound)) return;
+            if (pnode->fMasternode || (fMasternodeMode && pnode->fInbound)) continue;
             // only use up to date peers
-            if (pnode->nVersion < MIN_GOVERNANCE_PEER_PROTO_VERSION) return;
+            if (pnode->nVersion < MIN_GOVERNANCE_PEER_PROTO_VERSION) continue;
             // stop early to prevent RequestData overflow
             {
                 LOCK(cs_main);
-                if (!RequestDataAvailable(pnode->GetId(), nProjectedVotes)) return;
+                if (!RequestDataAvailable(pnode->GetId(), nProjectedVotes)) continue;
                 // to early to ask the same node
-                if (mapAskedRecently[nHashGovobj].count(pnode->addr)) return;
+                if (mapAskedRecently[nHashGovobj].count(pnode->addr)) continue;
             }
 
             RequestGovernanceObject(pnode, nHashGovobj, true);
             mapAskedRecently[nHashGovobj][pnode->addr] = nNow + nTimeout;
             fAsked = true;
             // stop loop if max number of peers per obj was asked
-            if (mapAskedRecently[nHashGovobj].size() >= nPeersPerHashMax) return; // break
-        });
+            if (mapAskedRecently[nHashGovobj].size() >= nPeersPerHashMax) break;
+        }
         // NOTE: this should match `if` above (the one before `while`)
         if (vTriggerObjHashes.size()) {
             vTriggerObjHashes.pop_back();

@@ -200,11 +200,29 @@ public:
     void OpenMasternodeConnection(const CAddress& addrConnect);
     bool CheckIncomingNonce(uint64_t nonce);
 
+    struct CFullyConnectedOnly {
+        bool operator() (const CNode* pnode) const {
+            return NodeFullyConnected(pnode);
+        }
+    };
+
+    constexpr static const CFullyConnectedOnly FullyConnectedOnly{};
+
+    struct CAllNodes {
+        bool operator() (const CNode*) const {return true;}
+    };
+
+    constexpr static const CAllNodes AllNodes{};
+
     bool ForNode(NodeId id, std::function<bool(CNode* pnode)> func);
     bool ForNode(const CService& addr, std::function<bool(CNode* pnode)> func);
     bool IsMasternodeOrDisconnectRequested(const CService& addr);
 
     void PushMessage(CNode* pnode, CSerializedNetMsg&& msg);
+
+    std::vector<CNode*> CopyNodeVector(std::function<bool(const CNode* pnode)> cond);
+    std::vector<CNode*> CopyNodeVector();
+    void ReleaseNodeVector(const std::vector<CNode*>& vecNodes);
 
     template<typename Callable>
     void ForEachNode(Callable&& func)
