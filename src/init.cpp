@@ -1745,7 +1745,6 @@ bool AppInitMain(InitInterfaces& interfaces)
             }
 
             try {
-                LOCK(cs_main);
                 if (!is_coinsview_empty) {
                     uiInterface.InitMessage(_("Verifying blocks...").translated);
                     if (fHavePruned && gArgs.GetArg("-checkblocks", DEFAULT_CHECKBLOCKS) > MIN_BLOCKS_TO_KEEP) {
