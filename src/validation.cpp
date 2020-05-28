@@ -159,15 +159,12 @@ namespace {
 
 CBlockIndex* LookupBlockIndex(const uint256& hash)
 {
-    AssertLockHeld(cs_main);
     BlockMap::const_iterator it = g_blockman.m_block_index.find(hash);
     return it == g_blockman.m_block_index.end() ? nullptr : it->second;
 }
 
 CBlockIndex* FindForkInGlobalIndex(const CChain& chain, const CBlockLocator& locator)
 {
-    AssertLockHeld(cs_main);
-
     // Find the latest block common to locator and chain - we expect that
     // locator.vHave is sorted descending by height.
     for (const uint256& hash : locator.vHave) {
@@ -4148,8 +4145,6 @@ fs::path GetBlockPosFilename(const FlatFilePos &pos)
 
 CBlockIndex * BlockManager::InsertBlockIndex(const uint256& hash)
 {
-    AssertLockHeld(cs_main);
-
     if (hash.IsNull())
         return nullptr;
 
@@ -4168,8 +4163,6 @@ CBlockIndex * BlockManager::InsertBlockIndex(const uint256& hash)
 
 void BlockManager::InsertPoSIndex(const uint256& hash)
 {
-    AssertLockHeld(cs_main);
-
     if (hash.IsNull())
         return;
 
@@ -4321,7 +4314,6 @@ bool static LoadBlockIndexDB(const CChainParams& chainparams) EXCLUSIVE_LOCKS_RE
 
 bool LoadChainTip(const CChainParams& chainparams)
 {
-    AssertLockHeld(cs_main);
     assert(!pcoinsTip->GetBestBlock().IsNull()); // Never called when the coins view is empty
 
     if (::ChainActive().Tip() && ::ChainActive().Tip()->GetBlockHash() == pcoinsTip->GetBestBlock()) return true;

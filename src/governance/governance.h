@@ -293,7 +293,7 @@ public:
 
     void ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStream& vRecv, CConnman& connman);
 
-    void DoMaintenance();
+    void DoMaintenance(CConnman& connman);
 
     CGovernanceObject* FindGovernanceObject(const uint256& nHash);
 
@@ -401,7 +401,7 @@ public:
     int RequestGovernanceObjectVotes(const std::vector<CNode*>& vNodesCopy, CConnman& connman);
 
 private:
-    void RequestGovernanceObject(CNode* pfrom, const uint256& nHash, bool fUseFilter = false);
+    void RequestGovernanceObject(CNode* pfrom, const uint256& nHash, CConnman& connman, bool fUseFilter = false);
 
     void AddInvalidVote(const CGovernanceVote& vote)
     {
@@ -424,7 +424,7 @@ private:
 
     void AddCachedTriggers();
 
-    void RequestOrphanObjects();
+    void RequestOrphanObjects(CConnman& connman);
 
     void CleanOrphanObjects();
 
