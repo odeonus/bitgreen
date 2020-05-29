@@ -44,7 +44,7 @@ public:
     void setAddress(const QString &address);
     void pasteEntry(const SendCoinsRecipient &rv);
     bool handlePaymentRequest(const SendCoinsRecipient &recipient);
-    bool fSplitBlock;
+    bool fSplitUTXO;
 
 public Q_SLOTS:
     void clear();
@@ -93,8 +93,8 @@ private Q_SLOTS:
     void coinControlClipboardBytes();
     void coinControlClipboardLowOutput();
     void coinControlClipboardChange();
-    void splitBlockChecked(int);
-    void splitBlockLineEditChanged(const QString & text);
+    void splitUTXOChecked(int);
+    void splitUTXOValueEdited(const QString &);
     void updateFeeSectionControls();
     void updateSmartFeeLabel();
 

@@ -85,8 +85,8 @@ SendCoinsDialog::SendCoinsDialog(const PlatformStyle *_platformStyle, QWidget *p
     connect(ui->lineEditCoinControlChange, &QValidatedLineEdit::textEdited, this, &SendCoinsDialog::coinControlChangeEdited);
 
     // UTXO Splitter
-    connect(ui->splitBlockCheckBox, &QCheckBox::stateChanged, this, &SendCoinsDialog::splitBlockChecked);
-    connect(ui->splitBlockLineEdit, &QValidatedLineEdit::textEdited, this, &SendCoinsDialog::splitBlockLineEditChanged);
+    connect(ui->checkBoxSplitUTXO, &QCheckBox::stateChanged, this, &SendCoinsDialog::splitUTXOChecked);
+    connect(ui->lineEditSplitUTXOValue, &QValidatedLineEdit::textEdited, this, &SendCoinsDialog::splitUTXOValueEdited);
 
     // Coin Control: clipboard actions
     QAction *clipboardQuantityAction = new QAction(tr("Copy quantity"), this);
@@ -231,10 +231,10 @@ void SendCoinsDialog::on_sendButton_clicked()
 
         //UTXO splitter - address should be our own
         CTxDestination address = DecodeDestination(entry->getValue().address.toStdString());
-        if(!model->isMine(address) && ui->splitBlockCheckBox->checkState() == Qt::Checked)
+        if(!model->isMine(address) && ui->checkBoxSplitUTXO->checkState() == Qt::Checked)
         {
-            CoinControlDialog::coinControl()->fSplitBlock = false;
-            ui->splitBlockCheckBox->setCheckState(Qt::Unchecked);
+            CoinControlDialog::coinControl()->fSplitUTXO = false;
+            ui->checkBoxSplitUTXO->setCheckState(Qt::Unchecked);
             QMessageBox::warning(this, tr("Send Coins"),
                                  tr("The split block tool does not work when sending to outside addresses. Try again."),
                                  QMessageBox::Ok, QMessageBox::Ok);
@@ -260,20 +260,20 @@ void SendCoinsDialog::on_sendButton_clicked()
     }
 
     //set split block in model
-    CoinControlDialog::coinControl()->fSplitBlock = ui->splitBlockCheckBox->checkState() == Qt::Checked;
+    CoinControlDialog::coinControl()->fSplitUTXO = ui->checkBoxSplitUTXO->checkState() == Qt::Checked;
 
-    if (ui->entries->count() > 1 && ui->splitBlockCheckBox->checkState() == Qt::Checked)
+    if (ui->entries->count() > 1 && ui->checkBoxSplitUTXO->checkState() == Qt::Checked)
     {
-        CoinControlDialog::coinControl()->fSplitBlock = false;
-        ui->splitBlockCheckBox->setCheckState(Qt::Unchecked);
+        CoinControlDialog::coinControl()->fSplitUTXO = false;
+        ui->checkBoxSplitUTXO->setCheckState(Qt::Unchecked);
         QMessageBox::warning(this, tr("Send Coins"),
                              tr("The split block tool does not work with multiple addresses. Try again."),
                              QMessageBox::Ok, QMessageBox::Ok);
         return;
     }
 
-    if (CoinControlDialog::coinControl()->fSplitBlock)
-        CoinControlDialog::coinControl()->nSplitBlock = int(ui->splitBlockLineEdit->text().toInt());
+    if (CoinControlDialog::coinControl()->fSplitUTXO)
+        CoinControlDialog::coinControl()->nSplitUTXO = int(ui->lineEditSplitUTXOValue->text().toInt());
 
     fNewRecipientAllowed = false;
     WalletModel::UnlockContext ctx(model->requestUnlock());
@@ -348,10 +348,8 @@ void SendCoinsDialog::on_sendButton_clicked()
         }
 #endif
 
-        if(fSplitBlock)
-        {
-            recipientElement.append(tr(" split into %1 outputs using the UTXO splitter.").arg(CoinControlDialog::coinControl()->nSplitBlock));
-        }
+        if(fSplitUTXO)
+            recipientElement.append(tr(" split into %1 outputs using the UTXO splitter.").arg(CoinControlDialog::coinControl()->nSplitUTXO));
 
         formatted.append(recipientElement);
     }
@@ -754,28 +752,53 @@ void SendCoinsDialog::updateSmartFeeLabel()
 }
 
 // UTXO splitter
-void SendCoinsDialog::splitBlockChecked(int state)
+void SendCoinsDialog::splitUTXOChecked(int state)
 {
     if (model)
     {
-        CoinControlDialog::coinControl()->fSplitBlock = (state == Qt::Checked);
-        fSplitBlock = (state == Qt::Checked);
-        ui->splitBlockLineEdit->setEnabled((state == Qt::Checked));
-        ui->labelBlockSizeText->setEnabled((state == Qt::Checked));
-        ui->labelBlockSize->setEnabled((state == Qt::Checked));
+        CoinControlDialog::coinControl()->fSplitUTXO = (state == Qt::Checked);
+        fSplitUTXO = (state == Qt::Checked);
+        ui->lineEditSplitUTXOValue->setEnabled((state == Qt::Checked));
+        ui->labelSplitUTXOValueText->setEnabled((state == Qt::Checked));
+        ui->labelSplitUTXOValue->setEnabled((state == Qt::Checked));
+
+        // if unchecked, also reset the UTXO value
+        if (state == Qt::Unchecked) {
+            int nDisplayUnit = BitcoinUnits::BITG;
+            if (model && model->getOptionsModel())
+                nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
+
+            ui->lineEditSplitUTXOValue->clear();
+            ui->labelSplitUTXOValue->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, 0));
+        }
         coinControlUpdateLabels();
     }
 }
 
 //UTXO splitter
-void SendCoinsDialog::splitBlockLineEditChanged(const QString & text)
+void SendCoinsDialog::splitUTXOValueEdited(const QString& text)
 {
-    double nAfterFee = ui->labelCoinControlAfterFee->text().left(ui->labelCoinControlAfterFee->text().indexOf(" ")).replace("~", "").toDouble();
-    double nSize = nAfterFee;
-    if (nAfterFee > 0 && text.toDouble() > 0)
-        nSize = nAfterFee / text.toDouble();
-    ui->labelBlockSize->setText(QString::number(nSize));
-    CoinControlDialog::nSplitBlockDummy = text.toInt();
+    QString qAfterFee = ui->labelCoinControlAfterFee->text().left(ui->labelCoinControlAfterFee->text().indexOf(" ")).replace(ASYMP_UTF8, "");
+    CAmount nAfterFee;
+    if (!ParseMoney(qAfterFee.toStdString().c_str(), nAfterFee))
+        return;
+
+    CAmount nValue = nAfterFee;
+    int nBlocks = text.toInt();
+    if (nAfterFee > 0 && nBlocks > 0)
+        nValue = nAfterFee / nBlocks;
+
+    // assign to split block dummy
+    // used to recalculate the fee amount
+    // for the additional outputs
+    CoinControlDialog::nSplitUTXODummy = nBlocks;
+
+    // actually update labels
+    int nDisplayUnit = BitcoinUnits::BITG;
+    if (model && model->getOptionsModel())
+        nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
+
+    ui->labelSplitUTXOValue->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nValue));
     coinControlUpdateLabels();
 }
 
