@@ -34,6 +34,7 @@
 #include <QTreeWidget>
 
 QList<CAmount> CoinControlDialog::payAmounts;
+int CoinControlDialog::nSplitBlockDummy;
 bool CoinControlDialog::fSubtractFeeFromAmount = false;
 
 bool CCoinControlWidgetItem::operator<(const QTreeWidgetItem &other) const {
@@ -486,7 +487,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
     if (nQuantity > 0)
     {
         // Bytes
-        nBytes = nBytesInputs + ((CoinControlDialog::payAmounts.size() > 0 ? CoinControlDialog::payAmounts.size() + 1 : 2) * 34) + 10; // always assume +1 output for change here
+        nBytes = nBytesInputs + ((CoinControlDialog::payAmounts.size() > 0 ? CoinControlDialog::payAmounts.size() + std::max(1, CoinControlDialog::nSplitBlockDummy) : 2) * 34) + 10; // always assume +1 output for change here
         if (fWitness)
         {
             // there is some fudging in these numbers related to the actual virtual transaction size calculation that will keep this estimate from being exact.

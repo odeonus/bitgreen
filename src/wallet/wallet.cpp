@@ -3100,40 +3100,56 @@ bool CWallet::CreateTransaction(interfaces::Chain::Lock& locked_chain, const std
 
                 // vouts to the payees
                 coin_selection_params.tx_noinputs_size = 11; // Static vsize overhead + outputs vsize. 4 nVersion, 4 nLocktime, 1 input count, 1 output count, 1 witness overhead (dummy, flag, stack size)
-                for (const auto& recipient : vecSend)
-                {
-                    CTxOut txout(recipient.nAmount, recipient.scriptPubKey);
-
-                    if (recipient.fSubtractFeeFromAmount)
+                if (!coin_control.fSplitBlock) {
+                    for (const auto& recipient : vecSend)
                     {
-                        assert(nSubtractFeeFromAmount != 0);
-                        txout.nValue -= nFeeRet / nSubtractFeeFromAmount; // Subtract fee equally from each selected recipient
+                        CTxOut txout(recipient.nAmount, recipient.scriptPubKey);
 
-                        if (fFirst) // first receiver pays the remainder not divisible by output count
+                        if (recipient.fSubtractFeeFromAmount)
                         {
-                            fFirst = false;
-                            txout.nValue -= nFeeRet % nSubtractFeeFromAmount;
+                            assert(nSubtractFeeFromAmount != 0);
+                            txout.nValue -= nFeeRet / nSubtractFeeFromAmount; // Subtract fee equally from each selected recipient
+
+                            if (fFirst) // first receiver pays the remainder not divisible by output count
+                            {
+                                fFirst = false;
+                                txout.nValue -= nFeeRet % nSubtractFeeFromAmount;
+                            }
                         }
-                    }
-                    // Include the fee cost for outputs. Note this is only used for BnB right now
-                    coin_selection_params.tx_noinputs_size += ::GetSerializeSize(txout, PROTOCOL_VERSION);
+                        // Include the fee cost for outputs. Note this is only used for BnB right now
+                        coin_selection_params.tx_noinputs_size += ::GetSerializeSize(txout, PROTOCOL_VERSION);
 
-                    if (IsDust(txout, chain().relayDustFee()))
-                    {
-                        if (recipient.fSubtractFeeFromAmount && nFeeRet > 0)
+                        if (IsDust(txout, chain().relayDustFee()))
                         {
-                            if (txout.nValue < 0)
-                                strFailReason = _("The transaction amount is too small to pay the fee").translated;
+                            if (recipient.fSubtractFeeFromAmount && nFeeRet > 0)
+                            {
+                                if (txout.nValue < 0)
+                                    strFailReason = _("The transaction amount is too small to pay the fee").translated;
+                                else
+                                    strFailReason = _("The transaction amount is too small to send after the fee has been deducted").translated;
+                            }
                             else
-                                strFailReason = _("The transaction amount is too small to send after the fee has been deducted").translated;
+                                strFailReason = _("Transaction amount too small").translated;
+                            return false;
                         }
-                        else
-                            strFailReason = _("Transaction amount too small").translated;
-                        return false;
+                        txNew.vout.push_back(txout);
                     }
-                    txNew.vout.push_back(txout);
-                }
+                } else //UTXO Splitter Transaction
+                {
+                    int nSplitBlock;
 
+                    nSplitBlock = coin_control.nSplitBlock;
+
+                    for (const auto& recipient : vecSend) {
+                        for (int i = 0; i < nSplitBlock; i++) {
+                            if (i == nSplitBlock - 1) {
+                                uint64_t nRemainder = recipient.nAmount % nSplitBlock;
+                                txNew.vout.push_back(CTxOut((recipient.nAmount / nSplitBlock) + nRemainder, recipient.scriptPubKey));
+                            } else
+                                txNew.vout.push_back(CTxOut(recipient.nAmount / nSplitBlock, recipient.scriptPubKey));
+                        }
+                    }
+                }
                 // Choose coins to use
                 bool bnb_used;
                 if (pick_new_inputs) {
