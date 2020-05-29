@@ -1292,7 +1292,7 @@ bool CWallet::TransactionCanBeAbandoned(const uint256& hashTx) const
     auto locked_chain = chain().lock();
     LOCK(cs_wallet);
     const CWalletTx* wtx = GetWalletTx(hashTx);
-    return wtx && !wtx->isAbandoned() && wtx->GetDepthInMainChain(*locked_chain) == 0 && !wtx->InMempool();
+    return wtx && !wtx->isAbandoned() && wtx->GetDepthInMainChain(*locked_chain) <= 0 && !wtx->InMempool();
 }
 
 void CWallet::MarkInputsDirty(const CTransactionRef& tx)
@@ -1319,7 +1319,7 @@ bool CWallet::AbandonTransaction(interfaces::Chain::Lock& locked_chain, const ui
     auto it = mapWallet.find(hashTx);
     assert(it != mapWallet.end());
     CWalletTx& origtx = it->second;
-    if (origtx.GetDepthInMainChain(locked_chain) != 0 || origtx.InMempool() || origtx.IsLockedByInstantSend()) {
+    if (origtx.GetDepthInMainChain(locked_chain) > 0 || origtx.InMempool() || origtx.IsLockedByInstantSend()) {
         return false;
     }
 
@@ -2280,7 +2280,7 @@ CAmount CWalletTx::GetDebit(const isminefilter& filter) const
 CAmount CWalletTx::GetCredit(interfaces::Chain::Lock& locked_chain, const isminefilter& filter) const
 {
     // Must wait until coinbase is safely deep enough in the chain before valuing it
-    if (IsImmatureCoinBase(locked_chain))
+    if (IsCoinBase() && IsImmatureCoinBase(locked_chain))
         return 0;
 
     CAmount credit = 0;
@@ -4811,15 +4811,19 @@ int CMerkleTx::GetDepthInMainChain(interfaces::Chain::Lock& locked_chain) const
     if (hashUnset())
         return 0;
 
-    return locked_chain.getBlockDepth(hashBlock) * (nIndex == -1 ? -1 : 1);
+    int nResult = locked_chain.getBlockDepth(hashBlock) * (nIndex == -1 ? -1 : 1);
+
+    if (nResult == 0 && !mempool.exists(GetHash()))
+        return -1; // Not in chain, not in mempool
+
+    return nResult;
 }
 
 int CMerkleTx::GetBlocksToMaturity(interfaces::Chain::Lock& locked_chain) const
 {
-    if (!IsCoinBase())
+    if (!(IsCoinBase() || IsCoinStake()))
         return 0;
     int chain_depth = GetDepthInMainChain(locked_chain);
-    assert(chain_depth >= 0); // coinbase tx should not be conflicted
     return std::max(0, (COINBASE_MATURITY+1) - chain_depth);
 }
 
@@ -5293,7 +5297,7 @@ bool CWallet::CreateCoinStake(unsigned int nBits,
 
                 //presstab HyperStake - calculate the total size of our new output including the stake reward so that we can use it to decide whether to split the stake outputs
                 const CBlockIndex* pIndex0 = ChainActive().Tip();
-                uint64_t nTotalSize = pcoin.first->tx->vout[pcoin.second].nValue + nFees + GetBlockSubsidy(pIndex0->nHeight, Params().GetConsensus());
+                uint64_t nTotalSize = pcoin.first->tx->vout[pcoin.second].nValue + nFees + GetBlockSubsidy(pIndex0->nHeight+1, Params().GetConsensus());
 
                 //presstab HyperStake - if MultiSend is set to send in coinstake we will add our outputs here (values asigned further down)
                 // TODO: BitGreen - check if threshold split conflicts with masternode payment.
@@ -5314,7 +5318,7 @@ bool CWallet::CreateCoinStake(unsigned int nBits,
     // Calculate reward
     CAmount nReward;
     const CBlockIndex* pIndex0 = ChainActive().Tip();
-    nReward = nFees + GetBlockSubsidy(pIndex0->nHeight, Params().GetConsensus());
+    nReward = nFees + GetBlockSubsidy(pIndex0->nHeight+1, Params().GetConsensus());
     nCredit += nReward;
 
     CAmount nMinFee = 0;

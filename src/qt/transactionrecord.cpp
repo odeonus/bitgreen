@@ -39,12 +39,10 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(interfaces::Wal
     {
         TransactionRecord sub(hash, nTime);
         CTxDestination address;
-
-        if (!ExtractDestination(wtx.tx->vout[1].scriptPubKey, address) && wtx.txout_is_mine[1])
+        if(!ExtractDestination(wtx.tx->vout[1].scriptPubKey, address))
             return parts;
 
         isminetype mine = wtx.txout_address_is_mine[1];
-
         if (mine == ISMINE_NO) {
             //if the address is not yours then it means you have a tx sent to you in someone elses coinstake tx
             for (unsigned int i = 1; i < wtx.tx->vout.size(); i++) {
