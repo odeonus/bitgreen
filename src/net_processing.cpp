@@ -3015,6 +3015,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             }
             MaybePunishNode(pfrom->GetId(), state, /*via_compact_block*/ false);
         }
+        return true;
     }
 
     if (strCommand == NetMsgType::CMPCTBLOCK && !fImporting && !fReindex)
@@ -3230,7 +3231,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
                 MarkBlockAsReceived(pblock->GetHash());
             }
         }
-
+        return true;
     }
 
     if (strCommand == NetMsgType::BLOCKTXN)
@@ -3311,9 +3312,10 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
                 mapBlockSource.erase(pblock->GetHash());
             }
         }
+        return true;
     }
 
-    else if (strCommand == NetMsgType::HEADERS)
+    if (strCommand == NetMsgType::HEADERS)
     {
         // Ignore headers received while importing
         if (fImporting || fReindex) {
@@ -3646,7 +3648,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         return true;
     }
 
-    else if (strCommand == NetMsgType::GETMNLISTDIFF) {
+    if (strCommand == NetMsgType::GETMNLISTDIFF) {
         CGetSimplifiedMNListDiff cmd;
         vRecv >> cmd;
 
@@ -3660,6 +3662,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             LogPrint(BCLog::NET, "getmnlistdiff failed for baseBlockHash=%s, blockHash=%s. error=%s\n", cmd.baseBlockHash.ToString(), cmd.blockHash.ToString(), strError);
             Misbehaving(pfrom->GetId(), 1);
         }
+        return true;
     }
 
 
