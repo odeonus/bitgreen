@@ -7,6 +7,7 @@
 #include <config/bitgreen-config.h>
 #endif
 
+#include <bls/bls.h>
 #include <chainparamsbase.h>
 #include <clientversion.h>
 #include <fs.h>
@@ -59,6 +60,7 @@ static void SetupCliArgs()
     gArgs.AddArg("-rpcwallet=<walletname>", "Send RPC for non-default wallet on RPC server (needs to exactly match corresponding -wallet option passed to bitgreend). This changes the RPC endpoint used, e.g. http://127.0.0.1:8332/wallet/<walletname>", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-stdin", "Read extra arguments from standard input, one per line until EOF/Ctrl-D (recommended for sensitive information such as passphrases). When combined with -stdinrpcpass, the first line from standard input is used for the RPC password.", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-stdinrpcpass", "Read RPC password from standard input as a single line. When combined with -stdin, the first line from standard input is used for the RPC password.", false, OptionsCategory::OPTIONS);
+    gArgs.AddArg("-blsgenerate", "Returns a BLS secret/public key pair.", false, OptionsCategory::OPTIONS);
 }
 
 /** libevent event log callback */
@@ -426,6 +428,17 @@ static int CommandLineRPC(int argc, char *argv[])
         }
         std::unique_ptr<BaseRequestHandler> rh;
         std::string method;
+        if (gArgs.GetBoolArg("-blsgenerate", false)) {
+            CBLSSecretKey sk;
+            sk.MakeNewKey();
+
+            UniValue ret(UniValue::VOBJ);
+            ret.pushKV("secret", sk.ToString());
+            ret.pushKV("public", sk.GetPublicKey().ToString());
+            tfm::format(std::cout, "%s\n", ret.write(2).c_str());
+            return EXIT_SUCCESS;
+        }
+        else
         if (gArgs.GetBoolArg("-getinfo", false)) {
             rh.reset(new GetinfoRequestHandler());
             method = "";

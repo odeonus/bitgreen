@@ -715,7 +715,11 @@ endif
 libbitgreen_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitgreen_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitgreen_cli_a_SOURCES = \
+  bls/bls.cpp \
+  bls/bls.h \
   rpc/client.cpp \
+  uint256.cpp \
+  uint256.h \
   $(BITCOIN_CORE_H)
 
 nodist_libbitgreen_util_a_SOURCES = $(srcdir)/obj/build.h
