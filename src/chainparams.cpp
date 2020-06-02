@@ -270,7 +270,8 @@ public:
             // Data from RPC: getchaintxstats 70004 2da7cf773e5032a76aa4480b033c1ac6978ff64531f168c92d022c90f5bf7996
             /* nTime    */ 1583583293,
             /* nTxCount */ 268247,
-            /* dTxRate  */ 0.02924633374616526};
+            /* dTxRate  */ 0.02924633374616526
+        };
     }
 };
 
@@ -395,7 +396,8 @@ public:
             // Data from rpc: getchaintxstats <nblocks> <hash>
             /* nTime    */ 0,
             /* nTxCount */ 0,
-            /* dTxRate  */ 0};
+            /* dTxRate  */ 0
+        };
     }
 };
 
